@@ -15,6 +15,9 @@ Code History:
 3. Filbert Wee
    Change Date: January 28, 2020
    Change Description: Added parsing for the remaining events. Compiled "all" "event" matrices into one dictionary. 
+3. Filbert Wee
+   Change Date: February 1, 2020
+   Change Description: Updated required files for better naming. Updated parser to unlock a diary page
 
 File Creation
 Date: January 22, 2019
@@ -55,7 +58,7 @@ public class Parser : MonoBehaviour
     {
         initializeDictionary();
         // HARD CODE --- as the file parts will be different per OS used.
-        string path = Application.dataPath + "/" + "Messages Assets /Storm Surge and Flood Script - Sheet1.tsv";
+        string path = Application.dataPath + "/" + "Messages Assets /Storm Surge and Flood Script - Sorted.tsv";
         // variable to be used in temporarily storing each line of the .tsv file at a time
         string tmp;
         // variable to actually read the .tsv file as a whole
@@ -80,7 +83,8 @@ public class Parser : MonoBehaviour
                 text = line[3],
                 nextType = line[4],
                 nextNumber = 0,
-                choices = new List<int>()
+                choices = new List<int>(),
+                unlocks = int.Parse(line[6])
             };
             if (line[5].Contains(","))
             {
@@ -126,7 +130,7 @@ public class Parser : MonoBehaviour
     {
         story = new Dictionary<string, List<DTypes>>();
         // HARD CODE --- as the file parts will be different per OS used.
-        string path = Application.dataPath + "/" + "Messages Assets /Storm Surge and Flood Script - Sheet2.tsv";
+        string path = Application.dataPath + "/" + "Messages Assets /Storm Surge and Flood Script - Types.tsv";
         // variable to be used in temporarily storing each line of the .tsv file at a time
         string tmp;
         // variable to actually read the .tsv file as a whole
@@ -160,5 +164,7 @@ public class DTypes
     // id of the next line of text in the story         
     public int nextNumber;                      
     // id of choices to be chosen by the player, if allowed to choose
-    public List<int> choices;                   
+    public List<int> choices;
+    // id of the diary page if it unlocks one, otherwise set to -1         
+    public int unlocks;
 }

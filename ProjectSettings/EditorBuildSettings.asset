@@ -6,9 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
     path: Assets/Scenes/Home.unity
     guid: 1dafa9b2562514f4c9a9885dd3fcb9b3
   - enabled: 1
@@ -17,4 +14,22 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/HomeAfterMessages.unity
     guid: 018f331cca731d446b475b476f8084d6
+  - enabled: 1
+    path: Assets/Scenes/NotifDropdown.unity
+    guid: 3caaa3e04c74b204ca9d9661c022a0eb
+  - enabled: 1
+    path: Assets/Scenes/Phone.unity
+    guid: cef096eccb646124eb6cc153bbc6ea8a
+  - enabled: 1
+    path: Assets/Scenes/Diary.unity
+    guid: 3fc89ead71c4b774ea5cc09e35a2c50f
+  - enabled: 1
+    path: Assets/Scenes/Minigame2.unity
+    guid: a2afaa447bc86dd47b9e3f6a54ad6482
+  - enabled: 1
+    path: Assets/Scenes/Google.unity
+    guid: b3fa7087cacc50441b3dbb6ca10db983
+  - enabled: 1
+    path: Assets/Scenes/DiaryAfterOpeningPage.unity
+    guid: 73e1f59e3eaeda442a5855b20ef6d381
   m_configObjects: {}

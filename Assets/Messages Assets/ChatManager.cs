@@ -42,6 +42,21 @@ Code History:
 12.Filbert Wee
    Change Date: Jan 28, 2020
    Change Description: Updated variable to reflect parser changes. Rearranged functions for cleaner code.
+13.Gene Tan
+   Change Date: Jan 31, 2020
+   Change Description: Added test code for a dropdown notification with timing.
+14.Gene Tan
+   Change Date: Feb 1, 2020
+   Change Description: Removed test code for a dropdown notification to move it to a different file.
+15.Gene Tan
+   Change Date: Feb 2, 2020
+   Change Description: Changed some of the code in sendToChat() to match the changes made in the bot bubble & player bubble assets
+16.Gene Tan
+   Change Date: Feb 5, 2020
+   Change Description: Added code to unlock diary pages after choices are made
+16.Filbert Wee
+   Change Date: Feb 11, 2020
+   Change Description: Added hangman game to the story
 
 File Creation
 Date: January 20, 2019
@@ -56,6 +71,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+
 public class ChatManager : MonoBehaviour
 {
     // allows variables to be visible in the unity ui
@@ -69,23 +85,31 @@ public class ChatManager : MonoBehaviour
     public float countdown;
     // timer variable
     private float timer;
+    
     // list of available choices the player is allowed to choose next.
     public List<DTypes> options;
 
     // variable containing all the parsed messages in the story
     public Dictionary<string, List<DTypes>> story;
+
+    // variable containing all the parsed diary pages
+    public List<DiaryPage> diary;
+    // GameObject that contains the diary parser
+    public GameObject diaryParser;
+
     // gameobjects (where to post the messages, what the "friends', your, and system messages look like") to be accessed by the script
     public GameObject chatPanel, botReplyPrefab, playerReplyPrefab, systemNotifPrefab;
     // variable to check whether the name of a "sender" should be displayed
     private string oldName = "";
 
+    
     //Choosing the next type of messages
     public string type;
     //Choosing the next id of messages given the type
     public int num;
 
     // variable to check in which state the game(messages) is currently in
-    private string cases;
+    public string cases;
     
     // GameObject to be the location in which choices will be displayed
     public GameObject choosingReplyArea;
@@ -95,6 +119,9 @@ public class ChatManager : MonoBehaviour
     public GameObject replyButton;
     // variable to store the function from the script that controls the movement of the area "choosingReplyArea".
     ReplyBarScript rs;
+    
+
+    public bool test = false;
 
     /*
     method name: Start
@@ -112,8 +139,10 @@ public class ChatManager : MonoBehaviour
         num = 0;
         Debug.Log("nice");
         timer = countdown;
+        
         cases = "retrieving text";
         rs = replyButton.GetComponent<ReplyBarScript>();
+
     }
 
     /*
@@ -128,7 +157,12 @@ public class ChatManager : MonoBehaviour
     and return value: N/A
     */
     void Update()
-    {
+    {        
+        // ensures that grabbing the diary contents is done after the parser does its job
+        if (diary.Count == 0)
+        {
+            diary = diaryParser.GetComponent<DiaryParser>().pages;
+        }
         // if there are no more messages to be sent, allow the player to make a reply
         if (messagesQueue.Count == 0)
         {
@@ -153,14 +187,19 @@ public class ChatManager : MonoBehaviour
         {
             // chooses what message is next from the dictionary
             case "retrieving text":
-                chooseMessage();           
+                chooseMessage();
+                ReplyBarScript.canReply = false;
                 break;
             // chooses and create choices for player interaction
             case "retrieving reply":
                 setOptionButtons();             
                 break;
             // a wait for reply inside the update loop(forever loop)
-            case "choosing reply":  
+            case "choosing reply":
+                break;
+            case "playing minigame":
+                waitForMinigameEnd();
+                ReplyBarScript.canReply = false;
                 break;
             // tells the game that an ending is reached
             case "ending":           
@@ -213,6 +252,11 @@ public class ChatManager : MonoBehaviour
         {
             cases = "ending";
         }
+        else if (type == "minigame")
+        {
+            cases = "playing minigame";
+            num = story[currentType][num].nextNumber;
+        }
         // otherwise, procede to next line in the story
         else
         {
@@ -220,6 +264,44 @@ public class ChatManager : MonoBehaviour
         }
     }
 
+    /*
+    method name: waitForMinigameEnd
+    routine's creation date: January 26, 2020
+    purpose of the routine: This routine just checks other scripts if a specific minigame is finished
+    a list of the calling arguments: N/A
+    a list of required files and/or database tables: N/A
+    and return value: N/A
+    */
+    public void waitForMinigameEnd()
+    {
+        // if the hangman minigame
+        if (num == 0)
+        {
+            // start the game
+            if (SearchStart.disabled)
+            {
+                SearchStart.disabled = false;
+            }
+            // checks if finished
+            if (HangManGame.finished)
+            {
+                type = "minigame-answer";
+                // if lost
+                if (HangManGame.failed)
+                {
+                    options.Add(story[type][1]);
+                }
+                // else won
+                else
+                {
+                    options.Add(story[type][0]);
+                }
+                // proceed with story
+                cases = "retrieving reply";
+            }
+        }
+    }
+    
     /*
     method name: setOptionButtons
     routine's creation date: January 26, 2020
@@ -279,23 +361,37 @@ public class ChatManager : MonoBehaviour
     */
     public void setOptionButton(DTypes option)
     {
-        // creates new message from the choice chooses
-        Message newMessage = new Message
+        // checks if the choice leads to a minigame
+        if (option.nextType == "minigame")
         {
-            name = option.name,
-            text = option.text,
-            script = option
-        };
-        // adds new message to the message queue
-        messagesQueue.Enqueue(newMessage);
-        // reset the timer
-        timer = countdown;
-        // chooses the next message to be sent
-        type = option.nextType;
-        num = option.nextNumber;
-        // sets the next state of the game
-        cases = "retrieving text";
-        // clear choices buttons currently shown.
+            cases = "playing minigame";
+            num = option.nextNumber;
+        }
+        else
+        {
+            // creates new message from the choice chooses
+            Message newMessage = new Message
+            {
+                name = option.name,
+                text = option.text,
+                script = option
+            };
+            // adds new message to the message queue
+            messagesQueue.Enqueue(newMessage);
+            // reset the timer
+            timer = countdown;
+            // chooses the next message to be sent
+            type = option.nextType;
+            num = option.nextNumber;
+            // sets the next state of the game
+            cases = "retrieving text";
+            // unlock a diary page
+            if (option.unlocks != -1)
+            {
+                unlockDiaryPage(option.unlocks);
+            }
+            // clear choices buttons currently shown.
+        }
         clearButtons();
     }
 
@@ -320,6 +416,31 @@ public class ChatManager : MonoBehaviour
             // and deletes/destroys them
             Destroy (choosingReplyArea.transform.GetChild(i).gameObject);
         }
+        options = new List<DTypes>();
+    }
+
+    /*
+    method name: unlockDiaryPage
+    routine's creation date: Febuary 1, 2020
+    purpose of the routine: This routine sets a diary page to unlocked.
+                            This will also edit the text file outside the game so that it will keep pages unlocked by the player.
+    a list of the calling arguments: int pageNumber
+    a list of required files and/or database tables: N/A
+    and return value: N/A
+    */
+    public void unlockDiaryPage(int pageNumber)
+    {
+        // unlocks inside the game
+        if ((diary[pageNumber].unlocked) == false) {
+            diary[pageNumber].unlocked = true;
+            // unlocks outside the game
+            DiaryParser.unlockPage(diary);
+            NotifText.text = "A diary page has been unlocked";
+            NotifText.title = "My Diary";
+            NotifText.dropdown = true;
+            // NotificationDropdown.text = "A diary page has been unlocked.";
+        }
+
     }
 
     /*
@@ -342,29 +463,60 @@ public class ChatManager : MonoBehaviour
             {
                 // instantiate player bubble prefab under the chatPanel gameobject
                 newSpace = Instantiate(playerReplyPrefab, chatPanel.transform);
+                // set the text of the object
+                GameObject newText = newSpace.transform.GetChild(1).transform.GetChild(2).transform.GetChild(0).gameObject;
+                newMessage.textObject = newText.GetComponent<Text>();
+                newMessage.textObject.text = newMessage.text;
+                // code for the name appearing on top of the bubbles
+                if (oldName == newMessage.name)
+                {
+                    Text name = newSpace.transform.GetChild(1).transform.GetChild(0).GetComponent<Text>();
+                    name.fontSize = 1;
+                    name.text = "";
+                    name = newSpace.transform.GetChild(1).transform.GetChild(1).GetComponent<Text>();
+                    name.fontSize = 1;
+                    name.text = "";
+                }
+                else
+                {
+                    Text name = newSpace.transform.GetChild(1).transform.GetChild(1).GetComponent<Text>();
+                    name.text = newMessage.name;
+                    name.fontSize = 30;
+                    name = newSpace.transform.GetChild(1).transform.GetChild(0).GetComponent<Text>();
+                    name.text = "";
+                    name.fontSize = 20;
+                }
             }
             else
             {
                 // instantiate bot bubble prefab under the chatPanel gameobject
                 newSpace = Instantiate(botReplyPrefab, chatPanel.transform);
+                // set the text of the object
+                GameObject newText = newSpace.transform.GetChild(2).transform.GetChild(0).gameObject;
+                newMessage.textObject = newText.GetComponent<Text>();
+                newMessage.textObject.text = newMessage.text;
+                // code for the name appearing on top of the bubbles
+                if (oldName == newMessage.name)
+                {
+                    Text name = newSpace.transform.GetChild(0).GetComponent<Text>();
+                    name.fontSize = 1;
+                    name.text = "";
+                    name = newSpace.transform.GetChild(1).GetComponent<Text>();
+                    name.fontSize = 1;
+                    name.text = "";
+                }
+                else
+                {
+                    Text name = newSpace.transform.GetChild(1).GetComponent<Text>();
+                    name.text = newMessage.name;
+                    name.fontSize = 30;
+                    name = newSpace.transform.GetChild(0).GetComponent<Text>();
+                    name.text = "";
+                    name.fontSize = 20;
+                }
             }
-            // set the text of the object
-            GameObject newText = newSpace.transform.GetChild(1).transform.GetChild(0).gameObject;
-            newMessage.textObject = newText.GetComponent<Text>();
-            newMessage.textObject.text = newMessage.text;
-            // code for the name appearing on top of the bubbles
-            if (oldName == newMessage.name)
-            {
-                Text name = newSpace.transform.GetChild(0).GetComponent<Text>();
-                name.fontSize = 1;
-                name.text = "";
-            }
-            else
-            {
-                Text name = newSpace.transform.GetChild(0).GetComponent<Text>();
-                name.text = newMessage.name;
-                name.fontSize = 30;
-            }
+            
+
             oldName = newMessage.name;
         }
         else
@@ -381,6 +533,8 @@ public class ChatManager : MonoBehaviour
         messageList.Add(newMessage);
 
     }
+
+    
 }
 
 [System.Serializable]

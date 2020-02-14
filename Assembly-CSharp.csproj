@@ -45,11 +45,43 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\Diary Assets\DiaryManager.cs" />
+     <Compile Include="Assets\Diary Assets\DiaryPageVars.cs" />
+     <Compile Include="Assets\Google Assets\HangManGame.cs" />
+     <Compile Include="Assets\Google Assets\SearchStart.cs" />
      <Compile Include="Assets\Messages Assets\ChatManager.cs" />
      <Compile Include="Assets\Messages Assets\Parser.cs" />
      <Compile Include="Assets\Messages Assets\ReplyBarScript.cs" />
+     <Compile Include="Assets\MG2 Assets\Minigame2.cs" />
+     <Compile Include="Assets\MG2 Assets\StartGame.cs" />
+     <Compile Include="Assets\Phone Assets\AnimationTrigger.cs" />
+     <Compile Include="Assets\Phone Assets\Phone.cs" />
+     <Compile Include="Assets\Phone Assets\PhoneParser.cs" />
+     <Compile Include="Assets\script.cs" />
+     <Compile Include="Assets\Shared Assets\DiaryParser.cs" />
+     <Compile Include="Assets\Shared Assets\GlobalControl.cs" />
+     <Compile Include="Assets\Shared Assets\NotificationDropdown.cs" />
+     <Compile Include="Assets\Shared Assets\NotifText.cs" />
      <Compile Include="Assets\Shared Assets\SceneChange.cs" />
      <Compile Include="Assets\Shared Assets\TimeManager.cs" />
+     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
+     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
+     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />
+     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
+     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
+     <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
+     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Masking.shader" />
+     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Mobile.shader" />
+     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF Overlay.shader" />
+     <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
+     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Surface.cginc" />
+     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Overlay.shader" />
+     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap.shader" />
+     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
+     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF.shader" />
+     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile.shader" />
+     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Sprite.shader" />
+     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface.shader" />
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>C:/Users/genea/OneDrive/Documents/192 test/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>
@@ -644,6 +676,12 @@
  <Reference Include="System.Xml.Serialization">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.17f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Xml.Serialization.dll</HintPath>
  </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
+      <Project>{8019384E-4CCB-CCC5-3765-09D9384081AD}</Project>
+      <Name>Assembly-CSharp-firstpass</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

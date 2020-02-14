@@ -12,6 +12,15 @@ Code History:
 2. Filbert Wee
    Change Date: January 24, 2020
    Change Description: Added ability to go into the home "page" and go back into the messages "app"
+3. Gene Tan
+    Change Date: February 2, 2020
+    Change Description: Added ability to go into the phone app
+4. Nephia Dalisay
+    Change Date: Feb 9, 2020
+    Change Description: Added method/ability to go into the Minigame 2 scene.
+5. Nephia Dalisay
+    Change Date: Feb 12, 2020
+    Change Description: Added method/ability to go back to diary main menu from specific page.
 
 File Creation
 Date: January 20, 2019
@@ -55,6 +64,18 @@ public class SceneChange : MonoBehaviour
     }
 
     /*
+    method name: ToHomeFromAnywhereElse
+    routine's creation date: February 3, 2020
+    purpose of the routine: Allow player go back into the home page while from anywhere other than the messaging app
+    a list of the calling arguments: string currentScene
+    a list of required files and/or database tables: N/A
+    and return value: N/A
+    */
+    public void ToHomeFromAnywhereElse(string currentScene)
+    {
+        SceneManager.UnloadSceneAsync(currentScene);
+    }
+    /*
     method name: ToMessages
     routine's creation date: January 23, 2020
     purpose of the routine: Allow player go back into the messages page from the home page.
@@ -65,6 +86,44 @@ public class SceneChange : MonoBehaviour
     public void ToMessages()
     {
         SceneManager.UnloadSceneAsync("Scenes/HomeAfterMessages");
+    }
+    /*
+    method name: ToAnywhereElse
+    routine's creation date: February 3, 2020
+    purpose of the routine: Allow player go back into other apps from the home page.
+    a list of the calling arguments: string currentScene
+    a list of required files and/or database tables: N/A
+    and return value: N/A
+    */
+    public void ToAnywhereElse(string scene)
+    {
+        SceneManager.LoadScene(scene, LoadSceneMode.Additive);
+    }
+    /*
+    method name: ToMinigame2
+    routine's creation date: February 9, 2020
+    purpose of the routine: Allow player go back into the scene of Minigame 2 (Spot the Difference).
+    a list of the calling arguments: N/A
+    a list of required files and/or database tables: N/A
+    and return value: N/A
+    */
+    public void ToMinigame2()
+    {
+        SceneManager.LoadScene("Scenes/Minigame2");
+    }
+
+    /*
+    method name: ToDiaryMainFromPage
+    routine's creation date: February 12, 2020
+    purpose of the routine: Allow player go back into the main menu of the diary from a specific page
+    a list of the calling arguments: N/A
+    a list of required files and/or database tables: N/A
+    and return value: N/A
+    */
+    public void ToDiaryMainFromPage()
+    {
+        SceneManager.UnloadSceneAsync("Scenes/Diary");
+        SceneManager.LoadScene("Scenes/Diary", LoadSceneMode.Additive);
     }
 
 }
