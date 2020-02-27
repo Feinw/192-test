@@ -300,6 +300,42 @@ public class ChatManager : MonoBehaviour
                 cases = "retrieving reply";
             }
         }
+        else if (num == 1)
+        {
+           if (StartGame.didwin)
+            {
+                type = "minigame-answer";
+                // if lost
+                if (StartGame.didwin)
+                {
+                    options.Add(story[type][2]);
+                }
+                // else won
+                else
+                {
+                    options.Add(story[type][3]);
+                }
+                // proceed with story
+                cases = "retrieving reply";
+            } 
+        }
+        else if (num == 2)
+        {
+            if (AnimationTrigger.minigameStart == false) {
+                AnimationTrigger.minigameStart = true;
+                AnimationTrigger.minigameDone = false;
+            }
+            if (AnimationTrigger.minigameStart && AnimationTrigger.minigameDone) {
+                type = "minigame-answer";
+                if (AnimationTrigger.minigameSuccess) {
+                    options.Add(story[type][4]);
+                }
+                else {
+                    options.Add(story[type][5]);
+                }
+                cases = "retrieving reply";
+            }
+        }
     }
     
     /*

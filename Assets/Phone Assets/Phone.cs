@@ -45,7 +45,7 @@ public class Phone : MonoBehaviour
     }
 
     public void buttonPressed(string number) {
-        if (dialedNumber.Length < 11) { 
+        if (dialedNumber.Length < 11 && AnimationTrigger.animationStart == false) { 
             dialedNumber = dialedNumber + number;
             Debug.Log(dialedNumber);
             temp.text = dialedNumber;
@@ -53,21 +53,21 @@ public class Phone : MonoBehaviour
     }
 
 
-    public void callNumber() {
-        // iTween.ValueTo(callButton, iTween.Hash("from", "08B34E", "to", Color.red, "time", 1f, "onupdate", "updatingColor"));
-        if (dialedNumber == "911") 
-        {
-            Debug.Log("perfect");
-        }
-        else
-        {
-            Debug.Log("wrong");
+    // public void callNumber() {
+    //     // iTween.ValueTo(callButton, iTween.Hash("from", "08B34E", "to", Color.red, "time", 1f, "onupdate", "updatingColor"));
+    //     if (dialedNumber == "911") 
+    //     {
+    //         Debug.Log("perfect");
+    //     }
+    //     else
+    //     {
+    //         Debug.Log("wrong");
             
-        }
-    }
+    //     }
+    // }
 
     public void eraseNumber() {
-        if (dialedNumber.Length > 0) {
+        if (dialedNumber.Length > 0 && AnimationTrigger.animationStart == false) {
         dialedNumber = dialedNumber.Remove(dialedNumber.Length - 1, 1); 
         temp.text = dialedNumber;
         }

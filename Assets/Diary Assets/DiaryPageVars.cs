@@ -26,7 +26,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using System.IO;
 using System;
 
 public class DiaryPageVars : MonoBehaviour
@@ -59,6 +58,8 @@ public class DiaryPageVars : MonoBehaviour
     // an list containing the lines read from the .tsv file
     public List<string> content;
 
+    public TextAsset diaryPageContents;
+
     /*
     method name: Start
     routine's creation date: Feb 10, 2020
@@ -73,26 +74,16 @@ public class DiaryPageVars : MonoBehaviour
     void Start()
     {
         content = new List<string>();
-        // HARD CODE --- as the file parts will be different per OS used.
-        string path = Application.dataPath + "/" + "Diary Assets /Page Contents.tsv";
-        // variable to be used in temporarily storing each line of the .tsv file at a time
-        string tmp;
-        // variable to actually read the .tsv file as a whole
-        StreamReader tr = new StreamReader(path);
+        
+        string[] splits = new string[] { "\r", "\n", "\t\t" };
+        string[] words = diaryPageContents.text.Split(splits, StringSplitOptions.RemoveEmptyEntries);
 
-        // to remove the header line in the beginning
-        tr.ReadLine();
-
-        while((tmp = tr.ReadLine()) != null)
+        for (int i = 1; i < words.Length; i++)
         {
-            //remove blank lines
-            if (!tmp.Contains("\t\t"))
-            {
-                content.Add(tmp);
-            }
+            content.Add(words[i]);
         }
-        tr.Close();
-        foreach(string scontent in content)
+
+        foreach (string scontent in content)
         {
             string[] parsedcontent = scontent.Trim().Split("\t"[0]);
             contentid = int.Parse(parsedcontent[0]);

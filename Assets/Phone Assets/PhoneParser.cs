@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System.IO;
+using System;
 
 public class PhoneParser : MonoBehaviour
 {
@@ -10,7 +10,10 @@ public class PhoneParser : MonoBehaviour
     // Dictionary named story to contain the objects after parsing
     public Dictionary<string, List<DTypes>> story;       
     // GameObject that contains the script the dictionary will be passed to
-    public GameObject callButton;                        
+    public GameObject callButton;
+
+    public TextAsset phoneConversation;
+    public TextAsset phoneConversationTypes;
 
     /*
     method name: Start
@@ -29,20 +32,27 @@ public class PhoneParser : MonoBehaviour
     {
         initializeDictionary();
         // HARD CODE --- as the file parts will be different per OS used.
-        string path = Application.dataPath + "/" + "Phone Assets /PhoneConversation.tsv";
+        //string path = Application.dataPath + "/" + "Phone Assets /PhoneConversation.tsv";
         // variable to be used in temporarily storing each line of the .tsv file at a time
-        string tmp;
+        //string tmp;
         // variable to actually read the .tsv file as a whole
-        StreamReader tr = new StreamReader(path);
+        //StreamReader tr = new StreamReader(path);
         // to remove the header line in the beginning
-        tr.ReadLine();
-        while ((tmp = tr.ReadLine()) != null)
-        {
+        //tr.ReadLine();
+        //while ((tmp = tr.ReadLine()) != null)
+        //{
             //remove blank lines
-            if (!tmp.Contains("\t\t\t"))
-            {
-                messages.Add(tmp);          
-            }
+            //if (!tmp.Contains("\t\t\t"))
+            //{
+                //messages.Add(tmp);          
+            //}
+        //}
+        string[] splits = new string[] { "\r", "\n", "\t\t\t\t\t\t" };
+        string[] words = phoneConversation.text.Split(splits, StringSplitOptions.RemoveEmptyEntries);
+
+        for (int i = 1; i < words.Length; i++)
+        {
+            messages.Add(words[i]);
         }
         foreach (string message in messages)
         {
@@ -64,7 +74,7 @@ public class PhoneParser : MonoBehaviour
                     nextLine.choices.Add(int.Parse(element));
                 }
             }
-            else if (string.Equals(nextLine.nextType, "choice"))
+            else if (string.Equals(nextLine.nextType, "phoneChoice"))
             {
                 nextLine.choices.Add(int.Parse(line[5]));
             }
@@ -102,22 +112,29 @@ public class PhoneParser : MonoBehaviour
     {
         story = new Dictionary<string, List<DTypes>>();
         // HARD CODE --- as the file parts will be different per OS used.
-        string path = Application.dataPath + "/" + "Phone Assets /PhoneConversation - Types.tsv";
+        //string path = Application.dataPath + "/" + "Phone Assets /PhoneConversation - Types.tsv";
         // variable to be used in temporarily storing each line of the .tsv file at a time
-        string tmp;
+        //string tmp;
         // variable to actually read the .tsv file as a whole
-        StreamReader types = new StreamReader(path);
+        //StreamReader types = new StreamReader(path);
         // to remove the header line in the beginning
-        types.ReadLine();       
-        while ((tmp = types.ReadLine()) != null)
-        {
+        //types.ReadLine();       
+        //while ((tmp = types.ReadLine()) != null)
+        //{
             //remove blank lines
-            if (!tmp.Contains("\t"))
-            {
+            //if (!tmp.Contains("\t"))
+            //{
                 // initializes types of "events" dictionary
-                Debug.Log(tmp);
-                story.Add(tmp, new List<DTypes>());     
-            }
+                //Debug.Log(tmp);
+                //story.Add(tmp, new List<DTypes>());     
+            //}
+        //}
+        string[] splits = new string[] { "\r", "\n", "\t" };
+        string[] words = phoneConversationTypes.text.Split(splits, StringSplitOptions.RemoveEmptyEntries);
+
+        for (int i = 1; i < words.Length; i++)
+        {
+            story.Add(words[i], new List<DTypes>());
         }
     }
 }

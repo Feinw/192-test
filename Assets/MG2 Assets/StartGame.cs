@@ -7,8 +7,8 @@ Author/s: Nephia Dalisay
 
 Code History:
 1. Nephia Dalisay
-   Change Date: 
-   Change Description: 
+   Change Date: Feb. 25, 2020
+   Change Description: Added FoundDocuments() method.
 
 
 File Creation
@@ -37,10 +37,12 @@ public class StartGame : MonoBehaviour
     public GameObject Dog;
     public GameObject CeilingFan;
     public GameObject WindowCracks;
+    public GameObject Documents;
 
     public GameObject FoundObject;
 
     static int score;
+    public static bool didwin;
 
     private bool moved;
 
@@ -51,6 +53,7 @@ public class StartGame : MonoBehaviour
     {
         moved = false;
         score = 0;
+        didwin = false;
     }
 
     // Update is called once per frame
@@ -58,7 +61,7 @@ public class StartGame : MonoBehaviour
 
     void Update()
     {
-        if (score >= 3)
+        if (score >= 4)
         {
             GameWon();
         }
@@ -115,6 +118,12 @@ public class StartGame : MonoBehaviour
         AddScore();
     }
 
+    public void FoundDocuments()
+    {
+    	Destroy(Documents);
+    	AddScore();
+    }
+
     void GameWon()
     {
         RectTransform WonRT = Winner.GetComponent<RectTransform>();
@@ -130,6 +139,8 @@ public class StartGame : MonoBehaviour
         LowerRT.anchoredPosition = new Vector3(-810, -189, 0);
         PlayRT.anchoredPosition = new Vector3(-810, -189, 0);
         InstRT.anchoredPosition = new Vector3(-810, -189, 0);
-        FoundRT.anchoredPosition = new Vector3(-842, -652, 0);
+        FoundRT.anchoredPosition = new Vector3(-0, -652, 0);
+
+        didwin = true;
     }
 }
