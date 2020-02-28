@@ -21,6 +21,9 @@ Code History:
 5. Nephia Dalisay
     Change Date: Feb 12, 2020
     Change Description: Added method/ability to go back to diary main menu from specific page.
+6. Nephia Dalisay
+    Change Date: Feb 25, 2020
+    Change Description: Edited ToMinigame2() method, added ToMessagesAfterMG2() and ToMessagesAfterMG2Win(), which are methods to go back into the messages app from the Spot the Difference minigame
 
 File Creation
 Date: January 20, 2019
@@ -45,6 +48,8 @@ public class SceneChange : MonoBehaviour
     a list of required files and/or database tables: N/A
     and return value: N/A
     */
+
+        // rename later one to load messages
     public void ToMessagesFirstLaunch()
     {
         SceneManager.LoadScene("Scenes/Messages");
@@ -83,6 +88,8 @@ public class SceneChange : MonoBehaviour
     a list of required files and/or database tables: N/A
     and return value: N/A
     */
+
+        // rename later one to unload to messages
     public void ToMessages()
     {
         SceneManager.UnloadSceneAsync("Scenes/HomeAfterMessages");
@@ -98,6 +105,7 @@ public class SceneChange : MonoBehaviour
     public void ToAnywhereElse(string scene)
     {
         SceneManager.LoadScene(scene, LoadSceneMode.Additive);
+
     }
     /*
     method name: ToMinigame2
@@ -109,7 +117,8 @@ public class SceneChange : MonoBehaviour
     */
     public void ToMinigame2()
     {
-        SceneManager.LoadScene("Scenes/Minigame2");
+        SceneManager.LoadScene("Scenes/HomeAfterMessages", LoadSceneMode.Additive);
+        SceneManager.LoadScene("Scenes/Minigame2", LoadSceneMode.Additive);
     }
 
     /*
@@ -124,6 +133,16 @@ public class SceneChange : MonoBehaviour
     {
         SceneManager.UnloadSceneAsync("Scenes/Diary");
         SceneManager.LoadScene("Scenes/Diary", LoadSceneMode.Additive);
+    }
+
+    public void ToMessagesAfterMG2()
+    {
+        SceneManager.UnloadSceneAsync("Scenes/Minigame2");
+    }
+
+    public void ToMessagesAfterMG2Win()
+    {
+        SceneManager.UnloadSceneAsync("Scenes/Minigame2");
     }
 
 }

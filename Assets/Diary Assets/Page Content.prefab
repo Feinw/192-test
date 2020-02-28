@@ -102,3 +102,4 @@ MonoBehaviour:
   PageTitle: {fileID: 6864866235715085667}
   PageContent: {fileID: 6864866235715085667}
   content: []
+  diaryPageContents: {fileID: 4900000, guid: 14ffc7a4ea8f1174b9685113392e166d, type: 3}

@@ -1,0 +1,26 @@
+Type	#	user	text	nextType	#	unlocks
+phone	0	operator	"Hello?"	phone	1	-1
+phone	1	operator	"911, what is your emergency?"	phoneChoice	0,1	-1
+phoneChoice	0	player	Say nothing	phone	2	-1
+phoneChoice	1	player	Be concise	phone	5	-1
+phone	2	operator	"Listen, if you’re not going to say anything, I’m hanging up."	phone	3	-1
+phone	3	operator	"We don’t have time for prank calls, and I hope you know why."	phone	4	-1
+phone	4	operator	"Have a good day."	stop	1	-1
+						
+phone	5	operator	"Got it, what’s the location of the victim?"	phoneChoice	2	-1
+phoneChoice	2	player	It’s along Sampaguita Road, Tacloban City	phone	6	-1
+phone	6	operator	"Any prominent landmarks?"	phoneChoice	3	-1
+phoneChoice	3	player	 I… I’m not sure	phone	7	-1
+phone	7	operator	"How long has he been stuck there for?"	phoneChoice	4	-1
+phoneChoice	4	player	Not very long, maybe... 5 minutes?	phone	8	-1
+phone	8	operator	"Is your friend alone?"	phoneChoice	5	-1
+phoneChoice	5	player	He’s alone in the basement, but his family is in the upper floors of the house. They can’t get to him because of the storm and flood.	phone	9	-1
+phone	9	operator	"Got it."	phone	10	-1
+phone	10	operator	"What’s your name?"	phoneChoice	6	-1
+phoneChoice	6	player	[Player]	phone	11	-1
+phone	11	operator	"and your friend?"	phoneChoice	7	-1
+phoneChoice	7	player	[b]	phone	12	-1
+phone	12	operator	"The rescue team is on their way." 	phone	13	-1
+phone	13	operator	"We request you to keep your phone close to you at all times."	phone	14	-1
+phone	14	operator	"We have your number saved and may call you again if necessary."	phone	15	-1
+phone	15	operator	"Stay calm and call us again in case something happens."	stop	0	-1

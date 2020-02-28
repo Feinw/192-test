@@ -31,6 +31,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
+using UnityEditor;
+using System;
 
 public class Parser : MonoBehaviour
 {
@@ -39,7 +41,10 @@ public class Parser : MonoBehaviour
     // Dictionary named story to contain the objects after parsing
     private Dictionary<string, List<DTypes>> story;       
     // GameObject that contains the script the dictionary will be passed to
-    public GameObject chatManager;                        
+    public GameObject chatManager;
+
+    public TextAsset script;
+    public TextAsset types;
 
     /*
     method name: Start
@@ -57,22 +62,15 @@ public class Parser : MonoBehaviour
     void Start()
     {
         initializeDictionary();
-        // HARD CODE --- as the file parts will be different per OS used.
-        string path = Application.dataPath + "/" + "Messages Assets /Storm Surge and Flood Script - Sorted.tsv";
-        // variable to be used in temporarily storing each line of the .tsv file at a time
-        string tmp;
-        // variable to actually read the .tsv file as a whole
-        StreamReader tr = new StreamReader(path);
-        // to remove the header line in the beginning
-        tr.ReadLine();
-        while ((tmp = tr.ReadLine()) != null)
+        
+        string[] splits = new string[] { "\r", "\n", "\t\t\t\t\t\t" };
+        string[] words = script.text.Split(splits, StringSplitOptions.RemoveEmptyEntries);
+
+        for (int i = 1; i < words.Length; i++)
         {
-            //remove blank lines
-            if (!tmp.Contains("\t\t\t"))
-            {
-                messages.Add(tmp);          
-            }
+            messages.Add(words[i]);
         }
+
         foreach (string message in messages)
         {
             string[] line = message.Trim().Split("\t"[0]);
@@ -129,22 +127,13 @@ public class Parser : MonoBehaviour
     public void initializeDictionary()
     {
         story = new Dictionary<string, List<DTypes>>();
-        // HARD CODE --- as the file parts will be different per OS used.
-        string path = Application.dataPath + "/" + "Messages Assets /Storm Surge and Flood Script - Types.tsv";
-        // variable to be used in temporarily storing each line of the .tsv file at a time
-        string tmp;
-        // variable to actually read the .tsv file as a whole
-        StreamReader types = new StreamReader(path);
-        // to remove the header line in the beginning
-        types.ReadLine();       
-        while ((tmp = types.ReadLine()) != null)
+        
+        char[] splits = new char[] { '\r', '\n' , '\t' };
+        string[] words = types.text.Split(splits, StringSplitOptions.RemoveEmptyEntries);
+
+        for(int i = 1; i < words.Length; i++)
         {
-            //remove blank lines
-            if (!tmp.Contains("\t"))
-            {
-                // initializes types of "events" dictionary
-                story.Add(tmp, new List<DTypes>());     
-            }
+            story.Add(words[i], new List<DTypes>());
         }
     }
 }

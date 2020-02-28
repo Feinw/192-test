@@ -1,7 +1,0 @@
-Type	#	user	text	nextType	#	unlocks
-phone	0	operator	hello	phone	1	-1
-phone	1	operator	911, what's your emergency?	phoneChoice	0,1	-1
-phoneChoice	0	player	nothing	phone	3	-1
-phoneChoice	1	player	My friend got stuck in the basement	phone	2	-1
-phone	2	operator	ok	stop	0	-1
-phone	3	operator	help is on the way	stop	0	-1

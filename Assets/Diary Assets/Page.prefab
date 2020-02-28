@@ -152,6 +152,7 @@ MonoBehaviour:
   PageContent: {fileID: 6864866235715085667, guid: fa0c65ef81b2d8d49b58936d62a4fcd2,
     type: 3}
   content: []
+  diaryPageContents: {fileID: 4900000, guid: 14ffc7a4ea8f1174b9685113392e166d, type: 3}
 --- !u!114 &815628084346566475
 MonoBehaviour:
   m_ObjectHideFlags: 0

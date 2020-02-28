@@ -1,5 +1,5 @@
 #	Title	text	unlocked?
-0	Page Number 1	This is the content of the first page	False
-1	Page Number 2	This is the content of the second page	False
+0	Page Number 1	This is the content of the first page	True
+1	Page Number 2	This is the content of the second page	True
 2	Page Number 3	This is the content of the third page	False
-3	Page Number 4	This is the content of the fourth page	False
+3	Page Number 4	This is the content of the fourth page	True

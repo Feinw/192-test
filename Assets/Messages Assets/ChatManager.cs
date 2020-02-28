@@ -57,6 +57,9 @@ Code History:
 16.Filbert Wee
    Change Date: Feb 11, 2020
    Change Description: Added hangman game to the story
+17. Nephia Dalisay
+    Change Date: Feb 27, 2020
+    Change Description: Allows clickable photo to be sent by bot, leading to minigame2
 
 File Creation
 Date: January 20, 2019
@@ -98,7 +101,7 @@ public class ChatManager : MonoBehaviour
     public GameObject diaryParser;
 
     // gameobjects (where to post the messages, what the "friends', your, and system messages look like") to be accessed by the script
-    public GameObject chatPanel, botReplyPrefab, playerReplyPrefab, systemNotifPrefab;
+    public GameObject chatPanel, botReplyPrefab, playerReplyPrefab, systemNotifPrefab, photoPrefab;
     // variable to check whether the name of a "sender" should be displayed
     private string oldName = "";
 
@@ -300,6 +303,43 @@ public class ChatManager : MonoBehaviour
                 cases = "retrieving reply";
             }
         }
+        // case for minigame2 (spot the difference)
+        else if (num == 1)
+        {
+           if (StartGame.didwin)
+            {
+                type = "minigame-answer";
+                // if won
+                if (StartGame.didwin)
+                {
+                    options.Add(story[type][2]);
+                }
+                // else lost
+                else
+                {
+                    options.Add(story[type][3]);
+                }
+                // proceed with story
+                cases = "retrieving reply";
+            } 
+        }
+        else if (num == 2)
+        {
+            if (AnimationTrigger.minigameStart == false) {
+                AnimationTrigger.minigameStart = true;
+                AnimationTrigger.minigameDone = false;
+            }
+            if (AnimationTrigger.minigameStart && AnimationTrigger.minigameDone) {
+                type = "minigame-answer";
+                if (AnimationTrigger.minigameSuccess) {
+                    options.Add(story[type][4]);
+                }
+                else {
+                    options.Add(story[type][5]);
+                }
+                cases = "retrieving reply";
+            }
+        }
     }
     
     /*
@@ -340,7 +380,7 @@ public class ChatManager : MonoBehaviour
     method name: setBlockedButton
     routine's creation date: January 26, 2020
     purpose of the routine: Only displays the text of the chosen (blocked) choice on the console. 
-    a list of the calling arguments: N/A
+    a list of the calling arguments: DTypes option, DTypes is a custom class used to store the already parsed messages from the dictionary
     a list of required files and/or database tables: N/A
     and return value: N/A
     */
@@ -486,6 +526,21 @@ public class ChatManager : MonoBehaviour
                     name.text = "";
                     name.fontSize = 20;
                 }
+            }
+            // case for if a photo is sent by the bot (which leads to minigame2)
+            else if (newMessage.name == "p")
+            {
+            // instantiates the clickable photo
+            newSpace = Instantiate(photoPrefab, chatPanel.transform);
+
+            // instantiates the system instruction
+            newSpace = Instantiate(systemNotifPrefab, chatPanel.transform);
+
+            // set the text of the object, "Click the photo above"
+            GameObject newText = newSpace.transform.GetChild(0).transform.GetChild(0).gameObject;
+            newMessage.textObject = newText.GetComponent<Text>();
+            newMessage.textObject.text = newMessage.text;
+                
             }
             else
             {
