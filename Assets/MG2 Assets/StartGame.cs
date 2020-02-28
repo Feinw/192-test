@@ -9,6 +9,9 @@ Code History:
 1. Nephia Dalisay
    Change Date: Feb. 25, 2020
    Change Description: Added FoundDocuments() method.
+2. Nephia Dalisay
+   Change Date: Feb 26, 2020
+   Change Description: Added static bool, didwin, to check if player has finished the minigame
 
 
 File Creation
@@ -27,28 +30,40 @@ using System.Threading;
 
 public class StartGame : MonoBehaviour
 {
+	// all game objects on background
     public GameObject HomeButton;
     public GameObject UpperPhoto;
     public GameObject LowerPhoto;
     public GameObject PlayButton;
     public GameObject Instructions;
     public GameObject Winner;
+    public GameObject FoundObject;
+    public Text txt;
 
+    // game objects in the photo
     public GameObject Dog;
     public GameObject CeilingFan;
     public GameObject WindowCracks;
     public GameObject Documents;
 
-    public GameObject FoundObject;
-
+    // stores player's score
     static int score;
+
+    // if player has finished game or not
     public static bool didwin;
 
+    // if minigame start button has been clicked
     private bool moved;
 
-    public Text txt;
-
-    // Start is called before the first frame update
+    
+    /*
+    method name: Start
+    routine's creation date: Feb 9 2020
+    purpose of the routine: Initializes variables
+    a list of the calling arguments: N/A
+    a list of required files and/or database tables: N/A
+    and return value: N/A
+    */
     void Start()
     {
         moved = false;
@@ -56,9 +71,14 @@ public class StartGame : MonoBehaviour
         didwin = false;
     }
 
-    // Update is called once per frame
-
-
+    /*
+    method name: Update
+    routine's creation date: Feb 9 2020
+    purpose of the routine: Checks if player has reached winning score, then calls the GameWon method
+    a list of the calling arguments: N/A
+    a list of required files and/or database tables: N/A
+    and return value: N/A
+    */
     void Update()
     {
         if (score >= 4)
@@ -67,6 +87,14 @@ public class StartGame : MonoBehaviour
         }
     }
 
+    /*
+    method name: StartIt
+    routine's creation date: Feb 9 2020
+    purpose of the routine: Moves gameobjects to be able to play the actual minigame
+    a list of the calling arguments: N/A
+    a list of required files and/or database tables: N/A
+    and return value: N/A
+    */
     public void StartIt()
     {
         if (!moved)
@@ -90,6 +118,14 @@ public class StartGame : MonoBehaviour
         FoundRT.anchoredPosition = new Vector3(0, -652, 0);
     }
 
+    /*
+    method name: AddScore
+    routine's creation date: Feb 9 2020
+    purpose of the routine: Adds +1 to player's score everytime they click on a correct area
+    a list of the calling arguments: N/A
+    a list of required files and/or database tables: N/A
+    and return value: N/A
+    */
     void AddScore()
     {
         score = score + 1;
@@ -100,30 +136,70 @@ public class StartGame : MonoBehaviour
         Debug.Log(score);
     }
 
+    /*
+    method name: FoundDog
+    routine's creation date: Feb 9 2020
+    purpose of the routine: Adds to player's score after they've found the dog gameobject, then destroys this gameobject afterwards.
+    a list of the calling arguments: N/A
+    a list of required files and/or database tables: N/A
+    and return value: N/A
+    */
     public void FoundDog()
     {
         Destroy(Dog);
         AddScore();
     }
 
+    /*
+    method name: FoundDFan
+    routine's creation date: Feb 9 2020
+    purpose of the routine: Adds to player's score after they've found the ceiling fan gameobject, then destroys this gameobject afterwards.
+    a list of the calling arguments: N/A
+    a list of required files and/or database tables: N/A
+    and return value: N/A
+    */
     public void FoundFan()
     {
         Destroy(CeilingFan);
         AddScore();
     }
 
+    /*
+    method name: Found
+    routine's creation date: Feb 9 2020
+    purpose of the routine: Adds to player's score after they've found the windows cracks gameobject, then destroys this gameobject afterwards.
+    a list of the calling arguments: N/A
+    a list of required files and/or database tables: N/A
+    and return value: N/A
+    */
     public void FoundCracks()
     {
         Destroy(WindowCracks);
         AddScore();
     }
 
+    /*
+    method name: FoundDocuments
+    routine's creation date: Feb 9 2020
+    purpose of the routine: Adds to player's score after they've found the dpocuments gameobject, then destroys this gameobject afterwards.
+    a list of the calling arguments: N/A
+    a list of required files and/or database tables: N/A
+    and return value: N/A
+    */
     public void FoundDocuments()
     {
     	Destroy(Documents);
     	AddScore();
     }
 
+    /*
+    method name: GameWon
+    routine's creation date: Feb 9 2020
+    purpose of the routine: Method for when the player finds all differences (gameobjects). The objects are moved to show a different screen saying they have fininshed the minigame.
+    a list of the calling arguments: N/A
+    a list of required files and/or database tables: N/A
+    and return value: N/A
+    */
     void GameWon()
     {
         RectTransform WonRT = Winner.GetComponent<RectTransform>();

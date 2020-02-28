@@ -105,6 +105,7 @@ public class SceneChange : MonoBehaviour
     public void ToAnywhereElse(string scene)
     {
         SceneManager.LoadScene(scene, LoadSceneMode.Additive);
+
     }
     /*
     method name: ToMinigame2

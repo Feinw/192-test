@@ -1,31 +1,56 @@
-﻿using System.Collections;
+﻿/*
+“This is a course requirement for CS 192 Software Engineering II under the 
+supervision of Asst. Prof. Ma. Rowena C. Solamo of the Department of Computer Science, 
+College of Engineering, University of the Philippines, Diliman for the AY 2019-2020”.
+
+Author/s: Gene Tan
+
+Code History:
+1. Gene Tan
+   Change Date: February 23, 2020
+   Change Description: Code is heavily based off the other parser script. Certain variables and lines were changed for successful
+                        parsing of the phone conversation text file.
+
+File Creation
+Date: February 23, 2020
+Development Group: Nephia Dalisay, Gene Tan, Filbert Wee
+Client Group: Prof. Ma. Rowena C. Solamo, students of CS 192, people interested in mobile games
+Purpose of the software: The purpose of this project is to create a mobile application that aims to 
+                         encourage disaster preparedness in a fun, unique, and memorable way.
+
+*/
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
 
 public class PhoneParser : MonoBehaviour
 {
-    // an list containing the lines read from the .tsv file
+    // an list containing the lines read from the .txt file
     public List<string> messages;                         
     // Dictionary named story to contain the objects after parsing
     public Dictionary<string, List<DTypes>> story;       
     // GameObject that contains the script the dictionary will be passed to
     public GameObject callButton;
 
+    // to contain the phone conversation text file; this variable is initialized on the Unity UI
     public TextAsset phoneConversation;
+
+    // to contain the phone conversation types text file; this variable is initialized on the Unity UI
     public TextAsset phoneConversationTypes;
 
     /*
     method name: Start
-    routine's creation date: January 22, 2020
+    routine's creation date: February 23, 2020
     purpose of the routine: Start is called before the first frame update. Usually used for initializing variables.
-                            This routine reads the .tsv file and converts each line into objects and append them into
+                            This routine reads the .txt file and converts each line into objects and append them into
                             a dictionary. The lines in the file are categorized into types. 
                             The types are the keys in the dictionary and the lines in the file (minus the type) are the
                             values.
-                            After the dictionary has been filled, the dictionary is passed to ChatManager.cs 
+                            After the dictionary has been filled, the dictionary is passed to AnimationTrigger.cs
     a list of the calling arguments: N/A
-    a list of required files and/or database tables: Storm Surge and Flood Script - Sheet1.tsv
+    a list of required files and/or database tables: N/A
     and return value: N/A
     */
     void Start()
@@ -100,7 +125,7 @@ public class PhoneParser : MonoBehaviour
     
     /*
     method name: initializeDictionary
-    routine's creation date: January 28, 2020
+    routine's creation date: February 23, 2020
     purpose of the routine: This routine initializes the dictionary by reading the types of events on the script.
                             It initializes the dictionary using the types as the keys and empty lists of objects
                             as the values.

@@ -58,7 +58,7 @@ badending3	9	b	ohhhh, well alright. That’ll be my plan for the weekend then. J
 badending3	10	b	hi so	badending3	11	-1
 badending3	11	b	we shouldn’t have tried to pump all the water out at once	badending3	12	-1
 badending3	12	b	ughh i hate everything i’m so tired and this happens	badending3	13	-1
-badending3	13	a	?	choice	74	-1
+badending3	13	a	?	choice	75	-1
 badending3	14	b	the floor and walls of the basement cracked and collapsed	badending3	15	-1
 badending3	15	b	IT'S DESTROYED	badending3	16	-1
 badending3	16	b	there were so many things kept in there, even; important things	choice	78	-1
@@ -295,7 +295,7 @@ choice	25	Player	What are you talking about?	event2	13	-1
 choice	26	Player	I feel the same way.	event2	13	-1
 choice	27	Player	open the windows	event3	0	-1
 choice	28	Player	fetch the dehumidifier and air mover	badending2	0	-1
-choice	29	Player	go ahead	block	0	-1
+choice	29	Player	go ahead	badending7	0	-1
 choice	30	Player	don't	event4	0	-1
 choice	31	Player	16211	event4	9	-1
 choice	32	Player	just think of it as a work out	badending3	0	-1
@@ -403,9 +403,9 @@ event1	21	a	You can still try making last minute preparations to lessen the dama
 event1	22	a	What does the NDRRMC text say?	event1	23	-1
 event1	23	b	they said they’re anticipating the storm surge three days from now	event1	24	-1
 event1	24	a	Good.	event1	25	-1
-event1	25	b	good?	event1	26	-1
-event1	26	b	I mean I know all about storm surges now but i still have no clue what to do	event1	27	-1
-event1	27	a	hmm, maybe this'll help	minigame	1	-1
+event1	25	b	good? I mean I know all about storm surges now but i still have no clue what to do	event1	26	-1
+event1	26	a	Check this out	event1	27	-1
+event1	27	p	Click on the photo above	minigame	1	-1
 event1	28	b	nice! thanks for helping me guys	event1	29	-1
 event1	29	b	oh hey	event1	30	-1
 event1	30	b	i just received another message from ndrrmc	event1	31	-1
