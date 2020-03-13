@@ -9,6 +9,9 @@ Code History:
 1. Gene Tan
    Change Date: February 1, 2020
    Change Description: Transferred the Notification Dropdown code from ChatManager.cs to this file
+2. Gene Tan
+   Change Date: March 12, 2020
+   Change Description: Added resetVariables()
 
 File Creation
 Date: February 1, 2020
@@ -40,7 +43,7 @@ public class NotificationDropdown : MonoBehaviour
     public Vector3 notifBarPosition;
 
     // boolean to check whether to perform the code in Update() or not
-    public bool currentlyNotifying;
+    public static bool currentlyNotifying;
     // boolean to help the program know whether the move the notifbar up or down
     public bool notifyingDone;
     // variable for debugging
@@ -82,7 +85,7 @@ public class NotificationDropdown : MonoBehaviour
     {
         // Updates the text on the notification bar
         Text temp = notifBar.transform.GetChild(1).GetComponent<Text>();
-        Debug.Log(temp);
+        // Debug.Log(temp);
         temp.text = NotifText.text;
         temp = notifBar.transform.GetChild(0).GetChild(0).GetComponent<Text>();
         temp.text = NotifText.title;
@@ -104,8 +107,7 @@ public class NotificationDropdown : MonoBehaviour
             if (alertTimer >= alertCountdown) {
                 removeAlert();
                 alertTimer = 0;
-                currentlyNotifying = false;
-                notifyingDone = false;
+                
             }
             // increment the timer
             alertTimer += Time.deltaTime;
@@ -134,7 +136,19 @@ public class NotificationDropdown : MonoBehaviour
     */
     public void removeAlert() {
         notifBarPosition.y += notifMove;
-        iTween.MoveTo(notifBar, iTween.Hash("position", notifBarPosition, "time", 1.0f, "easeType", iTween.EaseType.easeInOutSine));
+        iTween.MoveTo(notifBar, iTween.Hash("position", notifBarPosition, "time", 1.0f, "easeType", iTween.EaseType.easeInOutSine, "onComplete", "resetVariables", "onCompleteTarget", gameObject));
+    }
+    /*
+    method name: resetVariables
+    routine's creation date: March 12, 2020
+    purpose of the routine: to reset the variables after notification dropdown animation
+    a list of the calling arguments: N/A
+    a list of required files and/or database tables: N/A
+    and return value: N/A
+    */
+    public void resetVariables() {
+        currentlyNotifying = false;
+        notifyingDone = false;
     }
 
 }

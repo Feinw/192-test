@@ -53,6 +53,7 @@ public class SceneChange : MonoBehaviour
     public void ToMessagesFirstLaunch()
     {
         SceneManager.LoadScene("Scenes/Messages");
+        SharedVariables.atMessages = true;
     }
 
     /*
@@ -66,6 +67,7 @@ public class SceneChange : MonoBehaviour
     public void ToHome()
     {
         SceneManager.LoadScene("Scenes/HomeAfterMessages", LoadSceneMode.Additive);
+        SharedVariables.atMessages = false;
     }
 
     /*
@@ -79,6 +81,7 @@ public class SceneChange : MonoBehaviour
     public void ToHomeFromAnywhereElse(string currentScene)
     {
         SceneManager.UnloadSceneAsync(currentScene);
+        SharedVariables.atMessages = false;
     }
     /*
     method name: ToMessages
@@ -93,6 +96,7 @@ public class SceneChange : MonoBehaviour
     public void ToMessages()
     {
         SceneManager.UnloadSceneAsync("Scenes/HomeAfterMessages");
+        SharedVariables.atMessages = true;
     }
     /*
     method name: ToAnywhereElse
@@ -105,7 +109,7 @@ public class SceneChange : MonoBehaviour
     public void ToAnywhereElse(string scene)
     {
         SceneManager.LoadScene(scene, LoadSceneMode.Additive);
-
+        SharedVariables.atMessages = false;
     }
     /*
     method name: ToMinigame2
@@ -115,10 +119,11 @@ public class SceneChange : MonoBehaviour
     a list of required files and/or database tables: N/A
     and return value: N/A
     */
-    public void ToMinigame2()
+    public static void ToMinigame2()
     {
         SceneManager.LoadScene("Scenes/HomeAfterMessages", LoadSceneMode.Additive);
         SceneManager.LoadScene("Scenes/Minigame2", LoadSceneMode.Additive);
+        SharedVariables.atMessages = false;
     }
 
     /*
@@ -133,16 +138,20 @@ public class SceneChange : MonoBehaviour
     {
         SceneManager.UnloadSceneAsync("Scenes/Diary");
         SceneManager.LoadScene("Scenes/Diary", LoadSceneMode.Additive);
+        SharedVariables.atMessages = false;
     }
 
     public void ToMessagesAfterMG2()
     {
         SceneManager.UnloadSceneAsync("Scenes/Minigame2");
+        SceneManager.UnloadSceneAsync("Scenes/HomeAfterMessages");
+        SharedVariables.atMessages = true;
     }
 
     public void ToMessagesAfterMG2Win()
     {
         SceneManager.UnloadSceneAsync("Scenes/Minigame2");
+        SharedVariables.atMessages = true;
     }
 
 }

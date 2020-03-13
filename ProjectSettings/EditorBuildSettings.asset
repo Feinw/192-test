@@ -32,4 +32,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/DiaryAfterOpeningPage.unity
     guid: 73e1f59e3eaeda442a5855b20ef6d381
+  - enabled: 1
+    path: Assets/Scenes/Username.unity
+    guid: 6e2d8ba278be2f144ade68b5e65015d6
+  - enabled: 1
+    path: Assets/Scenes/Twitter.unity
+    guid: cbdc583034b9c4c4e875277d205cfdf5
   m_configObjects: {}

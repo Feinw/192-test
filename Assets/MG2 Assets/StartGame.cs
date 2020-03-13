@@ -30,8 +30,8 @@ using System.Threading;
 
 public class StartGame : MonoBehaviour
 {
-	// all game objects on background
-    public GameObject HomeButton;
+    // all game objects on background
+    //public GameObject HomeButton;
     public GameObject UpperPhoto;
     public GameObject LowerPhoto;
     public GameObject PlayButton;
@@ -80,7 +80,8 @@ public class StartGame : MonoBehaviour
     and return value: N/A
     */
     void Update()
-    {
+    {   Debug.Log("AHHAHA");
+        Debug.Log(didwin);
         if (score >= 4)
         {
             GameWon();
@@ -99,13 +100,13 @@ public class StartGame : MonoBehaviour
     {
         if (!moved)
         {
-            RectTransform HomeRT = HomeButton.GetComponent<RectTransform>();
+            //RectTransform HomeRT = HomeButton.GetComponent<RectTransform>();
             RectTransform UpperRT = UpperPhoto.GetComponent<RectTransform>();
             RectTransform LowerRT = LowerPhoto.GetComponent<RectTransform>();
             RectTransform PlayRT = PlayButton.GetComponent<RectTransform>();
             RectTransform InstRT = Instructions.GetComponent<RectTransform>();
 
-            HomeRT.anchoredPosition = new Vector3(333, 499, 0);
+            //HomeRT.anchoredPosition = new Vector3(-357, 526, 0);
             UpperRT.anchoredPosition = new Vector3(-2, 192, 0);
             LowerRT.anchoredPosition = new Vector3(-2, -332, 0);
             PlayRT.anchoredPosition = new Vector3(659, -571, 0);

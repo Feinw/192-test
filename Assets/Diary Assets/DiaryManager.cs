@@ -9,6 +9,9 @@ Code History:
 1. Filbert Wee
    Change Date: February 3, 2020
    Change Description: Added grabbing of variable from parser and generation of buttons
+2. Filbert Wee
+   Change Date: March 8, 2020
+   Change Description: Changed UX of diary page
 
 File Creation
 Date: February 3, 2020
@@ -34,7 +37,12 @@ public class DiaryManager : MonoBehaviour
     public GameObject tabPrefab;
     // area in which the buttons above will be placed in
     public GameObject contentViewport;
-    
+
+    // tab that will show up
+    public GameObject pagePrefab;
+    // text content of the tab
+    public GameObject pageArea;
+
     /*
     method name: Update
     routine's creation date: February 3, 2020
@@ -68,16 +76,21 @@ public class DiaryManager : MonoBehaviour
                 dp.id = page.number;
 
                 title.text = page.title;
-                if (page.unlocked)
-                {
-                    text.text = page.text;
-                }
-                else
+                if (!page.unlocked)
                 {
                     text.text = "LOCKED";
                     // makes the button unclickable if the diary page has not yet been unlocked
                     tab.GetComponent<Button>().interactable = false;
                 }
+
+                // generate page that pop up when button in dia=ry is clicked
+                GameObject innerpage = Instantiate(pagePrefab, pageArea.transform);
+                // title
+                Text innerTitle = innerpage.transform.GetChild(0).GetComponent<Text>();
+                // text 
+                Text innerText = innerpage.transform.GetChild(1).GetChild(0).GetChild(0).GetComponent<Text>();
+                innerTitle.text = page.title;
+                innerText.text = page.text;
             }
         }
     }

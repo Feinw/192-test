@@ -60,6 +60,18 @@ Code History:
 17. Nephia Dalisay
     Change Date: Feb 27, 2020
     Change Description: Allows clickable photo to be sent by bot, leading to minigame2
+18. Filbert Wee
+    Change Date: Mar 8, 2020
+    Change Description: Save and load file support
+19. Filbert Wee
+    Change Date: Mar 10, 2020
+    Change Description: Adaptive timer based on message length
+20. Gene Tan
+    Change Date: Mar 11, 2020
+    Change Description: Added code for the text object "__ is typing..." to show when a character is "typing" -- for the UI
+21. Gene Tan
+    Change Date: Mar 12, 2020
+    Change Description: Added code for notification dropdown to notify player when they're outside the messaging app if new messages are available or if they can reply
 
 File Creation
 Date: January 20, 2019
@@ -79,6 +91,10 @@ public class ChatManager : MonoBehaviour
 {
     // allows variables to be visible in the unity ui
     [SerializeField]
+    // animator for the reply button
+    Animator buttonAnim;
+    // animator for the outline of the reply button
+    Animator buttonOutlineAnim;
     // list containing all the messages "sent"
     public List<Message> messageList = new List<Message>();
     // queue used in determining which messages to be "sent" next
@@ -86,6 +102,8 @@ public class ChatManager : MonoBehaviour
 
     // time to wait to send a message from the queue (in seconds)
     public float countdown;
+    // characters per second
+    public float CPS;
     // timer variable
     private float timer;
     
@@ -101,7 +119,7 @@ public class ChatManager : MonoBehaviour
     public GameObject diaryParser;
 
     // gameobjects (where to post the messages, what the "friends', your, and system messages look like") to be accessed by the script
-    public GameObject chatPanel, botReplyPrefab, playerReplyPrefab, systemNotifPrefab, photoPrefab;
+    public GameObject chatPanel, botReplyPrefab, playerReplyPrefab, systemNotifPrefab, photoPrefab, typing;
     // variable to check whether the name of a "sender" should be displayed
     private string oldName = "";
 
@@ -119,13 +137,25 @@ public class ChatManager : MonoBehaviour
     // what the choices will look like
     public GameObject choicesButtonPrefab;
     // GameObject that contains the button to display the area where choices will be displayed
-    public GameObject replyButton;
+    public GameObject replyButton, replyButtonOutline;
     // variable to store the function from the script that controls the movement of the area "choosingReplyArea".
     ReplyBarScript rs;
-    
+
+    // saved messages
+    public static List<SavedMessage> save = new List<SavedMessage>();
+    // to store the end of the messagesQueue
+    Message peeked;
 
     public bool test = false;
 
+    // counts the number of chat bubbles instantiated in the messaging app
+    public int numberOfGameObjects = 0;
+    // notification for new messages should only drop down if a message has been sent (or if a message has been dequeued from the queue)
+    public static bool deQueuedAlready = false;
+    // boolean created so that the notification dropdown will not animate continuously 
+    public bool waitingForReplyTriggerOnce = true;
+    // boolean created so that the notification dropdown will not animate continuously 
+    public bool newMessageTriggerOnce = false;
     /*
     method name: Start
     routine's creation date: January 20, 2020
@@ -138,14 +168,40 @@ public class ChatManager : MonoBehaviour
     */
     void Start()
     {
-        type = "intro";
-        num = 0;
-        Debug.Log("nice");
-        timer = countdown;
-        
-        cases = "retrieving text";
+        timer = 0;
+        countdown = -1;
+        cases = "loading save";
         rs = replyButton.GetComponent<ReplyBarScript>();
+        buttonAnim = replyButton.GetComponent<Animator>();
+        buttonOutlineAnim = replyButtonOutline.GetComponent<Animator>();
 
+    }
+    /*
+    method name: LoadM
+    routine's creation date: Mar 8, 2020
+    purpose of the routine: Loads save file
+    a list of the calling arguments: N/A
+    a list of required files and/or database tables: N/A
+    and return value: N/A
+    */
+    public void LoadM()
+    {
+        save = SaveManager.LoadMessages();
+        foreach(SavedMessage s in save)
+        {
+            Message newMessage = new Message
+            {
+                name = story[s.type][s.number].name,
+                text = story[s.type][s.number].text.Replace("[Player]", SharedVariables.username),
+                script = story[s.type][s.number],
+            };
+            messagesQueue.Enqueue(newMessage);
+        }
+        int lastIndex = save.Count;
+        type = story[save[lastIndex - 1].type][save[lastIndex - 1].number].nextType;
+        num = story[save[lastIndex - 1].type][save[lastIndex - 1].number].nextNumber;
+        cases = "retrieving text";
+        deQueuedAlready = false;
     }
 
     /*
@@ -161,6 +217,7 @@ public class ChatManager : MonoBehaviour
     */
     void Update()
     {        
+        // Debug.Log(deQueuedAlready);
         // ensures that grabbing the diary contents is done after the parser does its job
         if (diary.Count == 0)
         {
@@ -170,17 +227,50 @@ public class ChatManager : MonoBehaviour
         if (messagesQueue.Count == 0)
         {
             // call a function from a different script
+            if (deQueuedAlready)
+            {
+                waitingForReplyTriggerOnce = false;
+                newMessageTriggerOnce = true;
+                buttonAnim.SetTrigger("Active");
+                deQueuedAlready = false;
+            }
             ReplyBarScript.canReply = true;
+            // Debug.Log(ReplyBarScript.canReply);
         }
         // otherwise, send messages after a certain interval
         else
         {
+            // change timer countdown
+            if (countdown == -1)
+            {
+                peeked = messagesQueue.Peek();
+                if (peeked.name != "Player")
+                {
+                    countdown = peeked.text.Length/CPS;
+                    IsTyping();
+                }
+                // based on length
+                // countdown = (peeked.name == "Player") ? 0 : (peeked.text.Length / CPS) ;
+            }
             if (timer >= countdown)
             {
                 // send messages based on FIFO queue
+                peeked = messagesQueue.Peek();
+                if (peeked.name != "Player")
+                {
+                    IsNotTyping();
+                    deQueuedAlready = true;
+                    // countdown = -1;
+                } 
+                
                 sendToChat(messagesQueue.Dequeue());
+
                 // reset timer
                 timer = timer - countdown;
+                if (peeked.name != "Player")
+                {
+                    countdown = -1;
+                }
             }
             timer += Time.deltaTime;
         }
@@ -188,8 +278,14 @@ public class ChatManager : MonoBehaviour
         // chooses the current state of the game
         switch (cases)
         {
+            // load save file
+            case "loading save":
+                if (story.Count == 0) break;
+                LoadM();
+                break;
             // chooses what message is next from the dictionary
             case "retrieving text":
+                newMessageTriggerOnce = false;
                 chooseMessage();
                 ReplyBarScript.canReply = false;
                 break;
@@ -199,13 +295,18 @@ public class ChatManager : MonoBehaviour
                 break;
             // a wait for reply inside the update loop(forever loop)
             case "choosing reply":
+                // Debug.Log("choosing reply");
+                // Debug.Log(SharedVariables.atMessages);
+                triggerWaitingForReplyNotif();
                 break;
             case "playing minigame":
+                deQueuedAlready = false;
                 waitForMinigameEnd();
                 ReplyBarScript.canReply = false;
                 break;
             // tells the game that an ending is reached
-            case "ending":           
+            case "ending":          
+                deQueuedAlready = false; 
                 ReplyBarScript.canReply = false;
                 break;
         }
@@ -226,11 +327,17 @@ public class ChatManager : MonoBehaviour
         Message newMessage = new Message
         {
             name = story[type][num].name,
-            text = story[type][num].text,
+            text = story[type][num].text.Replace("[Player]", SharedVariables.username),
             script = story[type][num],
         };
         // add the new message to the message queue
         messagesQueue.Enqueue(newMessage);
+        SavedMessage sm = new SavedMessage
+        {
+            type = type,
+            number = num
+        };
+        save.Add(sm);
         // creates a temporary variable to store the current type of message as it will be overwritten
         string currentType = type;
         // update the type of message to what next is needed
@@ -248,6 +355,7 @@ public class ChatManager : MonoBehaviour
                 options.Add(story["choice"][choicenumber]);
             }
             // sets state to waiting to create choices buttons
+            
             cases = "retrieving reply";
         }
         // if the player has reached an ending
@@ -255,10 +363,26 @@ public class ChatManager : MonoBehaviour
         {
             cases = "ending";
         }
+        // if player reached a minigame
         else if (type == "minigame")
         {
             cases = "playing minigame";
             num = story[currentType][num].nextNumber;
+            
+        }
+        // if player forced to wait
+        else if (type == "timer")
+        {
+            num = story[currentType][num].nextNumber;
+            timer = 0;
+            countdown = float.Parse(story[type][num].text);
+            while (timer < countdown)
+            {
+                timer += Time.deltaTime;
+            }
+            timer = 0;
+            type = story[type][num].nextType;
+            num = story["timer"][num].nextNumber;
         }
         // otherwise, procede to next line in the story
         else
@@ -287,7 +411,9 @@ public class ChatManager : MonoBehaviour
             }
             // checks if finished
             if (HangManGame.finished)
-            {
+            {   
+                waitingForReplyTriggerOnce = false;
+                buttonAnim.SetTrigger("Active");
                 type = "minigame-answer";
                 // if lost
                 if (HangManGame.failed)
@@ -301,6 +427,9 @@ public class ChatManager : MonoBehaviour
                 }
                 // proceed with story
                 cases = "retrieving reply";
+                
+                List<bool> x = new List<bool>(new bool[] { SearchStart.disabled, HangManGame.finished, StartGame.didwin, AnimationTrigger.minigameStart, AnimationTrigger.minigameDone });
+                SaveManager.SaveMinigames(x);
             }
         }
         // case for minigame2 (spot the difference)
@@ -313,15 +442,23 @@ public class ChatManager : MonoBehaviour
                 if (StartGame.didwin)
                 {
                     options.Add(story[type][2]);
+                    waitingForReplyTriggerOnce = false;
+                    buttonAnim.SetTrigger("Active");
                 }
                 // else lost
                 else
                 {
                     options.Add(story[type][3]);
+                    waitingForReplyTriggerOnce = false;
+                    buttonAnim.SetTrigger("Active");
                 }
                 // proceed with story
                 cases = "retrieving reply";
-            } 
+                
+                List<bool> x = new List<bool>(new bool[] { SearchStart.disabled, HangManGame.finished, StartGame.didwin, AnimationTrigger.minigameStart, AnimationTrigger.minigameDone });
+                SaveManager.SaveMinigames(x);
+            }
+
         }
         else if (num == 2)
         {
@@ -330,14 +467,22 @@ public class ChatManager : MonoBehaviour
                 AnimationTrigger.minigameDone = false;
             }
             if (AnimationTrigger.minigameStart && AnimationTrigger.minigameDone) {
+                waitingForReplyTriggerOnce = false;
+                buttonAnim.SetTrigger("Active");
                 type = "minigame-answer";
                 if (AnimationTrigger.minigameSuccess) {
                     options.Add(story[type][4]);
+                    
                 }
                 else {
                     options.Add(story[type][5]);
+                    
                 }
                 cases = "retrieving reply";
+                
+                List<bool> x = new List<bool>(new bool[] { SearchStart.disabled, HangManGame.finished, StartGame.didwin, AnimationTrigger.minigameStart, AnimationTrigger.minigameDone });
+                SaveManager.SaveMinigames(x);
+                AnimationTrigger.minigameStart = false;
             }
         }
     }
@@ -409,15 +554,23 @@ public class ChatManager : MonoBehaviour
         }
         else
         {
+            num = -1;
             // creates new message from the choice chooses
             Message newMessage = new Message
             {
                 name = option.name,
-                text = option.text,
+                text = option.text.Replace("[Player]", SharedVariables.username),
                 script = option
             };
             // adds new message to the message queue
             messagesQueue.Enqueue(newMessage);
+            SavedMessage sm = new SavedMessage
+            {
+                type = option.type,
+                number = option.number
+            };
+            save.Add(sm);
+            SaveManager.SaveMessages(save);
             // reset the timer
             timer = countdown;
             // chooses the next message to be sent
@@ -447,9 +600,13 @@ public class ChatManager : MonoBehaviour
     public void clearButtons()
     {
         // calls ReplyBarScript.cs to hide the choices area
+        deQueuedAlready = false;
         rs.MoveStuff();
         // temporarily disables the reply button
-        ReplyBarScript.canReply = false;
+        waitingForReplyTriggerOnce = true;
+        newMessageTriggerOnce = false;
+        buttonAnim.SetTrigger("End");
+        ReplyBarScript.canReply = false; 
         // gets all choices currently shown
         for (int i = 0; i < choosingReplyArea.transform.childCount; i++)
         {
@@ -496,11 +653,12 @@ public class ChatManager : MonoBehaviour
     */
     public void sendToChat(Message newMessage)
     {
+        numberOfGameObjects += 1; 
         GameObject newSpace;
         if (newMessage.name != "system")
         {
             if (newMessage.name == "Player")
-            {
+            {   
                 // instantiate player bubble prefab under the chatPanel gameobject
                 newSpace = Instantiate(playerReplyPrefab, chatPanel.transform);
                 // set the text of the object
@@ -520,7 +678,7 @@ public class ChatManager : MonoBehaviour
                 else
                 {
                     Text name = newSpace.transform.GetChild(1).transform.GetChild(1).GetComponent<Text>();
-                    name.text = newMessage.name;
+                    name.text = SharedVariables.username;
                     name.fontSize = 30;
                     name = newSpace.transform.GetChild(1).transform.GetChild(0).GetComponent<Text>();
                     name.text = "";
@@ -530,6 +688,7 @@ public class ChatManager : MonoBehaviour
             // case for if a photo is sent by the bot (which leads to minigame2)
             else if (newMessage.name == "p")
             {
+                numberOfGameObjects += 1; 
             // instantiates the clickable photo
             newSpace = Instantiate(photoPrefab, chatPanel.transform);
 
@@ -540,10 +699,13 @@ public class ChatManager : MonoBehaviour
             GameObject newText = newSpace.transform.GetChild(0).transform.GetChild(0).gameObject;
             newMessage.textObject = newText.GetComponent<Text>();
             newMessage.textObject.text = newMessage.text;
+            deQueuedAlready = false;
                 
             }
             else
-            {
+            {   
+                triggerNewMessagesAvailable();
+                Debug.Log(newMessageTriggerOnce);
                 // instantiate bot bubble prefab under the chatPanel gameobject
                 newSpace = Instantiate(botReplyPrefab, chatPanel.transform);
                 // set the text of the object
@@ -588,12 +750,87 @@ public class ChatManager : MonoBehaviour
         messageList.Add(newMessage);
 
     }
+    /*
+    method name: isTyping
+    routine's creation date: March 11, 2020
+    purpose of the routine: To instantiate text that says "___ is typing..." when the characters are "typing"
+    a list of the calling arguments: N/A
+    a list of required files and/or database tables: N/A
+    and return value: N/A
+    */
+    public void IsTyping()
+    {
+        if (peeked.name != "p") {
+            GameObject newSpace = Instantiate(typing, chatPanel.transform);
+            Text name = newSpace.transform.GetChild(0).gameObject.GetComponent<Text>();
+            name.text = peeked.name+ " ";
+        }
+    }
+    /*
+    method name: isNotTyping
+    routine's creation date: March 11, 2020
+    purpose of the routine: To destroy the text object that says "___ is typing"
+    a list of the calling arguments: N/A
+    a list of required files and/or database tables: N/A
+    and return value: N/A
+    */
+    public void IsNotTyping() 
+    {
+        // Debug.Log("destroy typing");
+        try
+        {
+            Destroy(chatPanel.transform.GetChild(numberOfGameObjects).gameObject);
+        }
+        catch { }
+    }
+    /*
+    method name: triggerWaitingForReplyNotif
+    routine's creation date: March 11, 2020
+    purpose of the routine: To trigger notification dropdown animation when player can reply but he's outside the messaging app
+    a list of the calling arguments: N/A
+    a list of required files and/or database tables: N/A
+    and return value: N/A
+    */
+    public void triggerWaitingForReplyNotif()
+    {
+        if (!SharedVariables.atMessages && !waitingForReplyTriggerOnce)
+        {
+            if (!NotifText.dropdown && !NotificationDropdown.currentlyNotifying)
+            {
+                NotifText.text = "Your friends are awaiting your reply!";
+                NotifText.title = "Messages";
+                NotifText.dropdown = true;
+                waitingForReplyTriggerOnce = true;
+            }
+        }
+    }
+    /*
+    method name: triggerNewMessagesAvailable
+    routine's creation date: March 11, 2020
+    purpose of the routine: To trigger notification dropdown animation to notify player that there are new messages in the app when he's outside of it
+    a list of the calling arguments: N/A
+    a list of required files and/or database tables: N/A
+    and return value: N/A
+    */
+    public void triggerNewMessagesAvailable()
+    {
+        if (!SharedVariables.atMessages && !newMessageTriggerOnce)
+        {
+            if (!NotifText.dropdown && !NotificationDropdown.currentlyNotifying)
+            {
+                NotifText.text = "New Messages Available";
+                NotifText.title = "Messages";
+                NotifText.dropdown = true;
+                newMessageTriggerOnce = true;
+            }
+        }
+    }
 
     
 }
 
-[System.Serializable]
 // a class for the messages that will be displayed in the UI
+[System.Serializable]
 public class Message
 {
     // name of the "user"
@@ -604,4 +841,11 @@ public class Message
     public Text textObject;       
     // line taken from the parser     
     public DTypes script;               
+}
+// class for saving previoously sent messages
+[System.Serializable]
+public class SavedMessage
+{
+    public string type;
+    public int number;
 }

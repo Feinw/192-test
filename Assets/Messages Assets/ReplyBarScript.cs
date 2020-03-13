@@ -24,10 +24,12 @@ Purpose of the software: The purpose of this project is to create a mobile appli
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class ReplyBarScript : MonoBehaviour
 {
-
+    
     //a boolean variable that tells the current state of the reply bar
     bool down = true;
     //Game Object that will move up or down (Reply Bar)
@@ -65,46 +67,61 @@ public class ReplyBarScript : MonoBehaviour
         {
             if (canReply)
             {
+                // Debug.Log("I CAN ERPLY");
                 if (down)
                 {
                     //will contain the position of the object (x,y)
-                    Vector2 pos;
+                    Vector3 pos;
                     //moves the bar up
                     pos = bar.transform.position;
-                    pos.y += movement;
+                    pos.y += (movement);
                     bar.transform.position = pos;
-                    //resizes panel
-                    RectTransform rt = panel.GetComponent<RectTransform>();
-                    rt.sizeDelta = new Vector2(rt.rect.width, rt.rect.height - 90 - (movement/2)); 
-                    // rt.sizeDelta = new Vector2(798, 1021 - (panelMove/2));
                     
-                    //will contain the position of the object (x,y)
-                    Vector2 pos2 = panel.transform.position;
-                    pos2.y += (movement / 2);
+                    //resizes panel
+
+                    RectTransform rt = panel.GetComponent<RectTransform>();
+                    // Vector2 from = new Vector2(rt.rect.width, rt.rect.height);
+                    // Vector2 to = new Vector2(rt.rect.width, rt.rect.height - 90 - (movement/2));
+                    rt.sizeDelta = new Vector2(rt.rect.width, rt.rect.height - 90 - (movement/2)); 
+        
+                    // panel.GetComponent<VerticalLayoutGroup>().padding.top = 313;
+                    // rt.padding.top = 313;
+
+                    Vector3 pos2 = panel.transform.position;
+                    pos2.y += (movement/2);
                     panel.transform.position = pos2;
-                    //the reply bar is now up
+                    // iTween.ScaleTo(panel, iTween.Hash("scale", size, "time", 0.6f, "easeType", iTween.EaseType.easeInOutSine));
+                    // iTween.ValueTo(rt.sizeDelta, iTween.Hash("from", from, "to", to, "time",0.6f,"onupdate","changeMotionBlur"));
+
+                    // iTween.MoveTo(bar, iTween.Hash("position", pos, "time", 0.6f, "easeType", iTween.EaseType.easeInOutSine));
+                    // iTween.MoveTo(panel, iTween.Hash("position", pos2, "time", 0.6f, "easeType", iTween.EaseType.easeInOutSine));
+
                     down = false;
 
                 }
                 else
                 {
                     //will contain the position of the object (x,y)
-                    Vector2 pos;
+                    Vector3 pos;
                     //move the bar down
                     pos = bar.transform.position;
                     pos.y -= movement;
                     bar.transform.position = pos;
-                    //resize the panel
+                        //resize the panel
                     RectTransform rt = panel.GetComponent<RectTransform>();
                     rt.sizeDelta = new Vector2(rt.rect.width, rt.rect.height + 90 + (movement / 2));
-                    // RectTransform rt = panel.GetComponent<RectTransform>();
-                    // rt.sizeDelta = new Vector2(800, 832);
+                        // RectTransform rt = panel.GetComponent<RectTransform>();
+                        // rt.sizeDelta = new Vector2(800, 832);
 
                     //will contain the position of the object (x,y)
-                    Vector2 pos2 = panel.transform.position;
-                    pos2.y -= (movement / 2);
+                    Vector3 pos2 = panel.transform.position;
+                    pos2.y -= (movement/2);
                     panel.transform.position = pos2;
                     //the reply bar is now down
+                    
+
+                    // iTween.MoveTo(bar, iTween.Hash("position", pos, "time", 0.6f, "easeType", iTween.EaseType.easeInOutSine));
+                    // iTween.MoveTo(panel, iTween.Hash("position", pos2, "time", 0.6f, "easeType", iTween.EaseType.easeInOutSine));
                     down = true;
                 }
             }

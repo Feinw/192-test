@@ -9,6 +9,11 @@ Code History:
 1. Filbert Wee
    Change Date: February 1, 2020
    Change Description: Added parsing support for test file  
+2. Filbert Wee
+   Change Date: February 8, 2020
+   Change Description: Added saving and loading to file .
+                        Added multi-line diary page
+
 
 File Creation
 Date: February 1, 2020
@@ -30,6 +35,8 @@ public class DiaryParser : MonoBehaviour
     public List<string> lines;
     // an list parsed diary pages
     public List<DiaryPage> pages;
+    // file text is read from
+    public TextAsset diaryPages;
 
     /*
     method name: Start
@@ -44,36 +51,50 @@ public class DiaryParser : MonoBehaviour
     */
     void Start()
     {
-        lines = new List<string>();
-        pages = new List<DiaryPage>();
-        // HARD CODE --- as the file parts will be different per OS used.
-        string path = Application.dataPath + "/" + "Messages Assets /Storm Surge and Flood Script - Diary.tsv";
-        // variable to be used in temporarily storing each line of the .tsv file at a time
-        string tmp;
-        // variable to actually read the .tsv file as a whole
-        StreamReader tr = new StreamReader(path);
-        // to remove the header line in the beginning
-        tr.ReadLine();
-        while ((tmp = tr.ReadLine()) != null)
-        {
-            //remove blank lines
-            if (!tmp.Contains("\t\t"))
-            {
-                lines.Add(tmp);          
-            }
-        }
-        tr.Close();
+        //lines = new list<string>();
+        //pages = new list<diarypage>();
+        //// hard code --- as the file parts will be different per os used.
+        //string path = application.datapath + "/" + "messages assets /storm surge and flood script - diary.tsv";
+        //// variable to be used in temporarily storing each line of the .tsv file at a time
+        //string tmp;
+        //// variable to actually read the .tsv file as a whole
+        //streamreader tr = new streamreader(path);
+        //// to remove the header line in the beginning
+        //tr.readline();
+        //while ((tmp = tr.readline()) != null)
+        //{
+        //    //remove blank lines
+        //    if (!tmp.contains("\t\t"))
+        //    {
+        //        lines.add(tmp);
+        //    }
+        //}
+        //tr.close();
+        
+        // characters reprsented as blank like
+        string[] splits = new string[] { "\r", "\n" };
+        // grab text from file
+        string[] split = diaryPages.text.Split(splits, StringSplitOptions.RemoveEmptyEntries);
+        // convert to list instead of array
+        lines = new List<string>(split);
+        // remove header line
+        lines.RemoveAt(0);
+
+        // load which lines are unlocked
+        List<bool> save = SaveManager.LoadDiary(lines.Count);
+        int i = 0;
+        // parse into diary page from text and save
         foreach (string line in lines)
         {
-            string[] parsedline = line.Trim().Split("\t"[0]);
+            string[] parsedline = line.Trim().Split('\t');
             DiaryPage newPage = new DiaryPage
             {
                 number = int.Parse(parsedline[0]),
                 title = parsedline[1],
-                text = parsedline[2],
-                unlocked = Boolean.Parse(parsedline[3])
+                text = parsedline[2].Replace("NEWLINE", "\n"),
+                unlocked = save[i++]
             };
-            pages.Add(newPage);        
+            pages.Add(newPage);
         }
     }
 
@@ -90,17 +111,47 @@ public class DiaryParser : MonoBehaviour
     public static void unlockPage(List<DiaryPage> pages)
     {
         // HARD CODE --- as the file parts will be different per OS used.
-        string path = Application.dataPath + "/" + "Messages Assets /Storm Surge and Flood Script - Diary.tsv";
-        // allow writing to file
-        using (var writer = new StreamWriter(path))
+        //string folderPath = (Application.platform == RuntimePlatform.Android || Application.platform == RuntimePlatform.IPhonePlayer ? Application.persistentDataPath : Application.dataPath) + "/Messaxges Assets/";
+        //string path = folderPath + "Storm Surge and Flood Script - Diary.txt";
+        //// allow writing to file
+        //List<string> text = new List<string>();
+        ////using (var writer = new StreamWriter(path))
+        ////{
+        ////    writer.WriteLine("#\tTitle\ttext\tunlocked?");
+        ////}
+        //TextAsset file = Resources.Load<TextAsset>("Storm Surge and Flood Script - Diary");
+        //while (file == null)
+        //{
+        //    file = Resources.Load<TextAsset>("Storm Surge and Flood Script - Diary");
+        //    Debug.Log("why");
+        //}
+        //if (file != null)
+        //{
+        //    using (StreamWriter writer = new StreamWriter(new MemoryStream(file.bytes)))
+        //    {
+        //        writer.WriteLine("#\tTitle\ttext\tunlocked?");
+        //        foreach (DiaryPage page in pages)
+        //        {
+        //            string[] line = new string[4] { page.number.ToString(), page.title, page.text.Replace("\n", "NEWLINE"), page.unlocked.ToString() };
+        //            writer.WriteLine(string.Join("\t", line));
+        //        }
+        //    }
+        //}
+        //text.Add("#\tTitle\ttext\tunlocked?");
+        //foreach(DiaryPage page in pages)
+        //{
+        //    string[] line = new string[4] { page.number.ToString(), page.title, page.text.Replace("\n", "NEWLINE"), page.unlocked.ToString() };
+        //    text.Add(string.Join("\t", line));
+        //}
+        //File.WriteAllText(path, string.Join("\n",text));
+
+        // sends pages to save file
+        List<bool> x = new List<bool>();
+        foreach(DiaryPage page in pages)
         {
-            writer.WriteLine("#\tTitle\ttext\tunlocked?");
-            foreach(DiaryPage page in pages)
-            {
-                string[] line = new string[4] { page.number.ToString(), page.title, page.text, page.unlocked.ToString() };
-                writer.WriteLine(string.Join("\t", line));
-            }
+            x.Add(page.unlocked);
         }
+        SaveManager.SaveDiary(x);
     }
 }
 

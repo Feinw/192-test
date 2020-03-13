@@ -1,837 +1,933 @@
-Type	#	user	text	nextType	#	unlocks
-badending1	0	b	walking through the flooded waters isn’t that bad	badending1	1	-1
-badending1	1	b	feels a bit refreshing, if you ask me	badending1	2	-1
-badending1	2	b	if only the waters weren’t so dir	badending1	3	-1
-badending1	3	a	‘dir’, what?	notif	18	-1
-badending1	4	a	[b]???	choice	39,40	-1
-badending1	5	a	Now’s not the time to joke around!	badending1	6	-1
-badending1	6	a	Let’s hope he gets back home safe	badending1	7	-1
-badending1	7	a	[b] hasn’t contacted us in a while… I have a bad feeling about this	choice	41,42	-1
-badending1	8	a	If something bad did happen to him, it’s not your fault nor mine alone	badending1	9	-1
-badending1	9	a	It’s both ours	notif	1	-1
-badending1	10	a	[b]!!	badending1	11	-1
-badending1	11	a	I knew it! You’re safe!	badending1	12	-1
-badending1	12	b	[a], [Player]	badending1	13	-1
-badending1	13	a	What happened last time?? Why did you suddenly stop messaging us like that?	badending1	14	-1
-badending1	14	a	We were so worried	badending1	15	-1
-badending1	15	b	I’m sorry	badending1	16	-1
-badending1	16	b	but this is not [b]	badending1	17	-1
-badending1	17	b	this is his mother	badending1	18	-1
-badending1	18	b	we took the shortest way back home, but the flood was still pretty deep and foggy	badending1	19	-1
-badending1	19	b	we couldn’t see anything under the water	badending1	20	-1
-badending1	20	b	we were also unfamiliar with the roads and… well…	badending1	21	-1
-badending1	21	b	we didn’t know that there was an open gutter	badending1	22	-1
-badending1	22	b	and he…	badending1	23	-1
-badending1	23	b	i’m sorry i have no heart to tell you in detail what happened	badending1	24	-1
-badending1	24	b	just know that what happened to [b] is neither of your faults	badending1	25	-1
-badending1	25	b	it’s mine	badending1	26	-1
-badending1	26	b	both of you tried your best to guide and help [b], well, us, through the storm surge, and I, as his mother couldn’t do anything	badending1	27	-1
-badending1	27	b	despite what happened to [b], we are truly thankful for both of your guidance	badending1	28	-1
-badending1	28	b	i promise to read more on disaster preparedness	badending1	29	-1
-badending1	29	b	and i hope you do too	badending1	30	-1
-badending1	30	b	once again, thank you, and farewell	block	2	-1
-badending2	0	b	ok gimme a sec, i'll look for them in the attic	badending2	1	-1
-badending2	1	b	how do you even use these things	badending2	2	-1
-badending2	2	a	are you serious	choice	71	-1
-badending2	3	a	t e c h n o l o g y	badending2	4	-1
-badending2	4	b	i've never used these before in my life give me a break	badending2	5	-1
-badending2	5	b	ok be right back then	badending2	6	-1
-badending2	6	b	better dry this house up before i turn into a raisin	notif	0	-1
-badending2	7	a	wait	badending2	8	-1
-badending2	8	a	appliances make use of electricity	badending2	9	-1
-badending2	8	a	electricity does not go well with moist 2nd floors	badending2	10	-1
-badending2	10	a	WAIT	choice	72	-1
-badending2	11	a	b!!! don't plug them in!!!	badending2	12	-1
-badending2	12	a	b???	badending2	13	-1
-badending2	13	a	DO NOT PLUG THE DEHUMIDIFIER AND AIR MOVER INTO YOUR WET WALL SOCKETS	choice	73	-1
-badending2	14	a	b please respond	block	7	-1
-badending3	0	b	this is not how i imagined a nice workout would be	badending3	1	-1
-badending3	1	b	but oh well i gotta get all the water out quick	badending3	2	-1
-badending3	2	b	so then i could rest afterwards too	badending3	3	-1
-badending3	3	a	wait are you really going to MANUALLY get the water out???	badending3	4	-1
-badending3	4	b	... ok you're right that seems impossible	choice	74	-1
-badending3	5	b	actually my dad mentioned something about installing a sump pump, what even is that?	badending3	6	-1
-badending3	6	b	sump pump	badending3	7	-1
-badending3	7	b	haha that sounds kinda funny	badending3	8	-1
-badending3	8	a	it’s some device that would help you quickly get rid of the flooding in your basement	badending3	9	-1
-badending3	9	b	ohhhh, well alright. That’ll be my plan for the weekend then. Joy.	notif	15	-1
-badending3	10	b	hi so	badending3	11	-1
-badending3	11	b	we shouldn’t have tried to pump all the water out at once	badending3	12	-1
-badending3	12	b	ughh i hate everything i’m so tired and this happens	badending3	13	-1
-badending3	13	a	?	choice	75	-1
-badending3	14	b	the floor and walls of the basement cracked and collapsed	badending3	15	-1
-badending3	15	b	IT'S DESTROYED	badending3	16	-1
-badending3	16	b	there were so many things kept in there, even; important things	choice	78	-1
-badending3	17	a	ahh oh dear	badending3	18	-1
-badending3	18	a	i totally forgot	badending3	19	-1
-badending3	19	a	it’s caused by the pressure pushing against your basement walls, pressure from the water in the ground outside your house	badending3	20	-1
-badending3	20	a	the pumping out of water should’ve been done gradually	badending3	21	-1
-badending3	21	a	aaaah i’m sorry i should have mentioned this. I dont know why i didnt think about this happening.	badending3	22	-1
-badending3	22	b	it's too late now	badending3	23	-1
-badending3	23	b	the basement's a mess	badending3	24	-1
-badending3	24	b	i get the feeling the whole house is gonna collapse next	choice	76	-1
-badending4	0	b	alright, I guess I’m just being paranoid	badending4	1	-1
-badending4	1	b	kinda funny. I never imagined I’d be saying things like this	badending4	2	-1
-badending4	2	a	are you sure about this?	badending4	3	-1
-badending4	3	b	It’s okay. I trust you guys	badending4	4	-1
-badending4	4	b	and my family looks like they’re ready to leave	badending4	5	-1
-badending4	5	b	well, wish us luck	badending4	6	-1
-badending4	6	b	i’ll talk to you guys later	badending4	7	-1
-badending4	7	a	stay safe, [b]!	notif	2	-1
-badending4	8	a	[b] hasn’t contacted us in a while… I have a bad feeling about this	choice	43,44	-1
-badending4	9	a	if something bad did happen to him, it’s not your fault nor mine alone	badending4	10	-1
-badending4	10	a	it’s both our fault	notif	3	-1
-badending4	11	a	[b]!!	badending4	12	-1
-badending4	12	a	i knew it! You’re safe!	badending4	13	-1
-badending4	13	b	[a], [Player]	badending4	14	-1
-badending4	14	a	what happened last time?? Why did you suddenly stop messaging us like that?	badending4	15	-1
-badending4	15	a	we were so worried	badending4	16	-1
-badending4	16	b	I’m sorry	badending4	17	-1
-badending4	17	b	but this is not [b]	badending4	18	-1
-badending4	18	b	this is his mother	badending4	19	-1
-badending4	19	b	we decided to leave during the peak of the storm surge	badending4	20	-1
-badending4	20	b	we walked through the floods, but the winds were too strong	badending4	21	-1
-badending4	21	b	and he…	badending4	22	-1
-badending4	22	b	i’m sorry i have no heart to tell you in detail what happened	badending4	23	-1
-badending4	23	b	just know that what happened to b is neither of your faults	badending4	24	-1
-badending4	24	b	it’s mine	badending4	25	-1
-badending4	25	b	both of you tried your best to guide and help [b], well, us, through the storm surge, and I, as his mother couldn’t do anything.	badending4	26	-1
-badending4	26	b	<b>we even thoughtlessly ignored the warning message that was sent to us</b>	badending4	27	-1
-badending4	27	b	despite what happened to [b], we are truly thankful for both of your guidance	badending4	28	-1
-badending4	28	b	i promise to read more on disaster preparedness	badending4	29	-1
-badending4	29	b	and i hope you do too	badending4	30	-1
-badending4	30	b	once again, thank you, and farewell	block	3	-1
-badending5	0	b	oh yeah, that makes sense.	badending5	1	-1
-badending5	1	b	as long as I make sure the basement doesn’t get flooded, we’ll be safe	badending5	2	-1
-badending5	2	b	it’s underground after all	badending5	3	-1
-badending5	3	b	the walls should be strong, being supported by packs of dirt and all	badending5	4	-1
-badending5	4	b	i’ll go ahead and clean the basement first before telling my family	badending5	5	-1
-badending5	5	b	it’s probably filled with dust	choice	52	-1
-badending5	6	b	yep, I’m here and it’s as dusty as	badending5	7	-1
-badending5	7	a	as dusty as…?	badending5	8	-1
-badending5	8	b	sorry, i got distracted	badending5	9	-1
-badending5	9	b	i closed the door when i got here and i thought i heard my mom scream my name	badending5	10	-1
-badending5	10	a	uh… shouldn’t you go look for her?	badending5	11	-1
-badending5	11	b	nah, it’s okay. It’s probably nothing. She’s probably only calling me to fetch her a drink or something.	badending5	12	-1
-badending5	12	b	anyway, as I was saying, this basement is as dusty as	badending5	13	-1
-badending5	13	a	as dusty as..?	badending5	14	-1
-badending5	14	b	oh no	badending5	15	-1
-badending5	15	b	oh nono	badending5	16	-1
-badending5	16	b	ohhh nooo	choice	53,54	-1
-badending5	17	b	way worse	badending5	18	-1
-badending5	18	b	way way waaay worse	badending5	19	-1
-badending5	19	b	i’m screwed	badending5	20	-1
-badending5	20	b	the place is flooding up reaally fast	badending5	21	-1
-badending5	21	a	well, what are you doing? Get out of there!	badending5	22	-1
-badending5	22	b	i’m trying! But the door won’t open!	badending5	23	-1
-badending5	23	b	no way, could something be blocking it?	badending5	24	-1
-badending5	24	a	could it be that it’s already flooded outside the basement and the pressure is preventing you from opening the door??	badending5	25	-1
-badending5	25	b	no way! It wasn’t even thaat flooded there when i walked down the basement	badending5	26	-1
-badending5	26	a	but it was already flooding up??	badending5	27	-1
-badending5	27	a	Why didn’t you tell us!	badending5	28	-1
-badending5	28	b	well, the water wasn’t rising anymore so I thought that was already the worst it was gonna get	badending5	29	-1
-badending5	29	b	oh my god. Could my mom be calling me earlier because of this?	badending5	30	-1
-badending5	30	a	obviously!	badending5	31	-1
-badending5	31	b	what do I do??	badending5	32	-1
-badending5	32	a	[b], stay in the groupchat	choice	55	-1
-badending5	33	a	[name] call 911!!	badending5	34	-1
-badending5	34	a	[b], stay in the groupchat	badending5	35	-1
-badending5	35	a	just keep talking so we know you're still there	badending5	36	-1
-badending5	36	b	alright	badending5	37	-1
-badending5	37	b	but I don’t think this is gonna do me any good	badending5	38	-1
-badending5	38	b	i’m dead, huh?	badending5	39	-1
-badending5	39	b	i know i was very close to breaking down a while ago, but now that it’s coming…	badending5	40	-1
-badending5	40	b	i don’t feel as scared	badending5	41	-1
-badending5	41	a	don’t say that!	badending5	42	-1
-badending5	42	a	[name] is calling 911 right now	badending5	43	-1
-badending5	43	a	they should be there any minute	badending5	44	-1
-badending5	44	b	hahaha well, whatever	badending5	45	-1
-badending5	45	b	see you all in our next lives	notif	9	-1
-badending5	46	a	stop saying that!	badending5	47	-1
-badending5	47	a	[name], have you called 911???	minigame	2	-1
-badending5	48	a	hold up	badending5	49	-1
-badending5	49	a	[b] went offline??	badending5	50	-1
-badending5	50	a	i hope he’s okay…	notif	10	-1
-badending5	51	a	[b] hasn’t contacted us in a while… I have a bad feeling about this	choice	60,61	-1
-badending5	52	-	-	intro	0	-1
-badending5	53	-	-	intro	0	-1
-badending5	54	a	if something bad did happen to him, it’s not your fault nor mine alone	badending5	55	-1
-badending5	55	a	it’s both our fault	notif	11	-1
-badending5	56	a	[b]!!	badending5	57	-1
-badending5	57	a	i knew it! You’re safe!	badending5	58	-1
-badending5	58	b	[a], [name]	badending5	59	-1
-badending5	59	a	what happened last time?? Why did you suddenly stop messaging us like that?	badending5	60	-1
-badending5	60	a	we were so worried	badending5	61	-1
-badending5	61	b	I’m sorry	badending5	62	-1
-badending5	62	b	but this is not [b]	badending5	63	-1
-badending5	63	b	this is his mother	badending5	64	-1
-badending5	64	b	the storm suddenly got worse and we tried to look for [b]..	badending5	65	-1
-badending5	65	b	we really did…	badending5	66	-1
-badending5	66	b	but he didn’t respond	badending5	67	-1
-badending5	67	b	turns out, he was in the basement...	badending5	68	-1
-badending5	68	b	the place flooded up really fast and i couldn’t stay down there any longer	badending5	69	-1
-badending5	69	b	so he…	badending5	70	-1
-badending5	70	b	i’m sorry i have no heart to tell you in detail what happened	badending5	71	-1
-badending5	71	b	just know that what happened to [b] is neither of your faults	badending5	72	-1
-badending5	72	b	it’s mine	badending5	73	-1
-badending5	73	b	both of you tried your best to guide and help [b], well, us, through the storm surge, and I, as his mother couldn’t do anything.	badending5	74	-1
-badending5	74	b	we even thoughtlessly ignored the warning message that was sent to us	badending5	75	-1
-badending5	75	b	i could’ve at least kept a close eye on him...	badending5	76	-1
-badending5	76	b	despite what happened to [b], we are truly thankful for both of your guidance	badending5	77	-1
-badending5	77	b	i promise to read more on disaster preparedness	badending5	78	-1
-badending5	78	b	and i hope you do too	badending5	79	-1
-badending5	79	b	once again, thank you, and farewell	block	5	-1
-badending6	0	a	huh? Where did [b] go?	choice	56,57	-1
-badending6	1	a	come on, there’s no time for jokes	badending6	2	-1
-badending6	2	a	it couldn’t be the radio… could it?	badending6	3	-1
-badending6	3	a	oh my god. We should've told him not to touch it!	badending6	4	-1
-badending6	4	a	even though he didn’t touch the wires… it’s still an electrical appliance…	badending6	5	-1
-badending6	5	a	a plugged one, at that!	badending6	6	-1
-badending6	6	a	oh no… i really hope he’s okay	notif	13	-1
-badending6	7	a	@[b]	badending6	8	-1
-badending6	8	a	@[b]	badending6	9	-1
-badending6	9	a	[name],  I have a bad feeling about this	badending6	10	-1
-badending6	10	a	tw*tter says that the storm surge has calmed down already	badending6	11	-1
-badending6	11	a	but [b] still hasn’t contacted us	choice	58,59	-1
-badending6	12	a	if something bad did happen to him, it’s not your fault nor mine alone	badending6	13	-1
-badending6	13	a	it’s both our fault	notif	14	-1
-badending6	14	a	[b]!!	badending6	15	-1
-badending6	15	a	i knew it! You’re safe!	badending6	16	-1
-badending6	16	b	[a], [name]	badending6	17	-1
-badending6	17	a	what happened last time?? Why did you suddenly stop messaging us like that?	badending6	18	-1
-badending6	18	a	we were so worried	badending6	19	-1
-badending6	19	b	I’m sorry	badending6	20	-1
-badending6	20	b	but this is not [b]	badending6	21	-1
-badending6	21	b	this is his mother	badending6	22	-1
-badending6	22	b	he was already unconscious when we found him	badending6	23	-1
-badending6	23	b	he was lying beside a radio, so we could only guess that he tried to turn it on...	badending6	24	-1
-badending6	24	b	i’m sorry i have no heart to tell you in detail what happened	badending6	25	-1
-badending6	25	b	just know that what happened to [b] is neither of your faults	badending6	26	-1
-badending6	26	b	it’s mine	badending6	27	-1
-badending6	27	b	both of you tried your best to guide and help [b], well, us, through the storm surge, and I, as his mother couldn’t do anything.	badending6	28	-1
-badending6	28	b	we even thoughtlessly ignored the warning message that was sent to us	badending6	29	-1
-badending6	29	b	i could’ve at least kept a close eye on him...	badending6	30	-1
-badending6	30	b	despite what happened to [b], we are truly thankful for both of your guidance	badending6	31	-1
-badending6	31	b	i promise to read more on disaster preparedness	badending6	32	-1
-badending6	32	b	and i hope you do too	badending6	33	-1
-badending6	33	b	once again, thank you, and farewell	block	6	-1
-badending7	0	b	nice, I was afraid you’d say no for a second	notif	4	-1
-badending7	1	b	yuck! This water tastes weird!	badending7	2	-1
-badending7	2	b	i work hard cleaning up and this is how I’m rewarded?	badending7	3	-1
-badending7	3	a	are you okay?	badending7	4	-1
-badending7	4	b	besides this disgusting feeling in my mouth, i think i’m okay. Why would i not be?	badending7	5	-1
-badending7	5	a	the water might be contaminated, stupid!	badending7	6	-1
-badending7	6	b	oh… right…	badending7	7	-1
-badending7	7	b	but I don’t feel any different	badending7	8	-1
-badending7	8	b	so i think it’s okay	badending7	9	-1
-badending7	9	b	i’ll steer clear of contaminated water from now on, I guess	badending7	10	-1
-badending7	10	a	and get yourself checked as soon as possible!	badending7	11	-1
-badending7	11	a	you don’t know what might be in there!	badending7	12	-1
-badending7	12	b	sure, yeah, as soon as possible.	badending7	13	-1
-badending7	13	a	promise?	badending7	14	-1
-badending7	14	b	yeah. Well, see you guys later. There’s still lots to do and I want to finish this while im still feeling energized	badending7	15	-1
-badending7	15	a	alright, good luck	notif	5	-1
-badending7	16	a	[b] hasn’t contacted us in a while… I have a bad feeling about this	choice	45,46	-1
-badending7	17	a	if something bad did happen to him, it’s not your fault nor mine alone	badending7	18	-1
-badending7	18	a	it’s both our fault	notif	6	-1
-badending7	19	a	[b]!!	badending7	20	-1
-badending7	20	a	i knew it! You’re safe!	badending7	21	-1
-badending7	21	b	[a], [Player]	badending7	22	-1
-badending7	22	a	what happened last time?? Why did you suddenly stop messaging us like that?	badending7	23	-1
-badending7	23	a	we were so worried	badending7	24	-1
-badending7	24	b	I’m sorry	badending7	25	-1
-badending7	25	b	but this is not [b]	badending7	26	-1
-badending7	26	b	this is his mother	badending7	27	-1
-badending7	27	b	[b] had been sick with fever, diarrhea, and headaches for a while now, but he never told us until he got worse	badending7	28	-1
-badending7	28	b	we rushed him to the hospital as soon as possible	badending7	29	-1
-badending7	29	b	turns out, he had been typhoid fever.	badending7	30	-1
-badending7	30	b	doctors attended to him immediately and we thought everything was going to be fine	badending7	31	-1
-badending7	31	b	however, because we waited so long to get him treated, he had contracted pneumonia as well	badending7	32	-1
-badending7	32	b	he endured the symptoms for too long and it was simply too late...	badending7	33	-1
-badending7	33	b	i’m sorry i have no heart to tell you in detail what happened	badending7	34	-1
-badending7	34	b	just know that what happened to [b] is neither of your faults	badending7	35	-1
-badending7	35	b	it’s mine	badending7	36	-1
-badending7	36	b	both of you tried your best to guide and help [b], well, us, through the storm surge, and I, as his mother couldn’t do anything.	badending7	37	-1
-badending7	37	b	<b>i could’ve at least kept a close eye on him...</b>	badending7	38	-1
-badending7	38	b	despite what happened to [b], we are truly thankful for both of your guidance	badending7	39	-1
-badending7	39	b	i promise to read more on disaster preparedness	badending7	40	-1
-badending7	40	b	and i hope you do too	badending7	41	-1
-badending7	41	b	once again, thank you, and farewell	block	4	-1
-block	0	system	woops, can't select this option yet!	stop	0	-1
-block	1	system	congratulations, you have reached the good ending!	stop	0	-1
-block	2	system	you have reached Bad Ending 1, please try again to get the good ending	stop	0	-1
-block	3	system	you have reached Bad Ending 4, please try again to get the good ending	stop	0	-1
-block	4	system	you have reached Bad Ending 7, please try again to get the good ending	stop	0	-1
-block	5	system	you have reached Bad Ending 5, please try again to get the good ending	stop	0	-1
-block	6	system	you have reached Bad Ending 6, please try again to get the good ending	stop	0	-1
-block	7	system	you have reached Bad Ending 2, please try again to get the good ending	stop	0	-1
-block	8	system	you have reached Bad Ending 3, please try again to get the good ending	stop	0	-1
-choice	0	Player	Yeah, you didn't tell us	intro	12	-1
-choice	1	Player	I knew about it	intro	13	-1
-choice	2	Player	Tacloban?	intro	19	-1
-choice	3	Player	HAHA lmao the greatest	intro	22	-1
-choice	4	Player	what do you mean by 'great'?	intro	24	-1
-choice	5	Player	well, [a] has a point	intro	34	-1
-choice	6	Player	Yes, it was a tsunami	intro	43	-1
-choice	7	Player	No, it wasn’t a tsunami	intro	50	-1
-choice	8	Player	no I don't	block	0	-1
-choice	9	Player	hold on, I'll google it	minigame	0	-1
-choice	10	Player	it’s not too late	event1	21	-1
-choice	11	Player	it’s too late	event1	19	-1
-choice	12	Player	i’m glad	evac	4	-1
-choice	13	Player	get some rest	evac	3	-1
-choice	14	Player	you’ll be fine	evac	13	-1
-choice	15	Player	i’ll be praying for you	evac	13	-1
-choice	16	Player	text us when you get back	evac	24	-1
-choice	17	Player	get back safely	evac	24	-1
-choice	18	Player	go back the shortest way possible	badending1	0	-1
-choice	19	Player	take a detour	evac	32	-1
-choice	20	Player	i’m sorry	postdisaster1	10	-1
-choice	21	Player	it’s too late for regret	postdisaster1	11	-1
-choice	22	Player	go ahead and pump the water out	badending3	0	-1
-choice	23	Player	wait	event2	0	-1
-choice	24	Player	when the water is no longer covering the ground around the house	event2	8	-1
-choice	25	Player	What are you talking about?	event2	13	-1
-choice	26	Player	I feel the same way.	event2	13	-1
-choice	27	Player	open the windows	event3	0	-1
-choice	28	Player	fetch the dehumidifier and air mover	badending2	0	-1
-choice	29	Player	go ahead	badending7	0	-1
-choice	30	Player	don't	event4	0	-1
-choice	31	Player	16211	event4	9	-1
-choice	32	Player	just think of it as a work out	badending3	0	-1
-choice	33	Player	don’t pump all of them out	event5	0	-1
-choice	34	Player	pump about 1-3 feet and leave it overnight	event5	2	-1
-choice	35	Player	When is he was getting back?	goodending	3	-1
-choice	36	Player	Answering his questions tired me out	goodending	5	-1
-choice	37	Player	bye	goodending	33	-1
-choice	38	Player	you’re amazing	goodending	32	-1
-choice	39	Player	maybe he got electrocuted	badending1	5	-1
-choice	40	Player	maybe his cell phone fell into the water	badending1	5	-1
-choice	41	Player	me too..	badending1	8	-1
-choice	42	Player	it’s my fault	badending1	8	-1
-choice	43	Player	me too..	badending4	9	-1
-choice	44	Player	it’s my fault	badending4	9	-1
-choice	45	Player	me too..	badending7	17	-1
-choice	46	Player	it’s my fault	badending7	17	-1
-choice	47	Player	wait	event9	0	-1
-choice	48	Player	have you checked if you’re wet?	event9	3	-1
-choice	49	Player	even unplugged appliances can still be carrying electricity	event9	18	-1
-choice	50	Player	by any chance, do you have a HAM radio? 	event9	34	-1
-choice	51	Player	well, it’s not completely hopeless without a ham radio	event9	50	-1
-choice	52	Player	wait for a bit	badending5	6	-1
-choice	53	Player	your mother found you?	badending5	17	-1
-choice	54	Player	found a dead rat?	badending5	17	-1
-choice	55	Player	find higher ground immediately	badending5	33	-1
-choice	56	Player	probably saving his phone battery	badending6	1	-1
-choice	57	Player	he ditched us	badending6	1	-1
-choice	58	Player	me too	badending6	12	-1
-choice	59	Player	it's my fault	badending6	12	-1
-choice	60	Player	me too	badending5	54	-1
-choice	61	Player	it's my fault	badending5	54	-1
-choice	62	Player	we were getting worried	event6	14	-1
-choice	63	Player	are you okay?	event6	14	-1
-choice	64	Player	are you alright?	event6	18	-1
-choice	65	Player	a storm surge?	event6	23	-1
-choice	66	Player	a tsunami?	event6	24	-1
-choice	67	Player	leave your house	badending4	0	-1
-choice	68	Player	wait for help	event7	0	-1
-choice	69	Player	go to the basement	badending5	0	-1
-choice	70	Player	go to higher ground	event8	0	-1
-choice	71	Player	Plug them in. That's how appliances work.	badending2	3	-1
-choice	72	Player	oh my god you're right	badending2	11	-1
-choice	73	Player	YES YOU COULD GET ELECTROCUTED	badending2	14	-1
-choice	74	Player	yeah you're gonna need help from your family	badending3	5	-1
-choice	75	Player	what happened?	badending3	14	-1
-choice	76	Player	let's pray to god that doesn't happen	notif	16	-1
-choice	77	Player	go ahead	notif	12	-1
-choice	78	Player	how does this relate to you pumping out all the water?	badending3	17	-1
-evac	0	b	alright, we’re here	evac	1	-1
-evac	1	b	whew! There are so many people. It’s pretty crowded	evac	2	-1
-evac	2	b	but whatever, i’m just glad to be somewhere safer	choice	12,13	-1
-evac	3	b	thank you, i definitely will	evac	6	-1
-evac	4	b	me too	evac	5	-1
-evac	5	b	i guess i’ll get some rest for now	evac	6	-1
-evac	6	b	people here are saying there’ll be another storm surge coming	evac	7	-1
-evac	7	b	best be rested when that happens	evac	8	-1
-evac	8	b	my god, guys	evac	9	-1
-evac	9	b	the rain and winds are so strong	evac	10	-1
-evac	10	b	way stronger than it was a while ago	evac	11	-1
-evac	11	b	thankfully, this center seems pretty sturdy	evac	12	-1
-evac	12	b	i still can’t help but feel nervous, though	choice	14,15	-1
-evac	13	b	thank you	evac	14	-1
-evac	14	a	[b], are you alright?	evac	15	-1
-evac	15	a	i heard in the news that the storm is already outside the par	evac	16	-1
-evac	16	b	par?	evac	17	-1
-evac	17	a	philippine area of responsibility	evac	18	-1
-evac	18	b	ah, yeah.	evac	19	-1
-evac	19	b	We’re preparing to go back home	evac	20	-1
-evac	20	b	everyone’s relieved	evac	21	-1
-evac	21	b	but i’m worried about what we’ll see when we get back	evac	22	-1
-evac	22	b	honestly,I doubt the house made it in one piece	evac	23	-1
-evac	23	b	with how strong the storm surge was	choice	16,17	-1
-evac	24	b	will do	evac	25	-1
-evac	25	b	but before that…	evac	26	-1
-evac	26	b	see, i wanted to get back to the house as fast as possible	evac	27	-1
-evac	27	b	so i asked around but the shortest path to getting there is still flooded	evac	28	-1
-evac	28	a	how deep?	evac	29	-1
-evac	29	b	well, let’s just say I’ll be able to swim if I wanted to	evac	30	-1
-evac	30	b	it’s calm, though. I won’t get washed away for sure	evac	31	-1
-evac	31	a	hmm… you would be able to prevent more damages the earlier you get back	choice	18,19	-1
-evac	32	b	if you say so	postdisaster1	0	-1
-event1	0	b	so that’s what a storm surge is	event1	1	-1
-event1	1	b	my god, it's scarier than what I was imagining just a minute ago	event1	2	-1
-event1	2	b	… and to think that I’m in tacloban right now	event1	3	-1
-event1	3	b	… and this heavy rain	event1	4	-1
-event1	4	b	part of me wants to ignore this and say that you guys are just bluffing	event1	5	-1
-event1	5	b	but not gonna lie, part of me is freaking out right now	event1	6	-1
-event1	6	b	the rain and winds just seem to be getting stronger every minute	event1	7	-1
-event1	7	b	and, well, I guess I should've said this earlier	event1	8	-1
-event1	8	b	i thought it was just a bunch of spam	event1	9	-1
-event1	9	b	but i actually received a storm surge warning from ndrrmc just a few days ago	event1	10	-1
-event1	10	a	What??	event1	11	-1
-event1	11	a	Who knows what bad thing could have happened if you haven’t mentioned that! You could have drowned, you could have contracted some stomach disease, or even suffered from leptospirosis!	event1	12	-1
-event1	12	b	yeah, yeah	event1	13	-1
-event1	13	b	you can’t blame me	event1	14	-1
-event1	14	b	i literally thought “storm surge” was just a fancy term for “heavy rain”	event1	15	-1
-event1	15	b	they didn’t teach it at school	event1	16	-1
-event1	16	a	Well, you’re not completely blameless either, you know.	event1	17	-1
-event1	17	b	yeah, i know	event1	18	-1
-event1	18	b	i'm just hoping it’s not too late to realize that yet	choice	10,11	-1
-event1	19	a	Don’t say that!	event1	21	-1
-event1	20	a	[Player] is right.	event1	21	-1
-event1	21	a	You can still try making last minute preparations to lessen the damage.	event1	22	-1
-event1	22	a	What does the NDRRMC text say?	event1	23	-1
-event1	23	b	they said they’re anticipating the storm surge three days from now	event1	24	-1
-event1	24	a	Good.	event1	25	-1
-event1	25	b	good? I mean I know all about storm surges now but i still have no clue what to do	event1	26	-1
-event1	26	a	Check this out	event1	27	-1
-event1	27	p	Click on the photo above	minigame	1	-1
-event1	28	b	nice! thanks for helping me guys	event1	29	-1
-event1	29	b	oh hey	event1	30	-1
-event1	30	b	i just received another message from ndrrmc	event1	31	-1
-event1	31	b	they said that there’s an evacuation center not far from my current location and that it’s currently safe to evacuate	event1	32	-1
-event1	32	b	i guess i better go tell my family	event1	33	-1
-event1	33	b	i’ll talk to you guys again later when i get there	evac	0	-1
-event2	0	b	huh? why?	event2	1	-1
-event2	1	a	oh, i get it!	event2	2	-1
-event2	2	a	It won’t be safe to pump water out of the basement if there’s still water surrounding the walls from the outside.	event2	3	-1
-event2	3	a	Right now, the pressure inside and outside the basement are a bit balanced, considering that your basement walls are still up.	event2	4	-1
-event2	4	a	But if you reduce the pressure from the inside, your walls might not be able to take the outside pressure.	event2	5	-1
-event2	5	b	and it will break…	event2	6	-1
-event2	6	a	Exactly.	event2	7	-1
-event2	7	b	when is it safe to pump the water out, then	choice	24	-1
-event2	8	b	oh, cool. i guess i’ll have to wait a while then	event2	9	-1
-event2	9	b	i’ll see what else i can do for the meantime and maybe somewhere a bit drier	event2	10	-1
-event2	10	a	You know, amidst this horrible disaster, I’m actually glad that [b] is finally learning how to listen to us.	event2	11	-1
-event2	11	a	He used to be so stubborn and defiant.	event2	12	-1
-event2	12	a	If I had known that this experience was all it would take for him to start functioning like a pleasant human being, I would have wished this on him sooner.	choice	25,26	-1
-event2	13	a	That was a joke, of course.	event2	14	-1
-event2	14	a	You didn’t think I was serious, did you?	event2	15	-1
-event2	15	b	uhh, so i’m just gonna pretend i didnt see that	event2	16	-1
-event2	16	b	ugh i thought the 2nd floor would be a bit drier	event2	17	-1
-event2	17	b	but it’s so moist!	event2	18	-1
-event2	18	b	the moistness is so extreme that i might as well just dive into the flood	event2	19	-1
-event2	19	a	Yikes.	event2	20	-1
-event2	20	b	is there anything i should do about this? Or is there anything i could do about it?	event2	21	-1
-event2	21	a	Do you guys have a dehumidifier?	event2	22	-1
-event2	22	b	i think we do, i might’ve seen one in the attic before	event2	23	-1
-event2	23	a	How about an air mover?	event2	24	-1
-event2	24	b	what are those?	event2	25	-1
-event2	25	a	They’re basically air blowers. They’re used to improve air circulation to reduce drying times	event2	26	-1
-event2	26	b	won’t an electric fan e enough?	event2	27	-1
-event2	27	b	i mean… they blow air...	event2	28	-1
-event2	28	a	Fans usually circulate the air in multiple directions while air movers circulate them in a specific area.	event2	29	-1
-event2	29	a	Drying things might still be faster using an air mover.	event2	30	-1
-event2	30	a	However, using humidifiers and air movers can get quite tricky when using to lessen the damages from floods.	event2	31	-1
-event2	31	a	It usually takes the right balance of both	event2	32	-1
-event2	32	b	cool, well, i can still check if we have both of them	event2	33	-1
-event2	33	a	Or, you know, another option is to just open your windows tolet fresh air in.	event2	34	-1
-event2	34	b	what should i do?	choice	27,28	-1
-event3	0	a	Oh right,that completely slipped my mind for some reason.	event3	1	-1
-event3	1	a	I agree with [Player], keep everything electronic switched off for now.	event3	2	-1
-event3	2	a	I’m sorry for even suggesting it in the first place.	event3	3	-1
-event3	3	b	nah, it’s fine	event3	4	-1
-event3	4	b	wow, opening the windows really made the air inside feel more fresh	event3	5	-1
-event3	5	b	fresher than the fresh prince of bel air haha	event3	6	-1
-event3	6	a	Do you even know what you’re referencing?	event3	7	-1
-event3	7	b	doesnt matter, i’m feeling a little better now	event3	8	-1
-event3	8	b	i can’t wait for all of this to be over	event3	9	-1
-event3	9	a	Can’t you just leave? That’s your relative’s house anyway. Youre home in the city is probably still intact since [Player] and I are still doing alright.	event3	10	-1
-event3	10	b	can’t. They’re still family, plus they need all the help they can get	event3	11	-1
-event3	11	b	i’ll try looking for more stuff to do and make myself more useful	event3	12	-1
-event3	12	b	i’ll be right back	event3	13	-1
-event3	13	b	good news	event3	14	-1
-event3	14	a	Great! That took quite some time though.	event3	15	-1
-event3	15	b	sure did	event3	16	-1
-event3	16	b	which is why i decided to be productive	event3	17	-1
-event3	17	b	who knew i had a knack for stacking cans	event3	18	-1
-event3	18	b	cans are amazing	event3	19	-1
-event3	19	b	not gonna lie, i was getting tempted to eat some	event3	20	-1
-event3	20	b	anyways, im still hungry	event3	21	-1
-event3	21	b	but all the cans are sealed and im too lazy to find the can opener	event3	22	-1
-event3	22	b	guess i’ll settle with drinking water instead	choice	29,30	-1
-event4	0	a	Yeah, it’s important to remember that flood water isn’t just “dirty water”.	event4	1	-1
-event4	1	a	At this point, its probably a mix of every dirty thing you know.	event4	2	-1
-event4	2	a	Better be safe than sorry.	event4	3	-1
-event4	3	b	i guess i should really, carefully disinfect everything	event4	4	-1
-event4	4	b	ugh, my body already aches just thinking about the amount of work this will take	event4	5	-1
-event4	5	b	anyways, you guys were right to tell me not to use the humidifier thing earlier	event4	6	-1
-event4	6	b	i just noticed a while ago that there was a downed power line near my house	event4	7	-1
-event4	7	b	i would’ve reported it but i didn’t really know who or where to call	event4	8	-1
-event4	8	a	You could call Meralco, though I don’t really remember what their 24/7 hotline number is.	choice	31	-1
-event4	9	b	thanks thanks	event4	10	-1
-event4	10	b	i should call them to check our electric… stuff here at the house too	event4	11	-1
-event4	11	b	okay, just called em. what now?	event4	12	-1
-event4	12	a	Well, you did say that all the floodwater went down outside already, right?	event4	13	-1
-event4	13	b	and?	event4	14	-1
-event4	14	a	You can start pumping out the water in your basement already.	event4	15	-1
-event4	15	b	makes sense	event4	16	-1
-event4	16	b	better prepare myself to pump all the water out, yikes	choice	32,33	-1
-event5	0	b	huh, why not?	event5	1	-1
-event5	1	b	it’s not flooded outside anymore	choice	34	-1
-event5	2	b	but why	event5	3	-1
-event5	3	a	You’re still not sure if the pressure outside is lessened enough for you to pump out all the water inside safely.	event5	4	-1
-event5	4	a	Pumping out only a bit and leaving it overnight will make you more certain about whether it’s safe to continue or not.	event5	5	-1
-event5	5	b	how?	event5	6	-1
-event5	6	a	If you measure the height of the water after pumping some of it out, you’ll be able to see tomorrow if the water level has increased.	event5	7	-1
-event5	7	a	When the water stops rising, pump out 1-3 feet again.	event5	8	-1
-event5	8	a	Its safest to repeat those steps until you’ve pumped out all of the water.	event5	9	-1
-event5	9	b	huh… i see…	event5	10	-1
-event5	10	b	thanks sherlock	event5	11	-1
-event5	11	a	I’ll just ignore that. After the water’s gone, try to shovel out the mud before it dries.	event5	12	-1
-event5	12	a	I saw this formula online too, try using this to disinfect your walls.	event5	13	-1
-event5	13	a	“Hose off the walls and floors with clean water and then disinfect them with a solution of 1 1/2 cups of liquid chlorine bleach to a gallon of fresh water. CAUTION	event5	14	-1
-event5	14	b	ugh, more work	event5	15	-1
-event5	15	a	well, do you want to get sick from all of those bacteria?	event5	16	-1
-event5	16	a	if I were you, I'd get started right away.	event5	17	-1
-event5	17	b	easy for you to say	event5	18	-1
-event5	18	b	you're not doing all the hard work	event5	19	-1
-event5	19	b	but I guess i can't complain tho since you guys got me this far	event5	20	-1
-event5	20	b	an electrician will be visiting us after a few days so i better get started now	event5	21	-1
-event5	21	b	be right back guys	event5	22	-1
-event5	22	b	next time you see me I'll be jacked	goodending	0	-1
-event6	0	b	now you guys are just pulling my leg	event6	1	-1
-event6	1	a	No, we're telling you, a storm surge is really different from a tsunami.	event6	2	-1
-event6	2	a	We might not know how exactly they are different, but we know that they are both equally dangerous	event6	3	-1
-event6	3	b	whatever. i'm not falling for this	event6	4	-1
-event6	4	b	a storm surge is just an extra strong rain.	event6	5	-1
-event6	5	b	surge literally means "sudden increase"	event6	6	-1
-event6	6	b	you of all people should know, a. u practically eat dictionaries haha	event6	7	-1
-event6	7	b	i'm sure this house will be able to withstand it anyway	event6	8	-1
-event6	8	b	my relatives are pretty rich so this house is pretty BIG.	event6	9	-1
-event6	9	a	B. Listen.	event6	10	-1
-event6	10	b	whatever, this rain is making me feel sleepy	event6	11	-1
-event6	11	b	good night	notif	17	-1
-event6	12	b	hey guys	event6	13	-1
-event6	13	a	b! Where were you?? We've been trying to contact you	choice	62,63	-1
-event6	14	a	we saw what's happening over there all over twitter.	event6	15	-1
-event6	15	a	it's like...	event6	16	-1
-event6	16	b	like yolanda all over again	event6	17	-1
-event6	17	a	right...	choice	64	-1
-event6	18	b	listen guys, don't panic	event6	19	-1
-event6	19	b	I'm panicking enough already	event6	20	-1
-event6	20	b	I got a message two days ago from NDRRMC	event6	21	-1
-event6	21	b	i didn't tell you guys because I thought it was just spam	event6	22	-1
-event6	22	b	well guess what it was	choice	65,66	-1
-event6	23	b	you got that right	event6	26	-1
-event6	24	b	are you kidding me right now?	event6	25	-1
-event6	25	b	it's a storm surge. Keep up.	event6	26	-1
-event6	26	b	well, i wasn’t scared then because it wasn’t even raining THAT hard	event6	27	-1
-event6	27	b	but now, if you guys were here to see this...	event6	28	-1
-event6	28	a	Can you still leave and evacuate?	event6	29	-1
-event6	29	b	my family's preparing to, but...	event6	30	-1
-event6	30	b	i saw some footage from some parts of tacloban	event6	31	-1
-event6	31	b	the flood... looked like raging rivers	event6	32	-1
-event6	32	b	and they said the winds are going to get stronger	event6	33	-1
-event6	33	b	i’ll probably be swept away by the waters if i just leave 	event6	34	-1
-event6	34	b	but if I stay… well, this house is pretty far from the coastal areas	event6	35	-1
-event6	35	b	but… who knows how bad this will get?	event6	36	-1
-event6	36	b	what should i do?	event6	37	-1
-event6	37	b	im scared	event6	38	-1
-event6	38	b	im sorry for making fun of you guys before	event6	39	-1
-event6	39	b	please help me	event6	40	-1
-event6	40	a	b...	choice	67,68	-1
-event7	0	b	alright	event7	1	-1
-event7	1	b	i'll trust you guys	event7	2	-1
-event7	2	a	it's going to be okay	event7	3	-1
-event7	3	a	authorities must be assisting people to evacuate at this very moment	event7	4	-1
-event7	4	b	okay...	event7	5	-1
-event7	5	b	you guys tell me to wait, but...	event7	6	-1
-event7	6	b	i can't sit still. I gotta do something	event7	7	-1
-event7	7	b	I can’t just watch the flood rising and let it get to me. 	choice	69,70	-1
-event8	0	b	yeah, i guess that makes sense	event8	1	-1
-event8	1	b	the higher i am, the longer it will take for the water to reach me	event8	2	-1
-event8	2	b	i wouldn’t be surprised if the basement is already flooded	event8	3	-1
-event8	3	b	brb Give me a minute.	event8	4	-1
-event8	4	a	we’ll be right here	notif	7	-1
-event8	5	b	alright, im in our attic	event8	6	-1
-event8	6	b	this is as high as i can possibly go	event8	7	-1
-event8	7	b	my relatives are on the third floor	event8	8	-1
-event8	8	b	they said the attic’s too dusty for them	event8	9	-1
-event8	9	a	dude how high is that house?	event8	10	-1
-event8	10	b	not important	event8	11	-1
-event8	11	b	anyway, i couldn’t sit still so i decided to look around	event8	12	-1
-event8	12	b	guess what i found?	event8	13	-1
-event8	13	b	a radio!	event8	14	-1
-event8	14	a	nice! But…	event8	15	-1
-event8	15	a	what do you need a “physical” radio for? Don’t you have a radio on your phone?	event8	16	-1
-event8	16	b	dude, i want to preserve as much battery as I can	event8	17	-1
-event8	17	b	just in case something bad happens…	event8	18	-1
-event8	18	b	let’s stop talking about this. I wouldn’t want to jinx it, you know?	event8	19	-1
-event8	19	b	anyway, our radio is plugged so I won’t be touching the wires	event8	20	-1
-event8	20	b	I’ll try turning it on	choice	47,77	-1
-event9	0	b	why not?	event9	1	-1
-event9	1	b	that shocked me there.	event9	2	-1
-event9	2	b	and I was just about to touch it	choice	48	-1
-event9	3	b	huh? What do you mean? Why would i be wet?	event9	4	-1
-event9	4	b	….	event9	5	-1
-event9	5	b	now that you mention it. I forgot to tell you guys that i took a peek at the basement before going up to the attic	event9	6	-1
-event9	6	b	and well, it was flooding there already all right	event9	7	-1
-event9	7	b	hmm i guess i must have gotten wet then. I didnt even notice.	event9	8	-1
-event9	8	b	Wow my pants are soaked	event9	9	-1
-event9	9	b	doesn’t help that i’m also sweating from head to toe	event9	10	-1
-event9	10	b	its so humid here	event9	11	-1
-event9	11	b	but... What’s that got to do with the radio?	event9	12	-1
-event9	12	a	you might get yourself electrocuted, duh	event9	13	-1
-event9	13	b	why?	event9	14	-1
-event9	14	a	well, you did say your radio’s still plugged. Even though you guys had a black out, there’s a chance that the plug is still carrying electric current	event9	15	-1
-event9	15	a	the human body is a good conductor for electricity, you know?	event9	16	-1
-event9	16	a	touching it with wet hands, especially, will increase the risk since water is a good conductor as well	event9	17	-1
-event9	17	a	moisture also actually reduces the body’s resistance to electric shocks	choice	49	-1
-event9	18	a	yeah, so it’s best to make sure you’re dry before touching electrical devices	event9	19	-1
-event9	19	b	geez, sherlock	event9	20	-1
-event9	20	b	I’m touching my phone right now, though, and I’m still fine	event9	21	-1
-event9	21	a	you’re not charging your phone right now, right?	event9	22	-1
-event9	22	a	and you’re not completely submerged in water?	event9	23	-1
-event9	23	a	there isn’t enough electric current in a cell phone to electrocute you	event9	24	-1
-event9	24	a	it’s different, though, if it’s plugged in and if you’re using a substandard (fake) charger with bad insulation	event9	25	-1
-event9	25	a	but that’s a story for another day	event9	26	-1
-event9	26	a	the bottom line is, just make sure to avoid electric devices when wet	event9	27	-1
-event9	27	b	alright.	event9	28	-1
-event9	28	b	thanks. You guys saved me once again.	event9	29	-1
-event9	29	b	hmm i guess i better dry myself first	event9	30	-1
-event9	30	b	be right back	notif	8	-1
-event9	31	b	alright, i’m dry and i’ve successfully turned the radio on	event9	32	-1
-event9	32	b	i’ve switched through a couple of channels but the only channels i’ve found promising so far are the news channels	event9	33	-1
-event9	33	b	like Radyo Singko 92.3 News FM	choice	50	-1
-event9	34	b	uhh… what is that?	event9	35	-1
-event9	35	b	I dont think I do…	event9	36	-1
-event9	36	a	oh yeah! Ham!	event9	37	-1
-event9	37	a	I read about that in a news article about the storm surge in tacloban	event9	38	-1
-event9	38	a	there’s something called a Ham Emergency Radio Operations (HERO) that was conducted by the Philippine Amateur Radio Association (PARA)	event9	39	-1
-event9	39	a	I don’t know if you guys have heard about this, but during the typhoon, a school building that was being used as an evacuation center collapsed and injured some of the evacuees.	event9	40	-1
-event9	40	a	there weren’t any volunteers around because the typhoon was especially strong at that time	event9	41	-1
-event9	41	a	A HERO volunteer was able to report the incident and was able to send a request for a rescue team	event9	42	-1
-event9	42	a	what the HERO volunteer used to communicate this was called an amateur radio or “ham”	event9	43	-1
-event9	43	a	the volunteer’s request got relayed from station to station until it reached the rescue teams	event9	44	-1
-event9	44	b	wow. I didn’t even know that there was such a thing as an “amateur radio”	event9	45	-1
-event9	45	a	well, it’s mostly for hobbyists and radio enthusiasts and you usually need to have a license for it	event9	46	-1
-event9	46	a	but it does prove to be useful in case of disasters	event9	47	-1
-event9	47	a	i’ve been thinking about getting one myself, but forgot about it until now	event9	48	-1
-event9	48	b	hmm yeah maybe i should get one too	event9	49	-1
-event9	49	b	would be really useful if I had one and if I knew how to operate it	choice	51	-1
-event9	50	b	how so?	event9	51	-1
-event9	51	a	hmm… ndrrmc?	event9	52	-1
-event9	52	b	oh yeah, i did receive a warning from them a few days ago	event9	53	-1
-event9	53	b	ugh and im still regretting not taking it seriously	event9	54	-1
-event9	54	b	but how are you sure that we’ll be receiving their messages?	event9	55	-1
-event9	55	b	people from everywhere will be sending lots of messages for sure	event9	56	-1
-event9	56	b	ndrrmc’s messages might arrive late	event9	57	-1
-event9	57	a	ndrrmc partnered with Smart and ndrrmc now sends their messages through a radio channel that’s separate from what normal citizens use in sending our text messages.	event9	58	-1
-event9	58	a	it’s not guaranteed, but they try to make sure the warning messages arrive early	event9	59	-1
-event9	59	b	ah! Speaking of ndrrmc	event9	60	-1
-event9	60	b	I just received a message	event9	61	-1
-event9	61	b	they said that there’s an evacuation center not far from my current location and that it’s currently safe to evacuate	event9	62	-1
-event9	62	b	i guess i better go tell my family	event9	63	-1
-event9	63	b	i’ll talk to you guys again later when i get there	evac	0	-1
-goodending	0	a	[b] must’ve been really busy helping his relatives out	goodending	1	-1
-goodending	1	a	He barely had time to talk to us here	goodending	2	-1
-goodending	2	a	It’s good that he’s getting the hang of it though	choice	35,36	-1
-goodending	3	a	This afternoon, actually	goodending	4	-1
-goodending	4	a	About a few hours from now	goodending	9	-1
-goodending	5	a	lol	goodending	6	-1
-goodending	6	a	Not gonna lie but, me too	goodending	7	-1
-goodending	7	a	stressed me out too	goodending	8	-1
-goodending	8	a	It felt like I was the one in the middle of that storm surge	goodending	9	-1
-goodending	9	b	hey guys	goodending	10	-1
-goodending	10	a	lol are you okay?	goodending	11	-1
-goodending	11	b	yeah, just feeling a little tired	goodending	12	-1
-goodending	12	b	i’m not going back home yet, actually	goodending	13	-1
-goodending	13	b	my parents were itching to get back home, but i can’t leave just yet	goodending	14	-1
-goodending	14	b	sorry if i tired you guys out	goodending	15	-1
-goodending	15	a	It’s alright, that was nothing.	goodending	16	-1
-goodending	16	b	i just want to say thanks again	goodending	17	-1
-goodending	17	b	would it be weird of me to say that this is probably the best vacation of my life?	goodending	18	-1
-goodending	18	a	Well, yes.	goodending	19	-1
-goodending	19	b	hahaha	goodending	20	-1
-goodending	20	b	I just never thought i would learn so much	goodending	21	-1
-goodending	21	b	and i guess i’ve never really felt this thankful to be alive	goodending	22	-1
-goodending	22	a	So, what’s the reason you can’t go home just yet?	goodending	23	-1
-goodending	23	b	actually…	goodending	24	-1
-goodending	24	b	all this kinda made me wanna volunteer	goodending	25	-1
-goodending	25	b	i mean, i would’ve died if it weren’t for you guys	goodending	26	-1
-goodending	26	b	so I thought i could help others like u guys helped me	goodending	27	-1
-goodending	27	a	Wow, you’re like, a different person now.	goodending	28	-1
-goodending	28	b	hahaha, i know, it’s also weirding me out	goodending	29	-1
-goodending	29	b	anyway, thanks again! And talk to you guys later	goodending	30	-1
-goodending	30	b	i need to head out soon	goodending	31	-1
-goodending	31	a	Alright, bye [b]!	choice	37,38	-1
-goodending	32	b	haha, thanks	block	1	-1
-goodending	33	b	haha, good bye ;P	block	1	-1
-intro	0	b	hi guys	intro	1	-1
-intro	1	b	im so bored	intro	2	-1
-intro	2	a	Huh? If I recall correctly, aren't you on vacation?	intro	3	-1
-intro	3	b	yeah, though it doesn't really feel like a vacation	intro	4	-1
-intro	4	a	Well, at least you're not stuck at home. All this rain is making me feel gloomy.	intro	5	-1
-intro	5	a	Though I must admit, this seems like the perfect weather to read some books.	intro	6	-1
-intro	6	b	no joke	intro	7	-1
-intro	7	b	the rain's also ruining my mood	intro	8	-1
-intro	8	a	Huh? It's also raining there in Japan?	intro	9	-1
-intro	9	b	nah my trip got cancelled because of the storm	intro	10	-1
-intro	10	b	didn't i tell you?	intro	11	-1
-intro	11	a	No, you didn't. Right, [Player]?	choice	0,1	-1
-intro	12	b	my bad. guess i forgot	intro	14	-1
-intro	13	a	You guys are mean, keeping me out of the circle.	intro	14	-1
-intro	14	a	Anyways, maybe we can make some plans now that you’re still in town.	intro	15	-1
-intro	15	a	At least after the rain’s finished.	intro	16	-1
-intro	16	b	cant	intro	17	-1
-intro	17	b	i’m in tacloban	intro	18	-1
-intro	18	b	you know, visiting my relatives, instead.	choice	2	-1
-intro	19	a	Goodness,that reminds me. This gloomy rain and you saying Tacloban just reminded me of something.	intro	20	-1
-intro	20	a	The Yolanda typhoon. Do you guys remember?	intro	21	-1
-intro	21	b	oh yeah, that was great	choice	3,4	-1
-intro	22	b	Ha! [Player] gets me.	intro	23	-1
-intro	23	a	What are you guys talking about?	intro	25	-1
-intro	24	b	you guys don’t get it?	intro	25	-1
-intro	25	b	typhoon yolanda. that typhoon that blessed us week long holidays away from school	intro	26	-1
-intro	26	b	It felt like a second summer vacation	intro	27	-1
-intro	27	a	What the hell?	intro	28	-1
-intro	28	a	That was a disaster where lots of people lost their homes, families and even their lives.	intro	29	-1
-intro	29	b	well, boohoo, look for someone who cares. I’d wish ANYTHING for no classes.	intro	30	-1
-intro	30	b	in fact, i kinda wish that it wouldn’t rain while we’re on vacation and just rain when classes start again	intro	31	-1
-intro	31	b	so u know, extended holidays for us all	intro	32	-1
-intro	32	b	right, [Player]?	intro	33	-1
-intro	33	a	Are you kidding? Back me up here, [Player]. I can’t be the only sensible one here.	choice	5	-1
-intro	34	a	Right, around 3000 people died in Tacloban, and about 6000 died, counting the other parts of the country	intro	35	-1
-intro	35	b	darn(d*mn), i’m almost more surprised that you know all that on the top of your head	intro	36	-1
-intro	36	b	all those people really died just because of some rain?	intro	37	-1
-intro	37	b	sure, yolanda was a pretty strong bagyo, but it wasn’t that strong	intro	38	-1
-intro	38	b	how do you even know these things?	intro	39	-1
-intro	39	a	I read the news, like what everyone should do.	intro	40	-1
-intro	40	a	Also, it wasn’t the rain that did the damage.	intro	41	-1
-intro	41	b	the winds, then? they were pretty strong, I guess	intro	42	-1
-intro	42	a	No, not the winds. I think it was a tsunami.	choice	6,7	-1
-intro	43	a	hmm… that doesn’t sound quite right	intro	44	-1
-intro	44	b	yeah it doesn’t. how is there a tsunami if it’s just a typhoon?	intro	45	-1
-intro	45	b	there weren’t any earthquakes or anything	intro	46	-1
-intro	46	a	I know I did say it was a tsunami, but it really wasn’t. I just can’t seem to remember what actually happened.	intro	47	-1
-intro	47	b	well, that’s a first	intro	48	-1
-intro	48	b	maybe you can just admit that i’m right and perhaps it was the heavy rain, afterall	intro	49	-1
-intro	49	b	since, u know, it’s a storm	intro	50	-1
-intro	50	a	That’s it!	intro	51	-1
-intro	51	a	I remember it now. Yes, it was a storm surge	intro	52	-1
-intro	52	b	uhh…	intro	53	-1
-intro	53	b	a storm surge?	intro	54	-1
-intro	54	b	… an extra heavy rain?	intro	55	-1
-intro	55	a	You make me want to punch my face.	intro	56	-1
-intro	56	b	then what is it?? Just tell me	intro	57	-1
-intro	57	a	well…	intro	58	-1
-intro	58	a	I guess you could say it’s like a tsunami.	intro	59	-1
-intro	59	b	it’s like a tsunami but it’s not a tsunami?	intro	60	-1
-intro	60	a	Well, truth be told, I’m not really sure what a storm surge is either.	intro	61	-1
-intro	61	a	I just know that it’s different from a tsunami	intro	62	-1
-intro	62	a	[Player], do you know?	choice	8,9	-1
-intro	63	a	Oh, I see.	intro	65	-1
-intro	64	a	“A storm surge is water pushed inland by very strong winds, usually during very strong typhoons; on the other hand, a tsunami happens when water is displaced by earthquakes.”	intro	65	-1
-intro	65	a	Yep, that makes sense.	event1	0	-1
-minigame	0	-	-	minigame-answer	0,1	-1
-minigame	1	-	-	minigame-answer	2,3	-1
-minigame	2	-	-	minigame-answer	4,5	-1
-minigame-answer	0	Player	I found this link: https://www.nist.gov/video/storm-surge-animation	intro	63	-1
-minigame-answer	1	Player	I can't seem to find it	event6	0	-1
-minigame-answer	2	Player	There you go	event1	28	-1
-minigame-answer	3	Player	errr, actually, we'll tell you next time	event1	28	-1
-minigame-answer	4	Player	Yes	badending5	48	-1
-minigame-answer	5	Player	No	badending5	48	-1
-notif	0	system	...	badending2	7	-1
-notif	1	system	[b] is online	badending1	10	-1
-notif	2	system	-[b] went offline-	badending4	8	-1
-notif	3	system	-[b] is online-	badending4	11	-1
-notif	4	system	…	badending7	1	-1
-notif	5	system	after a while	badending7	16	-1
-notif	6	system	-[b] is online-	badending7	19	-1
-notif	7	system	A few moments later...	event8	5	-1
-notif	8	system	A few moments later...	event9	31	-1
-notif	9	system	-[b] went offline-	badending5	46	-1
-notif	10	system	A few days later...	badending5	51	-1
-notif	11	system	-[b] is online-	badending5	56	-1
-notif	12	system	-[b] went offline-	badending6	0	-1
-notif	13	system	A little while later...	badending6	7	-1
-notif	14	system	-[b] is online-	badending6	14	-1
-notif	15	system	after a day or so ....	badending3	10	-1
-notif	16	system	the whole house then collapses	block	8	-1
-notif	17	system	[b] went offline	event6	12	-1
-notif	18	system	[b] went offline	badending1	4	-1
-postdisaster1	0	b	my god	postdisaster1	1	-1
-postdisaster1	1	b	the house is destroyed	postdisaster1	2	-1
-postdisaster1	2	b	like my morale haha	postdisaster1	3	-1
-postdisaster1	3	b	well, not completely.	postdisaster1	4	-1
-postdisaster1	4	a	it’s nice to know that you’re still going strong after all of this.	postdisaster1	5	-1
-postdisaster1	5	b	no, my morale is crushed	postdisaster1	6	-1
-postdisaster1	6	b	but the house is still standing,	postdisaster1	7	-1
-postdisaster1	7	b	bad news is that its still flooded and stuff are broken everywhere	postdisaster1	8	-1
-postdisaster1	8	b	i can’t help but feel bad	postdisaster1	9	-1
-postdisaster1	9	b	i feel like we could’ve prevented this or lessened some of the damage at least	choice	20,21	-1
-postdisaster1	10	b	don’t be	postdisaster1	13	-1
-postdisaster1	11	b	...that’s right	postdisaster1	12	-1
-postdisaster1	12	b	well i shouldnt complain	postdisaster1	13	-1
-postdisaster1	13	b	i was too ignorant	postdisaster1	14	-1
-postdisaster1	14	a	well, you DID listen to us, so you’re not THAT ignorant	postdisaster1	15	-1
-postdisaster1	15	a	that accounts for something!	postdisaster1	16	-1
-postdisaster1	16	a	maybe for now, you can try checking each room to check their conditions	postdisaster1	17	-1
-postdisaster1	17	b	alright, wait a min I’ll go check the rooms on the ground floor first	postdisaster1	18	-1
-postdisaster1	18	b	guys…	postdisaster1	19	-1
-postdisaster1	19	b	you know the feeling when you know you bombed a test and you dont want to look at it	postdisaster1	20	-1
-postdisaster1	20	b	but when you look at it you see that you DID fail and you feel terrible even if you expected it?	postdisaster1	21	-1
-postdisaster1	21	a	can’t say that I have.	postdisaster1	22	-1
-postdisaster1	22	b	well, whatever	postdisaster1	23	-1
-postdisaster1	23	b	I feel like that right now	postdisaster1	24	-1
-postdisaster1	24	b	the whole ground floor is a mess	postdisaster1	25	-1
-postdisaster1	25	b	I cant even imagine what my parents feel	postdisaster1	26	-1
-postdisaster1	26	b	or my relatives, especially	postdisaster1	27	-1
-postdisaster1	27	a	[b]….	postdisaster1	28	-1
-postdisaster1	28	b	there are a couple of bedrooms on the first floor	postdisaster1	29	-1
-postdisaster1	29	b	the ones they use as the masters’ bedroom and children's rooms	postdisaster1	30	-1
-postdisaster1	30	b	for some reason, the guest rooms are on the second floor	postdisaster1	31	-1
-postdisaster1	31	b	anyway, they said they preferred having the rooms on the first floor so that they won’t have to walk far on a tiring day	postdisaster1	32	-1
-postdisaster1	32	b	which is understandable, by the way	postdisaster1	33	-1
-postdisaster1	33	b	this house is HUGE	postdisaster1	34	-1
-postdisaster1	34	b	but i bet they’re reevaluating their life choices right now	postdisaster1	35	-1
-postdisaster1	35	b	the ground floor is a WRECK	postdisaster1	36	-1
-postdisaster1	36	b	you know what’s worse?	postdisaster1	37	-1
-postdisaster1	37	a	Don’t tell me all the books I carefully picked out and generously lent you got destroyed. I spent a fortune on those!	postdisaster1	38	-1
-postdisaster1	38	b	you mean your books that you FORCED onto me because you thought I needed help with my vocabulary?	postdisaster1	39	-1
-postdisaster1	39	b	nuh-uh. no way am I reading a single one of those in my lifetime	postdisaster1	40	-1
-postdisaster1	40	b	so of course	postdisaster1	41	-1
-postdisaster1	41	b	I left ‘em all at home	postdisaster1	42	-1
-postdisaster1	42	a	For once, something good came out of your illiteracy.	postdisaster1	43	-1
-postdisaster1	43	b	hey! No need to be so rude!	postdisaster1	44	-1
-postdisaster1	44	b	anyway, back to the problem	postdisaster1	45	-1
-postdisaster1	45	b	my relatives kept most of their valuables in those rooms including important documents	postdisaster1	46	-1
-postdisaster1	46	b	like their house lease contract	postdisaster1	47	-1
-postdisaster1	47	b	(I only overheard that during the adults’ talk)	postdisaster1	48	-1
-postdisaster1	48	b	of course, their TV’s and gadgets all took a swim too	postdisaster1	49	-1
-postdisaster1	49	a	Oh no, were there some things left that were salvageable?	postdisaster1	50	-1
-postdisaster1	50	b	well, there’s still stuff on the 2nd floor and above	postdisaster1	51	-1
-postdisaster1	51	b	but they lost a lot	postdisaster1	52	-1
-postdisaster1	52	b	even with how rich they are, there’ll be a huge dent in their savings just to recover from this	postdisaster1	53	-1
-postdisaster1	53	a	Well, on the bright side, they’re very privileged even recover from those losses compared to others	postdisaster1	54	-1
-postdisaster1	54	b	i guess so…	postdisaster1	55	-1
-postdisaster1	55	b	i just can’t help but regret, though	postdisaster1	56	-1
-postdisaster1	56	b	if only we had been more prepared	postdisaster1	57	-1
-postdisaster1	57	b	if only we had known what to do…	postdisaster1	58	-1
-postdisaster1	58	a	Well, no use dwelling on the past, as long as you make sure you learn from this.	postdisaster1	59	-1
-postdisaster1	59	b	alright…	postdisaster1	60	-1
-postdisaster1	60	b	i guess i should get started on pumping water out. The basement is still quite flooded	postdisaster1	61	-1
-postdisaster1	61	b	getting the water out as soon as possible will lessen the damage	postdisaster1	62	-1
-postdisaster1	62	b	hey, [Player], stop seenzoning, what do you think?	choice	22,23	-1
+Type	#	user	text	nextType	#	unlocks	
+badending1	0	Jacob	walking through the flooded waters isn’t that bad	badending1	1	-1	
+badending1	1	Jacob	feels a bit refreshing, if you ask me	badending1	2	-1	
+badending1	2	Jacob	if only the waters weren’t so dir	badending1	3	-1	
+badending1	3	Holly	‘dir’, what?	notif	18	-1	
+badending1	4	Holly	Jacob???	choice	39,40	-1	
+badending1	5	Holly	Now’s not the time to joke around!	badending1	6	-1	
+badending1	6	Holly	Let’s hope he gets back home safe	badending1	7	-1	
+badending1	7	Holly	Jacob hasn’t contacted us in a while… I have a bad feeling about this	choice	41,42	-1	
+badending1	8	Holly	If something bad did happen to him, it’s not your fault nor mine alone	badending1	9	-1	
+badending1	9	Holly	It’s both ours	notif	1	-1	
+badending1	10	Holly	Jacob!!	badending1	11	-1	
+badending1	11	Holly	I knew it! You’re safe!	badending1	12	-1	
+badending1	12	Jacob	Holly, [Player]	badending1	13	-1	
+badending1	13	Holly	What happened last time?? Why did you suddenly stop messaging us like that?	badending1	14	-1	
+badending1	14	Holly	We were so worried	badending1	15	-1	
+badending1	15	Jacob	I’m sorry	badending1	16	-1	
+badending1	16	Jacob	but this is not Jacob	badending1	17	-1	
+badending1	17	Jacob	this is his mother	badending1	18	-1	
+badending1	18	Jacob	we took the shortest way back home, but the flood was still pretty deep and foggy	badending1	19	-1	
+badending1	19	Jacob	we couldn’t see anything under the water	badending1	20	-1	
+badending1	20	Jacob	we were also unfamiliar with the roads and… well…	badending1	21	-1	
+badending1	21	Jacob	we didn’t know that there was an open gutter	badending1	22	-1	
+badending1	22	Jacob	and he…	badending1	23	-1	
+badending1	23	Jacob	i’m sorry i have no heart to tell you in detail what happened	badending1	24	-1	
+badending1	24	Jacob	just know that what happened to Jacob is neither of your faults	badending1	25	-1	
+badending1	25	Jacob	it’s mine	badending1	26	-1	
+badending1	26	Jacob	both of you tried your best to guide and help Jacob, well, us, through the storm surge, and I, as his mother couldn’t do anything	badending1	27	-1	
+badending1	27	Jacob	despite what happened to Jacob, we are truly thankful for both of your guidance	badending1	28	-1	
+badending1	28	Jacob	i promise to read more on disaster preparedness	badending1	29	-1	
+badending1	29	Jacob	and i hope you do too	badending1	30	-1	
+badending1	30	Jacob	once again, thank you, and farewell	block	2	-1	
+badending2	0	Jacob	ok gimme a sec, i'll look for them in the attic	badending2	1	-1	
+badending2	1	Jacob	how do you even use these things	badending2	2	-1	
+badending2	2	Holly	are you serious	choice	71	-1	
+badending2	3	Holly	t e c h n o l o g y	badending2	4	-1	
+badending2	4	Jacob	i've never used these before in my life give me a break	badending2	5	-1	
+badending2	5	Jacob	ok be right back then	badending2	6	-1	
+badending2	6	Jacob	better dry this house up before i turn into a raisin	notif	0	-1	
+badending2	7	Holly	wait	badending2	8	-1	
+badending2	8	Holly	appliances make use of electricity	badending2	9	-1	
+badending2	8	Holly	electricity does not go well with moist 2nd floors	badending2	10	-1	
+badending2	10	Holly	WAIT	choice	72	-1	
+badending2	11	Holly	Jacob!!! don't plug them in!!!	badending2	12	-1	
+badending2	12	Holly	Jacob???	badending2	13	-1	
+badending2	13	Holly	DO NOT PLUG THE DEHUMIDIFIER AND AIR MOVER INTO YOUR WET WALL SOCKETS	choice	73	-1	
+badending2	14	Holly	Jacob please respond	block	7	-1	
+badending3	0	Jacob	this is not how i imagined a nice workout would be	badending3	1	-1	
+badending3	1	Jacob	but oh well i gotta get all the water out quick	badending3	2	-1	
+badending3	2	Jacob	so then i could rest afterwards too	badending3	3	-1	
+badending3	3	Holly	wait are you really going to MANUALLY get the water out???	badending3	4	-1	
+badending3	4	Jacob	... ok you're right that seems impossible	choice	74	-1	
+badending3	5	Jacob	actually my dad mentioned something about installing a sump pump, what even is that?	badending3	6	-1	
+badending3	6	Jacob	sump pump	badending3	7	-1	
+badending3	7	Jacob	haha that sounds kinda funny	badending3	8	-1	
+badending3	8	Holly	it’s some device that would help you quickly get rid of the flooding in your basement	badending3	9	-1	
+badending3	9	Jacob	ohhhh, well alright. That’ll be my plan for the weekend then. Joy.	timer	0	-1	
+badending3	10	Jacob	hi so	badending3	11	-1	
+badending3	11	Jacob	we shouldn’t have tried to pump all the water out at once	badending3	12	-1	
+badending3	12	Jacob	ughh i hate everything i’m so tired and this happens	badending3	13	-1	
+badending3	13	Holly	?	choice	75	-1	
+badending3	14	Jacob	the floor and walls of the basement cracked and collapsed	badending3	15	-1	
+badending3	15	Jacob	IT'S DESTROYED	badending3	16	-1	
+badending3	16	Jacob	there were so many things kept in there, even; important things	choice	78	-1	
+badending3	17	Holly	ahh oh dear	badending3	18	-1	
+badending3	18	Holly	i totally forgot	badending3	19	-1	
+badending3	19	Holly	it’s caused by the pressure pushing against your basement walls, pressure from the water in the ground outside your house	badending3	20	-1	
+badending3	20	Holly	the pumping out of water should’ve been done gradually	badending3	21	-1	
+badending3	21	Holly	aaaah i’m sorry i should have mentioned this. I dont know why i didnt think about this happening.	badending3	22	-1	
+badending3	22	Jacob	it's too late now	badending3	23	-1	
+badending3	23	Jacob	the basement's a mess	badending3	24	-1	
+badending3	24	Jacob	i get the feeling the whole house is gonna collapse next	choice	76	-1	
+badending4	0	Jacob	alright, I guess I’m just being paranoid	badending4	1	-1	
+badending4	1	Jacob	kinda funny. I never imagined I’d be saying things like this	badending4	2	-1	
+badending4	2	Holly	are you sure about this?	badending4	3	-1	
+badending4	3	Jacob	It’s okay. I trust you guys	badending4	4	-1	
+badending4	4	Jacob	and my family looks like they’re ready to leave	badending4	5	-1	
+badending4	5	Jacob	well, wish us luck	badending4	6	-1	
+badending4	6	Jacob	i’ll talk to you guys later	badending4	7	-1	
+badending4	7	Holly	stay safe, Jacob!	notif	2	-1	
+badending4	8	Holly	Jacob hasn’t contacted us in a while… I have a bad feeling about this	choice	43,44	-1	
+badending4	9	Holly	if something bad did happen to him, it’s not your fault nor mine alone	badending4	10	-1	
+badending4	10	Holly	it’s both our fault	notif	3	-1	
+badending4	11	Holly	Jacob!!	badending4	12	-1	
+badending4	12	Holly	i knew it! You’re safe!	badending4	13	-1	
+badending4	13	Jacob	Holly, [Player]	badending4	14	-1	
+badending4	14	Holly	what happened last time?? Why did you suddenly stop messaging us like that?	badending4	15	-1	
+badending4	15	Holly	we were so worried	badending4	16	-1	
+badending4	16	Jacob	I’m sorry	badending4	17	-1	
+badending4	17	Jacob	but this is not Jacob	badending4	18	-1	
+badending4	18	Jacob	this is his mother	badending4	19	-1	
+badending4	19	Jacob	we decided to leave during the peak of the storm surge	badending4	20	-1	
+badending4	20	Jacob	we walked through the floods, but the winds were too strong	badending4	21	-1	
+badending4	21	Jacob	and he…	badending4	22	-1	
+badending4	22	Jacob	i’m sorry i have no heart to tell you in detail what happened	badending4	23	-1	
+badending4	23	Jacob	just know that what happened to Jacob is neither of your faults	badending4	24	-1	
+badending4	24	Jacob	it’s mine	badending4	25	-1	
+badending4	25	Jacob	both of you tried your best to guide and help Jacob, well, us, through the storm surge, and I, as his mother couldn’t do anything.	badending4	26	-1	
+badending4	26	Jacob	<b>we even thoughtlessly ignored the warning message that was sent to us</b>	badending4	27	-1	
+badending4	27	Jacob	despite what happened to Jacob, we are truly thankful for both of your guidance	badending4	28	-1	
+badending4	28	Jacob	i promise to read more on disaster preparedness	badending4	29	-1	
+badending4	29	Jacob	and i hope you do too	badending4	30	-1	
+badending4	30	Jacob	once again, thank you, and farewell	block	3	-1	
+badending5	0	Jacob	oh yeah, that makes sense.	badending5	1	-1	
+badending5	1	Jacob	as long as I make sure the basement doesn’t get flooded, we’ll be safe	badending5	2	-1	
+badending5	2	Jacob	it’s underground after all	badending5	3	-1	
+badending5	3	Jacob	the walls should be strong, being supported by packs of dirt and all	badending5	4	-1	
+badending5	4	Jacob	i’ll go ahead and clean the basement first before telling my family	badending5	5	-1	
+badending5	5	Jacob	it’s probably filled with dust	choice	52	-1	
+badending5	6	Jacob	yep, I’m here and it’s as dusty as	badending5	7	-1	
+badending5	7	Holly	as dusty as…?	badending5	8	-1	
+badending5	8	Jacob	sorry, i got distracted	badending5	9	-1	
+badending5	9	Jacob	i closed the door when i got here and i thought i heard my mom scream my name	badending5	10	-1	
+badending5	10	Holly	uh… shouldn’t you go look for her?	badending5	11	-1	
+badending5	11	Jacob	nah, it’s okay. It’s probably nothing. She’s probably only calling me to fetch her a drink or something.	badending5	12	-1	
+badending5	12	Jacob	anyway, as I was saying, this basement is as dusty as	badending5	13	-1	
+badending5	13	Holly	as dusty as..?	badending5	14	-1	
+badending5	14	Jacob	oh no	badending5	15	-1	
+badending5	15	Jacob	oh nono	badending5	16	-1	
+badending5	16	Jacob	ohhh nooo	choice	53,54	-1	
+badending5	17	Jacob	way worse	badending5	18	-1	
+badending5	18	Jacob	way way waaay worse	badending5	19	-1	
+badending5	19	Jacob	i’m screwed	badending5	20	-1	
+badending5	20	Jacob	the place is flooding up reaally fast	badending5	21	-1	
+badending5	21	Holly	well, what are you doing? Get out of there!	badending5	22	-1	
+badending5	22	Jacob	i’m trying! But the door won’t open!	badending5	23	-1	
+badending5	23	Jacob	no way, could something be blocking it?	badending5	24	-1	
+badending5	24	Holly	could it be that it’s already flooded outside the basement and the pressure is preventing you from opening the door??	badending5	25	-1	
+badending5	25	Jacob	no way! It wasn’t even thaat flooded there when i walked down the basement	badending5	26	-1	
+badending5	26	Holly	but it was already flooding up??	badending5	27	-1	
+badending5	27	Holly	Why didn’t you tell us!	badending5	28	-1	
+badending5	28	Jacob	well, the water wasn’t rising anymore so I thought that was already the worst it was gonna get	badending5	29	-1	
+badending5	29	Jacob	oh my god. Could my mom be calling me earlier because of this?	badending5	30	-1	
+badending5	30	Holly	obviously!	badending5	31	-1	
+badending5	31	Jacob	what do I do??	badending5	32	-1	
+badending5	32	Holly	Jacob, stay in the groupchat	choice	55	-1	
+badending5	33	Holly	[Player] call 911!!	badending5	34	-1	
+badending5	34	Holly	Jacob, stay in the groupchat	badending5	35	-1	
+badending5	35	Holly	just keep talking so we know you're still there	badending5	36	-1	
+badending5	36	Jacob	alright	badending5	37	-1	
+badending5	37	Jacob	but I don’t think this is gonna do me any good	badending5	38	-1	
+badending5	38	Jacob	i’m dead, huh?	badending5	39	-1	
+badending5	39	Jacob	i know i was very close to breaking down a while ago, but now that it’s coming…	badending5	40	-1	
+badending5	40	Jacob	i don’t feel as scared	badending5	41	-1	
+badending5	41	Holly	don’t say that!	badending5	42	-1	
+badending5	42	Holly	[Player] is calling 911 right now	badending5	43	-1	
+badending5	43	Holly	they should be there any minute	badending5	44	-1	
+badending5	44	Jacob	hahaha well, whatever	badending5	45	-1	
+badending5	45	Jacob	see you all in our next lives	notif	9	-1	
+badending5	46	Holly	stop saying that!	badending5	47	-1	
+badending5	47	Holly	[Player], have you called 911???	minigame	2	-1	
+badending5	48	Holly	hold up	badending5	49	-1	
+badending5	49	Holly	Jacob went offline??	badending5	50	-1	
+badending5	50	Holly	i hope he’s okay…	notif	10	-1	
+badending5	51	Holly	Jacob hasn’t contacted us in a while… I have a bad feeling about this	choice	60,61	-1	
+badending5	52	-	-	intro	0	-1	
+badending5	53	-	-	intro	0	-1	
+badending5	54	Holly	if something bad did happen to him, it’s not your fault nor mine alone	badending5	55	-1	
+badending5	55	Holly	it’s both our fault	notif	11	-1	
+badending5	56	Holly	Jacob!!	badending5	57	-1	
+badending5	57	Holly	i knew it! You’re safe!	badending5	58	-1	
+badending5	58	Jacob	Holly, [Player]	badending5	59	-1	
+badending5	59	Holly	what happened last time?? Why did you suddenly stop messaging us like that?	badending5	60	-1	
+badending5	60	Holly	we were so worried	badending5	61	-1	
+badending5	61	Jacob	I’m sorry	badending5	62	-1	
+badending5	62	Jacob	but this is not Jacob	badending5	63	-1	
+badending5	63	Jacob	this is his mother	badending5	64	-1	
+badending5	64	Jacob	the storm suddenly got worse and we tried to look for Jacob..	badending5	65	-1	
+badending5	65	Jacob	we really did…	badending5	66	-1	
+badending5	66	Jacob	but he didn’t respond	badending5	67	-1	
+badending5	67	Jacob	turns out, he was in the basement...	badending5	68	-1	
+badending5	68	Jacob	the place flooded up really fast and i couldn’t stay down there any longer	badending5	69	-1	
+badending5	69	Jacob	so he…	badending5	70	-1	
+badending5	70	Jacob	i’m sorry i have no heart to tell you in detail what happened	badending5	71	-1	
+badending5	71	Jacob	just know that what happened to Jacob is neither of your faults	badending5	72	-1	
+badending5	72	Jacob	it’s mine	badending5	73	-1	
+badending5	73	Jacob	both of you tried your best to guide and help Jacob, well, us, through the storm surge, and I, as his mother couldn’t do anything.	badending5	74	-1	
+badending5	74	Jacob	we even thoughtlessly ignored the warning message that was sent to us	badending5	75	-1	
+badending5	75	Jacob	i could’ve at least kept a close eye on him...	badending5	76	-1	
+badending5	76	Jacob	despite what happened to Jacob, we are truly thankful for both of your guidance	badending5	77	-1	
+badending5	77	Jacob	i promise to read more on disaster preparedness	badending5	78	-1	
+badending5	78	Jacob	and i hope you do too	badending5	79	-1	
+badending5	79	Jacob	once again, thank you, and farewell	block	5	-1	
+badending6	0	Holly	huh? Where did Jacob go?	choice	56,57	-1	
+badending6	1	Holly	come on, there’s no time for jokes	badending6	2	-1	
+badending6	2	Holly	it couldn’t be the radio… could it?	badending6	3	-1	
+badending6	3	Holly	oh my god. We should've told him not to touch it!	badending6	4	-1	
+badending6	4	Holly	even though he didn’t touch the wires… it’s still an electrical appliance…	badending6	5	-1	
+badending6	5	Holly	a plugged one, at that!	badending6	6	-1	
+badending6	6	Holly	oh no… i really hope he’s okay	notif	13	-1	
+badending6	7	Holly	@Jacob	badending6	8	-1	
+badending6	8	Holly	@Jacob	badending6	9	-1	
+badending6	9	Holly	[Player],  I have a bad feeling about this	badending6	10	-1	
+badending6	10	Holly	tw*tter says that the storm surge has calmed down already	badending6	11	-1	
+badending6	11	Holly	but Jacob still hasn’t contacted us	choice	58,59	-1	
+badending6	12	Holly	if something bad did happen to him, it’s not your fault nor mine alone	badending6	13	-1	
+badending6	13	Holly	it’s both our fault	notif	14	-1	
+badending6	14	Holly	Jacob!!	badending6	15	-1	
+badending6	15	Holly	i knew it! You’re safe!	badending6	16	-1	
+badending6	16	Jacob	Holly, [Player]	badending6	17	-1	
+badending6	17	Holly	what happened last time?? Why did you suddenly stop messaging us like that?	badending6	18	-1	
+badending6	18	Holly	we were so worried	badending6	19	-1	
+badending6	19	Jacob	I’m sorry	badending6	20	-1	
+badending6	20	Jacob	but this is not Jacob	badending6	21	-1	
+badending6	21	Jacob	this is his mother	badending6	22	-1	
+badending6	22	Jacob	he was already unconscious when we found him	badending6	23	-1	
+badending6	23	Jacob	he was lying beside a radio, so we could only guess that he tried to turn it on...	badending6	24	-1	
+badending6	24	Jacob	i’m sorry i have no heart to tell you in detail what happened	badending6	25	-1	
+badending6	25	Jacob	just know that what happened to Jacob is neither of your faults	badending6	26	-1	
+badending6	26	Jacob	it’s mine	badending6	27	-1	
+badending6	27	Jacob	both of you tried your best to guide and help Jacob, well, us, through the storm surge, and I, as his mother couldn’t do anything.	badending6	28	-1	
+badending6	28	Jacob	we even thoughtlessly ignored the warning message that was sent to us	badending6	29	-1	
+badending6	29	Jacob	i could’ve at least kept a close eye on him...	badending6	30	-1	
+badending6	30	Jacob	despite what happened to Jacob, we are truly thankful for both of your guidance	badending6	31	-1	
+badending6	31	Jacob	i promise to read more on disaster preparedness	badending6	32	-1	
+badending6	32	Jacob	and i hope you do too	badending6	33	-1	
+badending6	33	Jacob	once again, thank you, and farewell	block	6	-1	
+badending7	0	Jacob	nice, I was afraid you’d say no for a second	notif	4	-1	
+badending7	1	Jacob	yuck! This water tastes weird!	badending7	2	-1	
+badending7	2	Jacob	i work hard cleaning up and this is how I’m rewarded?	badending7	3	-1	
+badending7	3	Holly	are you okay?	badending7	4	-1	
+badending7	4	Jacob	besides this disgusting feeling in my mouth, i think i’m okay. Why would i not be?	badending7	5	-1	
+badending7	5	Holly	the water might be contaminated, stupid!	badending7	6	-1	
+badending7	6	Jacob	oh… right…	badending7	7	-1	
+badending7	7	Jacob	but I don’t feel any different	badending7	8	-1	
+badending7	8	Jacob	so i think it’s okay	badending7	9	-1	
+badending7	9	Jacob	i’ll steer clear of contaminated water from now on, I guess	badending7	10	-1	
+badending7	10	Holly	and get yourself checked as soon as possible!	badending7	11	-1	
+badending7	11	Holly	you don’t know what might be in there!	badending7	12	-1	
+badending7	12	Jacob	sure, yeah, as soon as possible.	badending7	13	-1	
+badending7	13	Holly	promise?	badending7	14	-1	
+badending7	14	Jacob	yeah. Well, see you guys later. There’s still lots to do and I want to finish this while im still feeling energized	badending7	15	-1	
+badending7	15	Holly	alright, good luck	notif	5	-1	
+badending7	16	Holly	Jacob hasn’t contacted us in a while… I have a bad feeling about this	choice	45,46	-1	
+badending7	17	Holly	if something bad did happen to him, it’s not your fault nor mine alone	badending7	18	-1	
+badending7	18	Holly	it’s both our fault	notif	6	-1	
+badending7	19	Holly	Jacob!!	badending7	20	-1	
+badending7	20	Holly	i knew it! You’re safe!	badending7	21	-1	
+badending7	21	Jacob	Holly, [Player]	badending7	22	-1	
+badending7	22	Holly	what happened last time?? Why did you suddenly stop messaging us like that?	badending7	23	-1	
+badending7	23	Holly	we were so worried	badending7	24	-1	
+badending7	24	Jacob	I’m sorry	badending7	25	-1	
+badending7	25	Jacob	but this is not Jacob	badending7	26	-1	
+badending7	26	Jacob	this is his mother	badending7	27	-1	
+badending7	27	Jacob	Jacob had been sick with fever, diarrhea, and headaches for a while now, but he never told us until he got worse	badending7	28	-1	
+badending7	28	Jacob	we rushed him to the hospital as soon as possible	badending7	29	-1	
+badending7	29	Jacob	turns out, he had been typhoid fever.	badending7	30	-1	
+badending7	30	Jacob	doctors attended to him immediately and we thought everything was going to be fine	badending7	31	-1	
+badending7	31	Jacob	however, because we waited so long to get him treated, he had contracted pneumonia as well	badending7	32	-1	
+badending7	32	Jacob	he endured the symptoms for too long and it was simply too late...	badending7	33	-1	
+badending7	33	Jacob	i’m sorry i have no heart to tell you in detail what happened	badending7	34	-1	
+badending7	34	Jacob	just know that what happened to Jacob is neither of your faults	badending7	35	-1	
+badending7	35	Jacob	it’s mine	badending7	36	-1	
+badending7	36	Jacob	both of you tried your best to guide and help Jacob, well, us, through the storm surge, and I, as his mother couldn’t do anything.	badending7	37	-1	
+badending7	37	Jacob	<b>i could’ve at least kept a close eye on him...</b>	badending7	38	-1	
+badending7	38	Jacob	despite what happened to Jacob, we are truly thankful for both of your guidance	badending7	39	-1	
+badending7	39	Jacob	i promise to read more on disaster preparedness	badending7	40	-1	
+badending7	40	Jacob	and i hope you do too	badending7	41	-1	
+badending7	41	Jacob	once again, thank you, and farewell	block	4	-1	
+block	0	system	woops, can't select this option yet!	stop	0	-1	
+block	1	system	congratulations, you have reached the good ending!	stop	0	-1	
+block	2	system	you have reached Bad Ending 1, please try again to get the good ending	stop	0	-1	
+block	3	system	you have reached Bad Ending 4, please try again to get the good ending	stop	0	-1	
+block	4	system	you have reached Bad Ending 7, please try again to get the good ending	stop	0	-1	
+block	5	system	you have reached Bad Ending 5, please try again to get the good ending	stop	0	-1	
+block	6	system	you have reached Bad Ending 6, please try again to get the good ending	stop	0	-1	
+block	7	system	you have reached Bad Ending 2, please try again to get the good ending	stop	0	-1	
+block	8	system	you have reached Bad Ending 3, please try again to get the good ending	stop	0	-1	
+choice	0	Player	Yeah, you didn't tell us	intro	12	-1	
+choice	1	Player	I knew about it	intro	13	-1	
+choice	2	Player	Tacloban?	intro	19	-1	
+choice	3	Player	HAHA lmao the greatest	intro	22	-1	
+choice	4	Player	what do you mean by 'great'?	intro	24	-1	
+choice	5	Player	well, Holly has a point	intro	34	-1	
+choice	6	Player	Yes, it was a tsunami	intro	43	-1	
+choice	7	Player	No, it wasn’t a tsunami	intro	50	-1	
+choice	8	Player	no I don't	block	0	-1	
+choice	9	Player	hold on, I'll google it	minigame	0	-1	
+choice	10	Player	it’s not too late	event1	21	-1	
+choice	11	Player	it’s too late	event1	19	-1	
+choice	12	Player	i’m glad	evac	4	-1	
+choice	13	Player	get some rest	evac	3	-1	
+choice	14	Player	you’ll be fine	evac	13	-1	
+choice	15	Player	i’ll be praying for you	evac	13	-1	
+choice	16	Player	text us when you get back	evac	24	-1	
+choice	17	Player	get back safely	evac	24	-1	
+choice	18	Player	go back the shortest way possible	badending1	0	-1	
+choice	19	Player	take a detour	evac	32	-1	
+choice	20	Player	i’m sorry	postdisaster1	10	-1	
+choice	21	Player	it’s too late for regret	postdisaster1	11	-1	
+choice	22	Player	go ahead and pump the water out	badending3	0	-1	
+choice	23	Player	wait	event2	0	-1	
+choice	24	Player	when the water is no longer covering the ground around the house	event2	8	-1	
+choice	25	Player	What are you talking about?	event2	13	-1	
+choice	26	Player	I feel the same way.	event2	13	-1	
+choice	27	Player	open the windows	event3	0	-1	
+choice	28	Player	fetch the dehumidifier and air mover	badending2	0	-1	
+choice	29	Player	go ahead	badending7	0	-1	
+choice	30	Player	don't	event4	0	-1	
+choice	31	Player	16211	event4	9	4	
+choice	32	Player	just think of it as a work out	badending3	0	-1	
+choice	33	Player	don’t pump all of them out	event5	0	-1	
+choice	34	Player	pump about 1-3 feet and leave it overnight	event5	2	-1	
+choice	35	Player	When is he was getting back?	goodending	3	-1	
+choice	36	Player	Answering his questions tired me out	goodending	5	-1	
+choice	37	Player	bye	goodending	33	-1	
+choice	38	Player	you’re amazing	goodending	32	-1	
+choice	39	Player	maybe he got electrocuted	badending1	5	-1	
+choice	40	Player	maybe his cell phone fell into the water	badending1	5	-1	
+choice	41	Player	me too..	badending1	8	-1	
+choice	42	Player	it’s my fault	badending1	8	-1	
+choice	43	Player	me too..	badending4	9	-1	
+choice	44	Player	it’s my fault	badending4	9	-1	
+choice	45	Player	me too..	badending7	17	-1	
+choice	46	Player	it’s my fault	badending7	17	-1	
+choice	47	Player	wait	event9	0	-1	
+choice	48	Player	have you checked if you’re wet?	event9	3	-1	
+choice	49	Player	even unplugged appliances can still be carrying electricity	event9	18	-1	
+choice	50	Player	by any chance, do you have a HAM radio? 	event9	34	-1	
+choice	51	Player	well, it’s not completely hopeless without a ham radio	event9	50	-1	
+choice	52	Player	wait for a bit	badending5	6	-1	
+choice	53	Player	your mother found you?	badending5	17	-1	
+choice	54	Player	found a dead rat?	badending5	17	-1	
+choice	55	Player	find higher ground immediately	badending5	33	-1	
+choice	56	Player	probably saving his phone battery	badending6	1	-1	
+choice	57	Player	he ditched us	badending6	1	-1	
+choice	58	Player	me too	badending6	12	-1	
+choice	59	Player	it's my fault	badending6	12	-1	
+choice	60	Player	me too	badending5	54	-1	
+choice	61	Player	it's my fault	badending5	54	-1	
+choice	62	Player	we were getting worried	event6	14	-1	
+choice	63	Player	are you okay?	event6	14	-1	
+choice	64	Player	are you alright?	event6	18	-1	
+choice	65	Player	a storm surge?	event6	23	-1	
+choice	66	Player	a tsunami?	event6	24	-1	
+choice	67	Player	leave your house	badending4	0	-1	
+choice	68	Player	wait for help	event7	0	-1	
+choice	69	Player	go to the basement	badending5	0	-1	
+choice	70	Player	go to higher ground	event8	0	-1	
+choice	71	Player	Plug them in. That's how appliances work.	badending2	3	-1	
+choice	72	Player	oh my god you're right	badending2	11	-1	
+choice	73	Player	YES YOU COULD GET ELECTROCUTED	badending2	14	-1	
+choice	74	Player	yeah you're gonna need help from your family	badending3	5	-1	
+choice	75	Player	what happened?	badending3	14	-1	
+choice	76	Player	let's pray to god that doesn't happen	notif	16	-1	
+choice	77	Player	go ahead	notif	12	-1	
+choice	78	Player	how does this relate to you pumping out all the water?	badending3	17	-1	
+choice	79	Player	i’m glad	evac2	4	-1	
+choice	80	Player	get some rest	evac2	3	-1	
+choice	81	Player	you’ll be fine	evac2	13	-1	
+choice	82	Player	i’ll be praying for you	evac2	13	-1	
+choice	83	Player	text us when you get back	evac2	24	-1	
+choice	84	Player	get back safely	evac2	24	-1	
+choice	85	Player	go back the shortest way possible	badending1	0	-1	
+choice	86	Player	take a detour	evac2	32	-1	
+choice	87	Player	you’re welcome	postdisaster2	11	-1	
+choice	88	Player	what’s the magic word?	postdisaster2	11	-1	
+choice	89	Player	go ahead and pump the water out	badending3	0	-1	
+choice	90	Player	wait	event2	0	-1	
+evac	0	Jacob	alright, we’re here	evac	1	-1	
+evac	1	Jacob	whew! There are so many people. It’s pretty crowded	evac	2	-1	
+evac	2	Jacob	but whatever, i’m just glad to be somewhere safer	choice	12,13	-1	
+evac	3	Jacob	thank you, i definitely will	evac	6	-1	
+evac	4	Jacob	me too	evac	5	-1	
+evac	5	Jacob	i guess i’ll get some rest for now	evac	6	-1	
+evac	6	Jacob	people here are saying there’ll be another storm surge coming	evac	7	-1	
+evac	7	Jacob	best be rested when that happens	evac	8	-1	
+evac	8	Jacob	my god, guys	evac	9	-1	
+evac	9	Jacob	the rain and winds are so strong	evac	10	-1	
+evac	10	Jacob	way stronger than it was a while ago	evac	11	-1	
+evac	11	Jacob	thankfully, this center seems pretty sturdy	evac	12	-1	
+evac	12	Jacob	i still can’t help but feel nervous, though	choice	14,15	-1	
+evac	13	Jacob	thank you	evac	14	-1	
+evac	14	Holly	Jacob, are you alright?	evac	15	-1	
+evac	15	Holly	i heard in the news that the storm is already outside the par	evac	16	-1	
+evac	16	Jacob	par?	evac	17	-1	
+evac	17	Holly	philippine area of responsibility	evac	18	-1	
+evac	18	Jacob	ah, yeah.	evac	19	-1	
+evac	19	Jacob	We’re preparing to go back home	evac	20	-1	
+evac	20	Jacob	everyone’s relieved	evac	21	-1	
+evac	21	Jacob	but i’m worried about what we’ll see when we get back	evac	22	-1	
+evac	22	Jacob	honestly,I doubt the house made it in one piece	evac	23	-1	
+evac	23	Jacob	with how strong the storm surge was	choice	16,17	-1	
+evac	24	Jacob	will do	evac	25	-1	
+evac	25	Jacob	but before that…	evac	26	-1	
+evac	26	Jacob	see, i wanted to get back to the house as fast as possible	evac	27	-1	
+evac	27	Jacob	so i asked around but the shortest path to getting there is still flooded	evac	28	-1	
+evac	28	Holly	how deep?	evac	29	-1	
+evac	29	Jacob	well, let’s just say I’ll be able to swim if I wanted to	evac	30	-1	
+evac	30	Jacob	it’s calm, though. I won’t get washed away for sure	evac	31	-1	
+evac	31	Holly	hmm… you would be able to prevent more damages the earlier you get back	choice	18,19	-1	
+evac	32	Jacob	if you say so	postdisaster1	0	-1	
+evac2	0	Jacob	alright, we’re here	evac2	1	-1	
+evac2	1	Jacob	whew! There are so many people. It’s pretty crowded	evac2	2	-1	
+evac2	2	Jacob	but whatever, i’m just glad to be somewhere safer	choice	79,80	-1	
+evac2	3	Jacob	thank you, i definitely will	evac2	6	-1	
+evac2	4	Jacob	me too	evac2	5	-1	
+evac2	5	Jacob	i guess i’ll get some rest for now	evac2	6	-1	
+evac2	6	Jacob	people here are saying there’ll be another storm surge coming	evac2	7	-1	
+evac2	7	Jacob	best be rested when that happens	evac2	8	-1	
+evac2	8	Jacob	my god, guys	evac2	9	-1	
+evac2	9	Jacob	the rain and winds are so strong	evac2	10	-1	
+evac2	10	Jacob	way stronger than it was a while ago	evac2	11	-1	
+evac2	11	Jacob	thankfully, this center seems pretty sturdy	evac2	12	-1	
+evac2	12	Jacob	i still can’t help but feel nervous, though	choice	81,82	-1	
+evac2	13	Jacob	thank you	evac2	14	-1	
+evac2	14	Holly	Jacob, are you alright?	evac2	15	-1	
+evac2	15	Holly	i heard in the news that the storm is already outside the par	evac2	16	-1	
+evac2	16	Jacob	par?	evac2	17	-1	
+evac2	17	Holly	philippine area of responsibility	evac2	18	-1	
+evac2	18	Jacob	ah, yeah.	evac2	19	-1	
+evac2	19	Jacob	We’re preparing to go back home	evac2	20	-1	
+evac2	20	Jacob	everyone’s relieved	evac2	21	-1	
+evac2	21	Jacob	but i’m worried about what we’ll see when we get back	evac2	22	-1	
+evac2	22	Jacob	honestly,I doubt the house made it in one piece	evac2	23	-1	
+evac2	23	Jacob	with how strong the storm surge was	choice	83,84	-1	
+evac2	24	Jacob	will do	evac2	25	-1	
+evac2	25	Jacob	but before that…	evac2	26	-1	
+evac2	26	Jacob	see, i wanted to get back to the house as fast as possible	evac2	27	-1	
+evac2	27	Jacob	so i asked around but the shortest path to getting there is still flooded	evac2	28	-1	
+evac2	28	Holly	how deep?	evac2	29	-1	
+evac2	29	Jacob	well, let’s just say I’ll be able to swim if I wanted to	evac2	30	-1	
+evac2	30	Jacob	it’s calm, though. I won’t get washed away for sure	evac2	31	-1	
+evac2	31	Holly	hmm… you would be able to prevent more damages the earlier you get back	choice	85,86	-1	
+evac2	32	Jacob	if you say so	postdisaster2	0	-1	
+event1	0	Jacob	so that’s what a storm surge is	event1	1	-1	
+event1	1	Jacob	my god, it's scarier than what I was imagining just a minute ago	event1	2	-1	
+event1	2	Jacob	… and to think that I’m in tacloban right now	event1	3	-1	
+event1	3	Jacob	… and this heavy rain	event1	4	-1	
+event1	4	Jacob	part of me wants to ignore this and say that you guys are just bluffing	event1	5	-1	
+event1	5	Jacob	but not gonna lie, part of me is freaking out right now	event1	6	-1	
+event1	6	Jacob	the rain and winds just seem to be getting stronger every minute	event1	7	-1	
+event1	7	Jacob	and, well, I guess I should've said this earlier	event1	8	-1	
+event1	8	Jacob	i thought it was just a bunch of spam	event1	9	-1	
+event1	9	Jacob	but i actually received a storm surge warning from ndrrmc just a few days ago	event1	10	-1	
+event1	10	Holly	What??	event1	11	-1	
+event1	11	Holly	Who knows what bad thing could have happened if you haven’t mentioned that! You could have drowned, you could have contracted some stomach disease, or even suffered from leptospirosis!	event1	12	-1	
+event1	12	Jacob	yeah, yeah	event1	13	-1	
+event1	13	Jacob	you can’t blame me	event1	14	-1	
+event1	14	Jacob	i literally thought “storm surge” was just a fancy term for “heavy rain”	event1	15	-1	
+event1	15	Jacob	they didn’t teach it at school	event1	16	-1	
+event1	16	Holly	Well, you’re not completely blameless either, you know.	event1	17	-1	
+event1	17	Jacob	yeah, i know	event1	18	-1	
+event1	18	Jacob	i'm just hoping it’s not too late to realize that yet	choice	10,11	-1	
+event1	19	Holly	Don’t say that!	event1	21	-1	
+event1	20	Holly	[Player] is right.	event1	21	-1	
+event1	21	Holly	You can still try making last minute preparations to lessen the damage.	event1	22	-1	
+event1	22	Holly	What does the NDRRMC text say?	event1	23	-1	
+event1	23	Jacob	they said they’re anticipating the storm surge three days from now	event1	24	-1	
+event1	24	Holly	Good.	event1	25	-1	
+event1	25	Jacob	good? I mean I know all about storm surges now but i still have no clue what to do	event1	26	-1	
+event1	26	Holly	Check this out	event1	27	-1	
+event1	27	p	Click on the photo above	minigame	1	-1	
+event1	28	Jacob	nice! thanks for helping me guys	event1	29	-1	
+event1	29	Jacob	oh hey	event1	30	-1	
+event1	30	Jacob	i just received another message from ndrrmc	event1	31	-1	
+event1	31	Jacob	they said that there’s an evacuation center not far from my current location and that it’s currently safe to evacuate	event1	32	-1	
+event1	32	Jacob	i guess i better go tell my family	event1	33	-1	
+event1	33	Jacob	i’ll talk to you guys again later when i get there	evac2	0	-1	
+event1	34	Jacob	nice! thanks for helping me guys	event1	35	-1	
+event1	35	Jacob	oh hey	event1	36	-1	
+event1	36	Jacob	i just received another message from ndrrmc	event1	37	-1	
+event1	37	Jacob	they said that there’s an evacuation center not far from my current location and that it’s currently safe to evacuate	event1	38	-1	
+event1	38	Jacob	i guess i better go tell my family	event1	39	-1	
+event1	39	Jacob	i’ll talk to you guys again later when i get there	evac	0	-1	
+event2	0	Jacob	huh? why?	event2	1	-1	
+event2	1	Holly	oh, i get it!	event2	2	-1	
+event2	2	Holly	It won’t be safe to pump water out of the basement if there’s still water surrounding the walls from the outside.	event2	3	-1	
+event2	3	Holly	Right now, the pressure inside and outside the basement are a bit balanced, considering that your basement walls are still up.	event2	4	-1	
+event2	4	Holly	But if you reduce the pressure from the inside, your walls might not be able to take the outside pressure.	event2	5	-1	
+event2	5	Jacob	and it will break…	event2	6	-1	
+event2	6	Holly	Exactly.	event2	7	-1	
+event2	7	Jacob	when is it safe to pump the water out, then	choice	24	-1	
+event2	8	Jacob	oh, cool. i guess i’ll have to wait a while then	event2	9	-1	
+event2	9	Jacob	i’ll see what else i can do for the meantime and maybe somewhere a bit drier	event2	10	-1	
+event2	10	Holly	You know, amidst this horrible disaster, I’m actually glad that Jacob is finally learning how to listen to us.	event2	11	-1	
+event2	11	Holly	He used to be so stubborn and defiant.	event2	12	-1	
+event2	12	Holly	If I had known that this experience was all it would take for him to start functioning like a pleasant human being, I would have wished this on him sooner.	choice	25,26	-1	
+event2	13	Holly	That was a joke, of course.	event2	14	-1	
+event2	14	Holly	You didn’t think I was serious, did you?	event2	15	-1	
+event2	15	Jacob	uhh, so i’m just gonna pretend i didnt see that	event2	16	-1	
+event2	16	Jacob	ugh i thought the 2nd floor would be a bit drier	event2	17	-1	
+event2	17	Jacob	but it’s so moist!	event2	18	-1	
+event2	18	Jacob	the moistness is so extreme that i might as well just dive into the flood	event2	19	-1	
+event2	19	Holly	Yikes.	event2	20	-1	
+event2	20	Jacob	is there anything i should do about this? Or is there anything i could do about it?	event2	21	-1	
+event2	21	Holly	Do you guys have a dehumidifier?	event2	22	-1	
+event2	22	Jacob	i think we do, i might’ve seen one in the attic before	event2	23	-1	
+event2	23	Holly	How about an air mover?	event2	24	-1	
+event2	24	Jacob	what are those?	event2	25	-1	
+event2	25	Holly	They’re basically air blowers. They’re used to improve air circulation to reduce drying times	event2	26	-1	
+event2	26	Jacob	won’t an electric fan be enough?	event2	27	-1	
+event2	27	Jacob	i mean… they blow air...	event2	28	-1	
+event2	28	Holly	Fans usually circulate the air in multiple directions while air movers circulate them in a specific area.	event2	29	-1	
+event2	29	Holly	Drying things might still be faster using an air mover.	event2	30	-1	
+event2	30	Holly	However, using humidifiers and air movers can get quite tricky when using to lessen the damages from floods.	event2	31	-1	
+event2	31	Holly	It usually takes the right balance of both	event2	32	-1	
+event2	32	Jacob	cool, well, i can still check if we have both of them	event2	33	-1	
+event2	33	Holly	Or, you know, another option is to just open your windows tolet fresh air in.	event2	34	-1	
+event2	34	Jacob	what should i do?	choice	27,28	-1	
+event3	0	Holly	Oh right,that completely slipped my mind for some reason.	event3	1	-1	
+event3	1	Holly	I agree with [Player], keep everything electronic switched off for now.	event3	2	-1	
+event3	2	Holly	I’m sorry for even suggesting it in the first place.	event3	3	-1	
+event3	3	Jacob	nah, it’s fine	event3	4	-1	
+event3	4	Jacob	wow, opening the windows really made the air inside feel more fresh	event3	5	-1	
+event3	5	Jacob	fresher than the fresh prince of bel air haha	event3	6	-1	
+event3	6	Holly	Do you even know what you’re referencing?	event3	7	-1	
+event3	7	Jacob	doesnt matter, i’m feeling a little better now	event3	8	-1	
+event3	8	Jacob	i can’t wait for all of this to be over	event3	9	-1	
+event3	9	Holly	Can’t you just leave? That’s your relative’s house anyway. Your home in the city is probably still intact since [Player] and I are still doing alright.	event3	10	-1	
+event3	10	Jacob	can’t. They’re still family, plus they need all the help they can get	event3	11	-1	
+event3	11	Jacob	i’ll try looking for more stuff to do and make myself more useful	event3	12	-1	
+event3	12	Jacob	i’ll be right back	event3	13	-1	
+event3	13	Jacob	good news	event3	14	-1	
+event3	14	Holly	Great! That took quite some time though.	event3	15	-1	
+event3	15	Jacob	sure did	event3	16	-1	
+event3	16	Jacob	which is why i decided to be productive	event3	17	-1	
+event3	17	Jacob	who knew i had a knack for stacking cans	event3	18	-1	
+event3	18	Jacob	cans are amazing	event3	19	-1	
+event3	19	Jacob	not gonna lie, i was getting tempted to eat some	event3	20	-1	
+event3	20	Jacob	anyways, im still hungry	event3	21	-1	
+event3	21	Jacob	but all the cans are sealed and im too lazy to find the can opener	event3	22	-1	
+event3	22	Jacob	guess i’ll settle with drinking water instead	choice	29,30	-1	
+event4	0	Holly	Yeah, it’s important to remember that flood water isn’t just “dirty water”.	event4	1	-1	
+event4	1	Holly	At this point, its probably a mix of every dirty thing you know.	event4	2	-1	
+event4	2	Holly	Better be safe than sorry.	event4	3	-1	
+event4	3	Jacob	i guess i should really, carefully disinfect everything	event4	4	-1	
+event4	4	Jacob	ugh, my body already aches just thinking about the amount of work this will take	event4	5	-1	
+event4	5	Jacob	anyways, you guys were right to tell me not to use the humidifier thing earlier	event4	6	-1	
+event4	6	Jacob	i just noticed a while ago that there was a downed power line near my house	event4	7	-1	
+event4	7	Jacob	i would’ve reported it but i didn’t really know who or where to call	event4	8	-1	
+event4	8	Holly	You could call Meralco, though I don’t really remember what their 24/7 hotline number is.	choice	31	-1	
+event4	9	Jacob	thanks thanks	event4	10	-1	
+event4	10	Jacob	i should call them to check our electric… stuff here at the house too	event4	11	-1	
+event4	11	Jacob	okay, just called em. what now?	event4	12	-1	
+event4	12	Holly	Well, you did say that all the floodwater went down outside already, right?	event4	13	-1	
+event4	13	Jacob	and?	event4	14	-1	
+event4	14	Holly	You can start pumping out the water in your basement already.	event4	15	-1	
+event4	15	Jacob	makes sense	event4	16	-1	
+event4	16	Jacob	better prepare myself to pump all the water out, yikes	choice	32,33	-1	
+event5	0	Jacob	huh, why not?	event5	1	-1	
+event5	1	Jacob	it’s not flooded outside anymore	choice	34	-1	
+event5	2	Jacob	but why	event5	3	-1	
+event5	3	Holly	You’re still not sure if the pressure outside is lessened enough for you to pump out all the water inside safely.	event5	4	-1	
+event5	4	Holly	Pumping out only a bit and leaving it overnight will make you more certain about whether it’s safe to continue or not.	event5	5	-1	
+event5	5	Jacob	how?	event5	6	-1	
+event5	6	Holly	If you measure the height of the water after pumping some of it out, you’ll be able to see tomorrow if the water level has increased.	event5	7	-1	
+event5	7	Holly	When the water stops rising, pump out 1-3 feet again.	event5	8	-1	
+event5	8	Holly	Its safest to repeat those steps until you’ve pumped out all of the water.	event5	9	-1	
+event5	9	Jacob	huh… i see…	event5	10	-1	
+event5	10	Jacob	thanks sherlock	event5	11	-1	
+event5	11	Holly	I’ll just ignore that. After the water’s gone, try to shovel out the mud before it dries.	event5	12	-1	
+event5	12	Holly	I saw this formula online too, try using this to disinfect your walls.	event5	13	-1	
+event5	13	Holly	“Hose off the walls and floors with clean water and then disinfect them with a solution of 1 1/2 cups of liquid chlorine bleach to a gallon of fresh water. CAUTION	event5	14	-1	
+event5	14	Jacob	ugh, more work	event5	15	-1	
+event5	15	Holly	well, do you want to get sick from all of those bacteria?	event5	16	-1	
+event5	16	Holly	if I were you, I'd get started right away.	event5	17	-1	
+event5	17	Jacob	easy for you to say	event5	18	-1	
+event5	18	Jacob	you're not doing all the hard work	event5	19	-1	
+event5	19	Jacob	but I guess i can't complain tho since you guys got me this far	event5	20	-1	
+event5	20	Jacob	an electrician will be visiting us after a few days so i better get started now	event5	21	-1	
+event5	21	Jacob	be right back guys	event5	22	-1	
+event5	22	Jacob	next time you see me I'll be jacked	goodending	0	-1	
+event6	0	Jacob	now you guys are just pulling my leg	event6	1	-1	
+event6	1	Holly	No, we're telling you, a storm surge is really different from a tsunami.	event6	2	-1	
+event6	2	Holly	We might not know how exactly they are different, but we know that they are both equally dangerous	event6	3	-1	
+event6	3	Jacob	whatever. i'm not falling for this	event6	4	-1	
+event6	4	Jacob	a storm surge is just an extra strong rain.	event6	5	-1	
+event6	5	Jacob	surge literally means "sudden increase"	event6	6	-1	
+event6	6	Jacob	you of all people should know, Holly. u practically eat dictionaries haha	event6	7	-1	
+event6	7	Jacob	i'm sure this house will be able to withstand it anyway	event6	8	-1	
+event6	8	Jacob	my relatives are pretty rich so this house is pretty BIG.	event6	9	-1	
+event6	9	Holly	Jacob. Listen.	event6	10	-1	
+event6	10	Jacob	whatever, this rain is making me feel sleepy	event6	11	-1	
+event6	11	Jacob	good night	notif	17	-1	
+event6	12	Jacob	hey guys	event6	13	-1	
+event6	13	Holly	Jacob! Where were you?? We've been trying to contact you	choice	62,63	-1	
+event6	14	Holly	we saw what's happening over there all over twitter.	event6	15	-1	
+event6	15	Holly	it's like...	event6	16	-1	
+event6	16	Jacob	like yolanda all over again	event6	17	-1	
+event6	17	Holly	right...	choice	64	-1	
+event6	18	Jacob	listen guys, don't panic	event6	19	-1	
+event6	19	Jacob	I'm panicking enough already	event6	20	-1	
+event6	20	Jacob	I got a message two days ago from NDRRMC	event6	21	-1	
+event6	21	Jacob	i didn't tell you guys because I thought it was just spam	event6	22	-1	
+event6	22	Jacob	well guess what it was	choice	65,66	-1	
+event6	23	Jacob	you got that right	event6	26	-1	
+event6	24	Jacob	are you kidding me right now?	event6	25	-1	
+event6	25	Jacob	it's a storm surge. Keep up.	event6	26	-1	
+event6	26	Jacob	well, i wasn’t scared then because it wasn’t even raining THAT hard	event6	27	-1	
+event6	27	Jacob	but now, if you guys were here to see this...	event6	28	-1	
+event6	28	Holly	Can you still leave and evacuate?	event6	29	-1	
+event6	29	Jacob	my family's preparing to, but...	event6	30	-1	
+event6	30	Jacob	i saw some footage from some parts of tacloban	event6	31	-1	
+event6	31	Jacob	the flood... looked like raging rivers	event6	32	-1	
+event6	32	Jacob	and they said the winds are going to get stronger	event6	33	-1	
+event6	33	Jacob	i’ll probably be swept away by the waters if i just leave 	event6	34	-1	
+event6	34	Jacob	but if I stay… well, this house is pretty far from the coastal areas	event6	35	-1	
+event6	35	Jacob	but… who knows how bad this will get?	event6	36	-1	
+event6	36	Jacob	what should i do?	event6	37	-1	
+event6	37	Jacob	im scared	event6	38	-1	
+event6	38	Jacob	im sorry for making fun of you guys before	event6	39	-1	
+event6	39	Jacob	please help me	event6	40	-1	
+event6	40	Holly	Jacob...	choice	67,68	-1	
+event7	0	Jacob	alright	event7	1	-1	
+event7	1	Jacob	i'll trust you guys	event7	2	-1	
+event7	2	Holly	it's going to be okay	event7	3	-1	
+event7	3	Holly	authorities must be assisting people to evacuate at this very moment	event7	4	-1	
+event7	4	Jacob	okay...	event7	5	-1	
+event7	5	Jacob	you guys tell me to wait, but...	event7	6	-1	
+event7	6	Jacob	i can't sit still. I gotta do something	event7	7	-1	
+event7	7	Jacob	I can’t just watch the flood rising and let it get to me. 	choice	69,70	-1	
+event8	0	Jacob	yeah, i guess that makes sense	event8	1	-1	
+event8	1	Jacob	the higher i am, the longer it will take for the water to reach me	event8	2	-1	
+event8	2	Jacob	i wouldn’t be surprised if the basement is already flooded	event8	3	-1	
+event8	3	Jacob	brb Give me a minute.	event8	4	-1	
+event8	4	Holly	we’ll be right here	notif	7	-1	
+event8	5	Jacob	alright, im in our attic	event8	6	-1	
+event8	6	Jacob	this is as high as i can possibly go	event8	7	-1	
+event8	7	Jacob	my relatives are on the third floor	event8	8	-1	
+event8	8	Jacob	they said the attic’s too dusty for them	event8	9	-1	
+event8	9	Holly	dude how high is that house?	event8	10	-1	
+event8	10	Jacob	not important	event8	11	-1	
+event8	11	Jacob	anyway, i couldn’t sit still so i decided to look around	event8	12	-1	
+event8	12	Jacob	guess what i found?	event8	13	-1	
+event8	13	Jacob	a radio!	event8	14	-1	
+event8	14	Holly	nice! But…	event8	15	-1	
+event8	15	Holly	what do you need a “physical” radio for? Don’t you have a radio on your phone?	event8	16	-1	
+event8	16	Jacob	dude, i want to preserve as much battery as I can	event8	17	-1	
+event8	17	Jacob	just in case something bad happens…	event8	18	-1	
+event8	18	Jacob	let’s stop talking about this. I wouldn’t want to jinx it, you know?	event8	19	-1	
+event8	19	Jacob	anyway, our radio is plugged so I won’t be touching the wires	event8	20	-1	
+event8	20	Jacob	I’ll try turning it on	choice	47,77	-1	
+event9	0	Jacob	why not?	event9	1	-1	
+event9	1	Jacob	that shocked me there.	event9	2	-1	
+event9	2	Jacob	and I was just about to touch it	choice	48	-1	
+event9	3	Jacob	huh? What do you mean? Why would i be wet?	event9	4	-1	
+event9	4	Jacob	….	event9	5	-1	
+event9	5	Jacob	now that you mention it. I forgot to tell you guys that i took a peek at the basement before going up to the attic	event9	6	-1	
+event9	6	Jacob	and well, it was flooding there already all right	event9	7	-1	
+event9	7	Jacob	hmm i guess i must have gotten wet then. I didnt even notice.	event9	8	-1	
+event9	8	Jacob	Wow my pants are soaked	event9	9	-1	
+event9	9	Jacob	doesn’t help that i’m also sweating from head to toe	event9	10	-1	
+event9	10	Jacob	its so humid here	event9	11	-1	
+event9	11	Jacob	but... What’s that got to do with the radio?	event9	12	-1	
+event9	12	Holly	you might get yourself electrocuted, duh	event9	13	-1	
+event9	13	Jacob	why?	event9	14	-1	
+event9	14	Holly	well, you did say your radio’s still plugged. Even though you guys had a black out, there’s a chance that the plug is still carrying electric current	event9	15	-1	
+event9	15	Holly	the human body is a good conductor for electricity, you know?	event9	16	-1	
+event9	16	Holly	touching it with wet hands, especially, will increase the risk since water is a good conductor as well	event9	17	-1	
+event9	17	Holly	moisture also actually reduces the body’s resistance to electric shocks	choice	49	-1	
+event9	18	Holly	yeah, so it’s best to make sure you’re dry before touching electrical devices	event9	19	-1	
+event9	19	Jacob	geez, sherlock	event9	20	-1	
+event9	20	Jacob	I’m touching my phone right now, though, and I’m still fine	event9	21	-1	
+event9	21	Holly	you’re not charging your phone right now, right?	event9	22	-1	
+event9	22	Holly	and you’re not completely submerged in water?	event9	23	-1	
+event9	23	Holly	there isn’t enough electric current in a cell phone to electrocute you	event9	24	-1	
+event9	24	Holly	it’s different, though, if it’s plugged in and if you’re using a substandard (fake) charger with bad insulation	event9	25	-1	
+event9	25	Holly	but that’s a story for another day	event9	26	-1	
+event9	26	Holly	the bottom line is, just make sure to avoid electric devices when wet	event9	27	-1	
+event9	27	Jacob	alright.	event9	28	-1	
+event9	28	Jacob	thanks. You guys saved me once again.	event9	29	-1	
+event9	29	Jacob	hmm i guess i better dry myself first	event9	30	-1	
+event9	30	Jacob	be right back	notif	8	-1	
+event9	31	Jacob	alright, i’m dry and i’ve successfully turned the radio on	event9	32	-1	
+event9	32	Jacob	i’ve switched through a couple of channels but the only channels i’ve found promising so far are the news channels	event9	33	-1	
+event9	33	Jacob	like Radyo Singko 92.3 News FM	choice	50	-1	
+event9	34	Jacob	uhh… what is that?	event9	35	-1	
+event9	35	Jacob	I dont think I do…	event9	36	-1	
+event9	36	Holly	oh yeah! Ham!	event9	37	-1	
+event9	37	Holly	I read about that in a news article about the storm surge in tacloban	event9	38	-1	
+event9	38	Holly	there’s something called a Ham Emergency Radio Operations (HERO) that was conducted by the Philippine Amateur Radio Association (PARA)	event9	39	-1	
+event9	39	Holly	I don’t know if you guys have heard about this, but during the typhoon, a school building that was being used as an evacuation center collapsed and injured some of the evacuees.	event9	40	-1	
+event9	40	Holly	there weren’t any volunteers around because the typhoon was especially strong at that time	event9	41	-1	
+event9	41	Holly	A HERO volunteer was able to report the incident and was able to send a request for a rescue team	event9	42	-1	
+event9	42	Holly	what the HERO volunteer used to communicate this was called an amateur radio or “ham”	event9	43	-1	
+event9	43	Holly	the volunteer’s request got relayed from station to station until it reached the rescue teams	event9	44	-1	
+event9	44	Jacob	wow. I didn’t even know that there was such a thing as an “amateur radio”	event9	45	-1	
+event9	45	Holly	well, it’s mostly for hobbyists and radio enthusiasts and you usually need to have a license for it	event9	46	-1	
+event9	46	Holly	but it does prove to be useful in case of disasters	event9	47	-1	
+event9	47	Holly	i’ve been thinking about getting one myself, but forgot about it until now	event9	48	-1	
+event9	48	Jacob	hmm yeah maybe i should get one too	event9	49	-1	
+event9	49	Jacob	would be really useful if I had one and if I knew how to operate it	choice	51	-1	
+event9	50	Jacob	how so?	event9	51	-1	
+event9	51	Holly	hmm… ndrrmc?	event9	52	-1	
+event9	52	Jacob	oh yeah, i did receive a warning from them a few days ago	event9	53	-1	
+event9	53	Jacob	ugh and im still regretting not taking it seriously	event9	54	-1	
+event9	54	Jacob	but how are you sure that we’ll be receiving their messages?	event9	55	-1	
+event9	55	Jacob	people from everywhere will be sending lots of messages for sure	event9	56	-1	
+event9	56	Jacob	ndrrmc’s messages might arrive late	event9	57	-1	
+event9	57	Holly	ndrrmc partnered with Smart and ndrrmc now sends their messages through a radio channel that’s separate from what normal citizens use in sending our text messages.	event9	58	-1	
+event9	58	Holly	it’s not guaranteed, but they try to make sure the warning messages arrive early	event9	59	-1	
+event9	59	Jacob	ah! Speaking of ndrrmc	event9	60	-1	
+event9	60	Jacob	I just received a message	event9	61	-1	
+event9	61	Jacob	they said that there’s an evacuation center not far from my current location and that it’s currently safe to evacuate	event9	62	-1	
+event9	62	Jacob	i guess i better go tell my family	event9	63	-1	
+event9	63	Jacob	i’ll talk to you guys again later when i get there	evac	0	-1	
+goodending	0	Holly	Jacob must’ve been really busy helping his relatives out	goodending	1	-1	
+goodending	1	Holly	He barely had time to talk to us here	goodending	2	-1	
+goodending	2	Holly	It’s good that he’s getting the hang of it though	choice	35,36	-1	
+goodending	3	Holly	This afternoon, actually	goodending	4	-1	
+goodending	4	Holly	About a few hours from now	goodending	9	-1	
+goodending	5	Holly	lol	goodending	6	-1	
+goodending	6	Holly	Not gonna lie but, me too	goodending	7	-1	
+goodending	7	Holly	stressed me out too	goodending	8	-1	
+goodending	8	Holly	It felt like I was the one in the middle of that storm surge	goodending	9	-1	
+goodending	9	Jacob	hey guys	goodending	10	-1	
+goodending	10	Holly	lol are you okay?	goodending	11	-1	
+goodending	11	Jacob	yeah, just feeling a little tired	goodending	12	-1	
+goodending	12	Jacob	i’m not going back home yet, actually	goodending	13	-1	
+goodending	13	Jacob	my parents were itching to get back home, but i can’t leave just yet	goodending	14	-1	
+goodending	14	Jacob	sorry if i tired you guys out	goodending	15	-1	
+goodending	15	Holly	It’s alright, that was nothing.	goodending	16	-1	
+goodending	16	Jacob	i just want to say thanks again	goodending	17	-1	
+goodending	17	Jacob	would it be weird of me to say that this is probably the best vacation of my life?	goodending	18	-1	
+goodending	18	Holly	Well, yes.	goodending	19	-1	
+goodending	19	Jacob	hahaha	goodending	20	-1	
+goodending	20	Jacob	I just never thought i would learn so much	goodending	21	-1	
+goodending	21	Jacob	and i guess i’ve never really felt this thankful to be alive	goodending	22	-1	
+goodending	22	Holly	So, what’s the reason you can’t go home just yet?	goodending	23	-1	
+goodending	23	Jacob	actually…	goodending	24	-1	
+goodending	24	Jacob	all this kinda made me wanna volunteer	goodending	25	-1	
+goodending	25	Jacob	i mean, i would’ve died if it weren’t for you guys	goodending	26	-1	
+goodending	26	Jacob	so I thought i could help others like u guys helped me	goodending	27	-1	
+goodending	27	Holly	Wow, you’re like, a different person now.	goodending	28	-1	
+goodending	28	Jacob	hahaha, i know, it’s also weirding me out	goodending	29	-1	
+goodending	29	Jacob	anyway, thanks again! And talk to you guys later	goodending	30	-1	
+goodending	30	Jacob	i need to head out soon	goodending	31	-1	
+goodending	31	Holly	Alright, bye Jacob!	choice	37,38	-1	
+goodending	32	Jacob	haha, thanks	block	1	-1	
+goodending	33	Jacob	haha, good bye ;P	block	1	-1	
+intro	0	b	hi guys	intro	1	-1	
+intro	1	b	im so bored	intro	2	-1	
+intro	2	Holly	Huh? If I recall correctly, aren't you on vacation?	intro	3	-1	
+intro	3	Jacob	yeah, though it doesn't really feel like a vacation	intro	4	-1	
+intro	4	Holly	Well, at least you're not stuck at home. All this rain is making me feel gloomy.	intro	5	-1	
+intro	5	Holly	Though I must admit, this seems like the perfect weather to read some books.	intro	6	-1	
+intro	6	Jacob	no joke	intro	7	-1	
+intro	7	Jacob	the rain's also ruining my mood	intro	8	-1	
+intro	8	Holly	Huh? It's also raining there in Japan?	intro	9	-1	
+intro	9	Jacob	nah my trip got cancelled because of the storm	intro	10	-1	
+intro	10	Jacob	didn't i tell you?	intro	11	-1	
+intro	11	Holly	No, you didn't. Right, [Player]?	choice	0,1	-1	
+intro	12	Jacob	my bad. guess i forgot	intro	14	-1	
+intro	13	Holly	You guys are mean, keeping me out of the circle.	intro	14	-1	
+intro	14	Holly	Anyways, maybe we can make some plans now that you’re still in town.	intro	15	-1	
+intro	15	Holly	At least after the rain’s finished.	intro	16	-1	
+intro	16	Jacob	cant	intro	17	-1	
+intro	17	Jacob	i’m in tacloban	intro	18	-1	
+intro	18	Jacob	you know, visiting my relatives, instead.	choice	2	-1	
+intro	19	Holly	Goodness,that reminds me. This gloomy rain and you saying Tacloban just reminded me of something.	intro	20	-1	
+intro	20	Holly	The Yolanda typhoon. Do you guys remember?	intro	21	-1	
+intro	21	Jacob	oh yeah, that was great	choice	3,4	-1	
+intro	22	Jacob	Ha! [Player] gets me.	intro	23	-1	
+intro	23	Holly	What are you guys talking about?	intro	25	-1	
+intro	24	Jacob	you guys don’t get it?	intro	25	-1	
+intro	25	Jacob	typhoon yolanda. that typhoon that blessed us week long holidays away from school	intro	26	-1	
+intro	26	Jacob	It felt like a second summer vacation	intro	27	-1	
+intro	27	Holly	What the hell?	intro	28	-1	
+intro	28	Holly	That was a disaster where lots of people lost their homes, families and even their lives.	intro	29	-1	
+intro	29	Jacob	well, boohoo, look for someone who cares. I’d wish ANYTHING for no classes.	intro	30	-1	
+intro	30	Jacob	in fact, i kinda wish that it wouldn’t rain while we’re on vacation and just rain when classes start again	intro	31	-1	
+intro	31	Jacob	so u know, extended holidays for us all	intro	32	-1	
+intro	32	Jacob	right, [Player]?	intro	33	-1	
+intro	33	Holly	Are you kidding? Back me up here, [Player]. I can’t be the only sensible one here.	choice	5	-1	
+intro	34	Holly	Right, around 3000 people died in Tacloban, and about 6000 died, counting the other parts of the country	intro	35	-1	
+intro	35	Jacob	darn(d*mn), i’m almost more surprised that you know all that on the top of your head	intro	36	-1	
+intro	36	Jacob	all those people really died just because of some rain?	intro	37	-1	
+intro	37	Jacob	sure, yolanda was a pretty strong bagyo, but it wasn’t that strong	intro	38	-1	
+intro	38	Jacob	how do you even know these things?	intro	39	-1	
+intro	39	Holly	I read the news, like what everyone should do.	intro	40	-1	
+intro	40	Holly	Also, it wasn’t the rain that did the damage.	intro	41	-1	
+intro	41	Jacob	the winds, then? they were pretty strong, I guess	intro	42	-1	
+intro	42	Holly	No, not the winds. I think it was a tsunami.	choice	6,7	-1	
+intro	43	Holly	hmm… that doesn’t sound quite right	intro	44	-1	
+intro	44	Jacob	yeah it doesn’t. how is there a tsunami if it’s just a typhoon?	intro	45	-1	
+intro	45	Jacob	there weren’t any earthquakes or anything	intro	46	-1	
+intro	46	Holly	I know I did say it was a tsunami, but it really wasn’t. I just can’t seem to remember what actually happened.	intro	47	-1	
+intro	47	Jacob	well, that’s a first	intro	48	-1	
+intro	48	Jacob	maybe you can just admit that i’m right and perhaps it was the heavy rain, afterall	intro	49	-1	
+intro	49	Jacob	since, u know, it’s a storm	intro	50	-1	
+intro	50	Holly	That’s it!	intro	51	-1	
+intro	51	Holly	I remember it now. Yes, it was a storm surge	intro	52	-1	
+intro	52	Jacob	uhh…	intro	53	-1	
+intro	53	Jacob	a storm surge?	intro	54	-1	
+intro	54	Jacob	… an extra heavy rain?	intro	55	-1	
+intro	55	Holly	You make me want to punch my face.	intro	56	-1	
+intro	56	Jacob	then what is it?? Just tell me	intro	57	-1	
+intro	57	Holly	well…	intro	58	-1	
+intro	58	Holly	I guess you could say it’s like a tsunami.	intro	59	-1	
+intro	59	Jacob	it’s like a tsunami but it’s not a tsunami?	intro	60	-1	
+intro	60	Holly	Well, truth be told, I’m not really sure what a storm surge is either.	intro	61	-1	
+intro	61	Holly	I just know that it’s different from a tsunami	intro	62	-1	
+intro	62	Holly	[Player], do you know?	choice	9	-1	
+intro	63	Holly	Oh, I see.	intro	65	-1	
+intro	64	Holly	“A storm surge is water pushed inland by very strong winds, usually during very strong typhoons; on the other hand, a tsunami happens when water is displaced by earthquakes.”	intro	65	-1	
+intro	65	Holly	Yep, that makes sense.	event1	0	-1	
+minigame	0	-	-	minigame-answer	0,1	-1	
+minigame	1	-	-	minigame-answer	2,3	-1	
+minigame	2	-	-	minigame-answer	4,5	-1	
+minigame-answer	0	Player	I found this link: https://www.nist.gov/video/storm-surge-animation	intro	63	0	
+minigame-answer	1	Player	I can't seem to find it	event6	0	-1	
+minigame-answer	2	Player	There you go	event1	28	1	
+minigame-answer	3	Player	errr, actually, we'll tell you next time	event1	34	-1	
+minigame-answer	4	Player	Yes	badending5	48	-1	
+minigame-answer	5	Player	No	badending5	48	-1	
+notif	0	system	...	badending2	7	-1	
+notif	1	system	Jacob is online	badending1	10	-1	
+notif	2	system	-Jacob went offline-	badending4	8	-1	
+notif	3	system	-Jacob is online-	badending4	11	-1	
+notif	4	system	…	badending7	1	-1	
+notif	5	system	after a while	badending7	16	-1	
+notif	6	system	-Jacob is online-	badending7	19	-1	
+notif	7	system	A few moments later...	event8	5	-1	
+notif	8	system	A few moments later...	event9	31	-1	
+notif	9	system	-Jacob went offline-	badending5	46	-1	
+notif	10	system	A few days later...	badending5	51	-1	
+notif	11	system	-Jacob is online-	badending5	56	-1	
+notif	12	system	-Jacob went offline-	badending6	0	-1	
+notif	13	system	A little while later...	badending6	7	-1	
+notif	14	system	-Jacob is online-	badending6	14	-1	
+notif	15	system	after a day or so ....	badending3	10	-1	
+notif	16	system	the whole house then collapses	block	8	-1	
+notif	17	system	Jacob went offline	event6	12	-1	
+notif	18	system	Jacob went offline	badending1	4	-1	
+notif	19	system	A little while later...	postdisaster2	22	-1	
+postdisaster1	0	Jacob	my god	postdisaster1	1	-1	
+postdisaster1	1	Jacob	the house is destroyed	postdisaster1	2	-1	
+postdisaster1	2	Jacob	like my morale haha	postdisaster1	3	-1	
+postdisaster1	3	Jacob	well, not completely.	postdisaster1	4	-1	
+postdisaster1	4	Holly	it’s nice to know that you’re still going strong after all of this.	postdisaster1	5	-1	
+postdisaster1	5	Jacob	no, my morale is crushed	postdisaster1	6	-1	
+postdisaster1	6	Jacob	but the house is still standing,	postdisaster1	7	-1	
+postdisaster1	7	Jacob	bad news is that its still flooded and stuff are broken everywhere	postdisaster1	8	-1	
+postdisaster1	8	Jacob	i can’t help but feel bad	postdisaster1	9	-1	
+postdisaster1	9	Jacob	i feel like we could’ve prevented this or lessened some of the damage at least	choice	20,21	-1	
+postdisaster1	10	Jacob	don’t be	postdisaster1	13	-1	
+postdisaster1	11	Jacob	...that’s right	postdisaster1	12	-1	
+postdisaster1	12	Jacob	well i shouldnt complain	postdisaster1	13	-1	
+postdisaster1	13	Jacob	i was too ignorant	postdisaster1	14	-1	
+postdisaster1	14	Holly	well, you DID listen to us, so you’re not THAT ignorant	postdisaster1	15	-1	
+postdisaster1	15	Holly	that accounts for something!	postdisaster1	16	-1	
+postdisaster1	16	Holly	maybe for now, you can try checking each room to check their conditions	postdisaster1	17	-1	
+postdisaster1	17	Jacob	alright, wait a min I’ll go check the rooms on the ground floor first	postdisaster1	18	-1	
+postdisaster1	18	Jacob	guys…	postdisaster1	19	-1	
+postdisaster1	19	Jacob	you know the feeling when you know you bombed a test and you dont want to look at it	postdisaster1	20	-1	
+postdisaster1	20	Jacob	but when you look at it you see that you DID fail and you feel terrible even if you expected it?	postdisaster1	21	-1	
+postdisaster1	21	Holly	can’t say that I have.	postdisaster1	22	-1	
+postdisaster1	22	Jacob	well, whatever	postdisaster1	23	-1	
+postdisaster1	23	Jacob	I feel like that right now	postdisaster1	24	-1	
+postdisaster1	24	Jacob	the whole ground floor is a mess	postdisaster1	25	-1	
+postdisaster1	25	Jacob	I cant even imagine what my parents feel	postdisaster1	26	-1	
+postdisaster1	26	Jacob	or my relatives, especially	postdisaster1	27	-1	
+postdisaster1	27	Holly	Jacob….	postdisaster1	28	-1	
+postdisaster1	28	Jacob	there are a couple of bedrooms on the first floor	postdisaster1	29	-1	
+postdisaster1	29	Jacob	the ones they use as the masters’ bedroom and children's rooms	postdisaster1	30	-1	
+postdisaster1	30	Jacob	for some reason, the guest rooms are on the second floor	postdisaster1	31	-1	
+postdisaster1	31	Jacob	anyway, they said they preferred having the rooms on the first floor so that they won’t have to walk far on a tiring day	postdisaster1	32	-1	
+postdisaster1	32	Jacob	which is understandable, by the way	postdisaster1	33	-1	
+postdisaster1	33	Jacob	this house is HUGE	postdisaster1	34	-1	
+postdisaster1	34	Jacob	but i bet they’re reevaluating their life choices right now	postdisaster1	35	-1	
+postdisaster1	35	Jacob	the ground floor is a WRECK	postdisaster1	36	-1	
+postdisaster1	36	Jacob	you know what’s worse?	postdisaster1	37	-1	
+postdisaster1	37	Holly	Don’t tell me all the books I carefully picked out and generously lent you got destroyed. I spent a fortune on those!	postdisaster1	38	-1	
+postdisaster1	38	Jacob	you mean your books that you FORCED onto me because you thought I needed help with my vocabulary?	postdisaster1	39	-1	
+postdisaster1	39	Jacob	nuh-uh. no way am I reading a single one of those in my lifetime	postdisaster1	40	-1	
+postdisaster1	40	Jacob	so of course	postdisaster1	41	-1	
+postdisaster1	41	Jacob	I left ‘em all at home	postdisaster1	42	-1	
+postdisaster1	42	Holly	For once, something good came out of your illiteracy.	postdisaster1	43	-1	
+postdisaster1	43	Jacob	hey! No need to be so rude!	postdisaster1	44	-1	
+postdisaster1	44	Jacob	anyway, back to the problem	postdisaster1	45	-1	
+postdisaster1	45	Jacob	my relatives kept most of their valuables in those rooms including important documents	postdisaster1	46	-1	
+postdisaster1	46	Jacob	like their house lease contract	postdisaster1	47	-1	
+postdisaster1	47	Jacob	(I only overheard that during the adults’ talk)	postdisaster1	48	-1	
+postdisaster1	48	Jacob	of course, their TV’s and gadgets all took a swim too	postdisaster1	49	-1	
+postdisaster1	49	Holly	Oh no, were there some things left that were salvageable?	postdisaster1	50	-1	
+postdisaster1	50	Jacob	well, there’s still stuff on the 2nd floor and above	postdisaster1	51	-1	
+postdisaster1	51	Jacob	but they lost a lot	postdisaster1	52	-1	
+postdisaster1	52	Jacob	even with how rich they are, there’ll be a huge dent in their savings just to recover from this	postdisaster1	53	-1	
+postdisaster1	53	Holly	Well, on the bright side, they’re very privileged even recover from those losses compared to others	postdisaster1	54	-1	
+postdisaster1	54	Jacob	i guess so…	postdisaster1	55	-1	
+postdisaster1	55	Jacob	i just can’t help but regret, though	postdisaster1	56	-1	
+postdisaster1	56	Jacob	if only we had been more prepared	postdisaster1	57	-1	
+postdisaster1	57	Jacob	if only we had known what to do…	postdisaster1	58	-1	
+postdisaster1	58	Holly	Well, no use dwelling on the past, as long as you make sure you learn from this.	postdisaster1	59	-1	
+postdisaster1	59	Jacob	alright…	postdisaster1	60	-1	
+postdisaster1	60	Jacob	i guess i should get started on pumping water out. The basement is still quite flooded	postdisaster1	61	-1	
+postdisaster1	61	Jacob	getting the water out as soon as possible will lessen the damage	postdisaster1	62	-1	
+postdisaster1	62	Jacob	hey, [Player], stop seenzoning, what do you think?	choice	22,23	-1	
+postdisaster2	0	Jacob	my god	postdisaster2	1	-1	
+postdisaster2	1	Jacob	the house is looking pretty good	postdisaster2	2	-1	
+postdisaster2	2	Jacob	way better than what i was expecting	postdisaster2	3	-1	
+postdisaster2	3	Jacob	… surprisingly	postdisaster2	4	-1	
+postdisaster2	4	Holly	it’s nice to know that you’re still going strong after all of this.	postdisaster2	5	-1	
+postdisaster2	5	Jacob	well, i am pretty strong, aren’t i?	postdisaster2	6	-1	
+postdisaster2	6	Jacob	much like this house, wow	postdisaster2	7	-1	
+postdisaster2	7	Jacob	can’t believe it’s still standing like this	postdisaster2	8	-1	
+postdisaster2	8	Jacob	it’s flooded on the inside, but that’s whatever	postdisaster2	9	-1	
+postdisaster2	9	Jacob	as if we could’ve done anything about that	postdisaster2	10	-1	
+postdisaster2	10	Jacob	but man, so many expensive and precious things were saved	choice	87,88	-1	
+postdisaster2	11	Jacob	dude, i was getting there	postdisaster2	12	-1	
+postdisaster2	12	Jacob	well	postdisaster2	13	-1	
+postdisaster2	13	Jacob	thank you haha	postdisaster2	14	-1	
+postdisaster2	14	Jacob	for saving my ignorant *ss	postdisaster2	15	-1	
+postdisaster2	15	Holly	well, you DID listen to us, so you’re not THAT ignorant	postdisaster2	16	-1	
+postdisaster2	16	Holly	that accounts for something!	postdisaster2	17	-1	
+postdisaster2	17	Jacob	you have a point :)	postdisaster2	18	-1	
+postdisaster2	18	Holly	don’t let it get to your head, though	postdisaster2	19	-1	
+postdisaster2	19	Holly	anyway, try checking each room to check their conditions, still	postdisaster2	20	-1	
+postdisaster2	20	Holly	one can never celebrate too early	postdisaster2	21	-1	
+postdisaster2	21	Jacob	alright, wait a min I’ll go check the rooms on the ground floor first	notif	19	-1	
+postdisaster2	22	Jacob	guys…	postdisaster2	23	-1	
+postdisaster2	23	Jacob	you know the feeling when you do well in an exam despite only reviewing an hour before?	postdisaster2	24	-1	
+postdisaster2	24	Jacob	that moment when you feel like the smartest person on the entire planet	postdisaster2	25	-1	
+postdisaster2	25	Holly	cramming is a self destructive behaviour	postdisaster2	26	-1	
+postdisaster2	26	Jacob	well, whatever	postdisaster2	27	-1	
+postdisaster2	27	Jacob	I feel like that right now	postdisaster2	28	-1	
+postdisaster2	28	Jacob	the whole ground floor is a mess	postdisaster2	29	-1	
+postdisaster2	29	Jacob	yet everyone is praising and thanking me	postdisaster2	30	-1	
+postdisaster2	30	Jacob	my relatives, especially	postdisaster2	31	-1	
+postdisaster2	31	Jacob	they kept most of their valuables down here, including important documents	postdisaster2	32	-1	
+postdisaster2	32	Jacob	like their house lease contract	postdisaster2	33	-1	
+postdisaster2	33	Jacob	(I only overheard that during the adults’ talk)	postdisaster2	34	-1	
+postdisaster2	34	Jacob	and their gadgets (wow, a nintendo wii supreme)	postdisaster2	35	-1	
+postdisaster2	35	Jacob	i followed your advice and took them to some place safer	postdisaster2	36	-1	
+postdisaster2	36	Jacob		postdisaster2	37	-1	
+postdisaster2	37	Jacob	tho bringing this house back to the way it was before will still take lots of money...	postdisaster2	38	-1	
+postdisaster2	38	Holly	Well, on the bright side, they’re very privileged to even be able to recover, unlike the others	postdisaster2	39	-1	
+postdisaster2	39	Jacob	i guess so…	postdisaster2	40	-1	
+postdisaster2	40	Jacob	well, i guess i should get started on pumping water out. The basement is still quite flooded	postdisaster2	41	-1	
+postdisaster2	41	Jacob	getting the water out as soon as possible will lessen the damage	postdisaster2	42	-1	
+postdisaster2	42	Jacob	hey, [Player], stop seenzoning, what do you think?	choice	89,90	-1	
+timer	0	system	10	notif	15	-1	

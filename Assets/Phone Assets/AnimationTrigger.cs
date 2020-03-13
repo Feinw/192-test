@@ -94,13 +94,13 @@ public class AnimationTrigger : MonoBehaviour
     public static bool minigameSuccess = false;
 
     // bool that determines if the minigame is completed
-    public static bool minigameDone = true;
+    public static bool minigameDone = false;
 
     // bool that ensures that the conversation with the operator can only happen once
     public bool doThisOnce = true;
 
     // placeholder variable to contain the items in the dictionary
-    DTypes placeholder;
+    public DTypes placeholder;
 
     /*
     method name: Start
@@ -141,7 +141,7 @@ public class AnimationTrigger : MonoBehaviour
     {
         if (minigameStart && story != null && doThisOnce) 
         {
-            fetchMessages(0);
+            fetchMessages(0); 
             minigameDone = false;
             doThisOnce = false;
         }
@@ -167,7 +167,7 @@ public class AnimationTrigger : MonoBehaviour
             }
             else 
             {
-                if (Phone.dialedNumber == "911" && !minigameDone) 
+                if (Phone.dialedNumber == "911" && (!minigameDone && minigameStart)) 
                 {
                     if (callTimer > callCountdown) 
                     {
@@ -274,11 +274,11 @@ public class AnimationTrigger : MonoBehaviour
         placeholder = story["phone"][index];
         while (placeholder.nextType == "phone") 
         {
-            conversation.Enqueue(placeholder.text);
+            conversation.Enqueue(placeholder.text.Replace("[Player]", SharedVariables.username));
             placeholder = story[placeholder.nextType][placeholder.nextNumber];
         }
         operatorIsTalking = true;
-        conversation.Enqueue(placeholder.text);
+        conversation.Enqueue(placeholder.text.Replace("[Player]", SharedVariables.username));
         if (placeholder.nextType == "stop") 
         {
             // Debug.Log("tapos na minigame");
@@ -315,6 +315,7 @@ public class AnimationTrigger : MonoBehaviour
             Button bt = button.GetComponent<Button>();
 
             Text text = button.transform.GetChild(0).gameObject.GetComponent<Text>(); //get component text
+            option.text = option.text.Replace("[Player]", SharedVariables.username);
             text.text = option.text;
 
             // sets the required onClick script
@@ -346,24 +347,28 @@ public class AnimationTrigger : MonoBehaviour
         // deletes and destroys the choices in case they are still existing before ending call.
             Destroy (replyArea.transform.GetChild(i).gameObject);
         }
-        if (Phone.dialedNumber == "911" && placeholder.nextType == "stop") 
+        if (Phone.dialedNumber == "911" && minigameStart) 
         {
-            if (placeholder.nextNumber == 0) 
+            if (placeholder.nextType == "stop")
             {
-                minigameDone = true;
-                minigameSuccess = true;
+                if (placeholder.nextNumber == 0) 
+                {
+                    minigameDone = true;
+                    minigameSuccess = true;
+                    // minigameStart = false;
+                }
+                else 
+                {
+                    minigameDone = true;
+                    minigameSuccess = false;
+                    // minigameStart = false;
+                }
             }
-            else 
-            {
+            else if (placeholder.nextType != "stop") {
                 minigameDone = true;
                 minigameSuccess = false;
+                // minigameStart = false;
             }
-        }
-        else if(Phone.dialedNumber == "911" && placeholder.nextType != "stop") 
-        {
-            // conversationEnd = true;
-            minigameDone = true;
-            minigameSuccess = false;
         }
     }
 

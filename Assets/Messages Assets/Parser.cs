@@ -76,6 +76,7 @@ public class Parser : MonoBehaviour
             string[] line = message.Trim().Split("\t"[0]);
             DTypes nextLine = new DTypes
             {
+                type = line[0],
                 number = int.Parse(line[1]),
                 name = line[2],
                 text = line[3],
@@ -147,7 +148,9 @@ public class DTypes
     // name of "user" that sends the text                 
     public string name;     
     // content of the text                    
-    public string text;            
+    public string text;
+    // type of current text in story            
+    public string type;
     // type of next text in story            
     public string nextType;            
     // id of the next line of text in the story         

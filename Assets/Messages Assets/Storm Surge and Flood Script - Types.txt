@@ -9,6 +9,7 @@ badending7
 block
 choice
 evac
+evac2
 event1
 event2
 event3
@@ -24,3 +25,5 @@ minigame
 minigame-answer
 notif
 postdisaster1
+postdisaster2
+timer
